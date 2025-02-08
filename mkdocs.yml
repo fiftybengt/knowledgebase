@@ -1,9 +1,14 @@
 site_name: My Knowledge Base
 theme:
   name: material 
+  palette:
+    scheme: custom
 
 plugins:
   - search
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md

@@ -46,6 +46,13 @@ When making changes to MkDocs documentation, follow these steps:
    mkdocs gh-deploy
    ```
 
+``` 
+mkdocs build --clean
+git add .
+git commit -m "comment"
+git push origin main
+mkdocs gh-deploy
+```
 This will build and deploy your MkDocs site to **GitHub Pages**.
 
 ---
