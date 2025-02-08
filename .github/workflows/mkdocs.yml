@@ -3,21 +3,22 @@ name: Deploy MkDocs
 on:
   push:
     branches:
-      - main  # Change this if your main branch is different
+      - main  # Runs when pushing to main
+  workflow_dispatch:  # Allows manual trigger from Actions tab
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install MkDocs and dependencies
         run: pip install --upgrade mkdocs-material
 
       - name: Deploy to GitHub Pages
