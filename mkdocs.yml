@@ -1,1 +1,12 @@
-site_name: My Docs
+site_name: My Knowledge Base
+theme:
+  name: material 
+
+nav:
+  - Home: index.md
+  - MkDocs:
+    - Formatting Guide: mkdocs-formatting-guide.md
+    - Create Virtual Enviroment: venv.md
+    - Create post: create.md
+    - Github create & update: github.md
+  - Linux Commands: linux-commands.md
