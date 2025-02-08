@@ -2,6 +2,9 @@ site_name: My Knowledge Base
 theme:
   name: material 
 
+plugins:
+  - search
+
 nav:
   - Home: index.md
   - MkDocs:
