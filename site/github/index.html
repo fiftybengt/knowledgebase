@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -61,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="dracula" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="custom" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -625,6 +627,12 @@ cd my-mkdocs-site
    <code>bash
    mkdocs gh-deploy</code></li>
 </ol>
+<pre><code>mkdocs build --clean
+git add .
+git commit -m &quot;comment&quot;
+git push origin main
+mkdocs gh-deploy
+</code></pre>
 <p>This will build and deploy your MkDocs site to <strong>GitHub Pages</strong>.</p>
 <hr />
 <h2 id="configuring-github-pages">🔹 Configuring GitHub Pages</h2>
