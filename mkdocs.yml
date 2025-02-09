@@ -15,4 +15,3 @@ nav:
     - Create post: create.md
     - Github create & update: github.md
   - Linux Commands: linux-commands.md
-  - Does it auto deploy: test_test.md
