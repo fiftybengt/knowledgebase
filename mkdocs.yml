@@ -18,6 +18,7 @@ nav:
   - Linux Commands: linux-commands.md
   - Linux Users and Privileges: linuxuserpriv.md
   - Manual Exploitation: manuexpl.md
+  - Mapping Hostnames to IPs: hostnamemapping.md
   - MSFconsole: msfc.md
   - Networking: networking.md
   - Proxychains Tor: torproxy.md
@@ -28,6 +29,8 @@ nav:
   - SMB (Server Message Block): smb.md
   - SSH (Secure Shell): ssh.md
   - Wordpress exploitation: wpexplo.md
+  - HTB:
+    - Three - S3 Reverse Shell: threeawsshell.md
   - MkDocs:  
     - Create post: create.md
     - Create Virtual Enviroment: venv.md

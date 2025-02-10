@@ -5,6 +5,15 @@ Metasploit is a powerful **penetration testing framework** that provides a varie
 
 ---
 
+## Different modules
+| Module Type  | Purpose |
+|-------------|---------|
+| **Auxiliary** | Used for scanning, enumeration, brute-force attacks, or DoS |
+| **Exploit**   | Executes an attack on a vulnerability to gain access |
+| **Payload**   | Defines post-exploit actions (shells, persistence, data exfiltration) |
+
+---
+
 ##  Finding Exploits
 Before using Metasploit, you can search for available exploits using **SearchSploit** or within **MSFConsole**.
 
