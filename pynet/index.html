@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../create/">
+        <link rel="prev" href="../networking/">
       
+      
+        <link rel="next" href="../revul/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Github create & update - My Knowledge Base</title>
+        <title>Python Networking - My Knowledge Base</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-mkdocs-with-github" class="md-skip">
+        <a href="#python-networking-socket-programming-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github create & update
+              Python Networking
             
           </span>
         </div>
@@ -425,10 +427,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pynet/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Python Networking
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -438,6 +461,143 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shebang-for-python-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Shebang for Python Scripts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-using-the-socket-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Importing &amp; Using the socket Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Importing & Using the socket Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-socket-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Socket Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-socket-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Socket Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nc-nvlp-terminal-command-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 nc -nvlp Terminal Command Explained
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 nc -nvlp Terminal Command Explained">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-port-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Python Port Scanner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Python Port Scanner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Scanner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -551,19 +711,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -578,7 +736,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -655,31 +813,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Github create & update
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,95 +826,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the Repository
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -817,28 +865,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#shebang-for-python-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      🔹 Shebang for Python Scripts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
+  <a href="#importing-using-the-socket-module" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
+      🔹 Importing &amp; Using the socket Module
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
+    <nav class="md-nav" aria-label="🔹 Importing & Using the socket Module">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
+  <a href="#common-socket-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloning the Repository
+      Common Socket Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-socket-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Socket Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
     </span>
   </a>
   
@@ -850,36 +916,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
+  <a href="#nc-nvlp-terminal-command-explained" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
+      🔹 nc -nvlp Terminal Command Explained
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 nc -nvlp Terminal Command Explained">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#python-port-scanner" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices
+      🔹 Python Port Scanner
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🔹 Python Port Scanner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Scanner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -901,75 +997,103 @@
 
 
 
-<h1 id="managing-mkdocs-with-github">Managing MkDocs with GitHub</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Using <strong>GitHub</strong> for version control and deployment is an essential practice when managing MkDocs projects. This guide covers how to <strong>create a new repository</strong>, update documentation, and deploy it to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="creating-a-new-github-repository">🔹 Creating a New GitHub Repository</h2>
-<ol>
-<li><strong>Go to GitHub</strong> and log in.</li>
-<li><strong>Click on</strong> <code>+</code> (top-right) → <code>New repository</code>.</li>
-<li><strong>Enter repository details</strong>:</li>
-<li>Repository name: <code>my-mkdocs-site</code></li>
-<li>Description (optional): "Documentation for my project"</li>
-<li>Choose <strong>Public</strong> or <strong>Private</strong>.</li>
-<li>Check <strong>Add a README</strong> (optional).</li>
-<li><strong>Click</strong> <code>Create repository</code>.</li>
-</ol>
-<h3 id="cloning-the-repository">Cloning the Repository</h3>
-<p>After creating the repository, clone it to your local machine:</p>
-<pre><code class="language-bash">git clone https://github.com/your-username/my-mkdocs-site.git
-cd my-mkdocs-site
+<h1 id="python-networking-socket-programming-guide">Python Networking &amp; Socket Programming Guide</h1>
+<h2 id="shebang-for-python-scripts">🔹 Shebang for Python Scripts</h2>
+<p>The <strong>shebang</strong> (<code>#!</code>) tells the system which interpreter to use when executing a script.</p>
+<p>For Python 3, use:</p>
+<pre><code class="language-python">#!/usr/bin/env python3
 </code></pre>
+<p>This ensures the script runs with the default <code>python3</code> interpreter in the system’s environment.</p>
 <hr />
-<h2 id="updating-mkdocs-and-pushing-to-github">🔹 Updating MkDocs and Pushing to GitHub</h2>
-<p>When making changes to MkDocs documentation, follow these steps:</p>
-<ol>
-<li><strong>Stage all changes</strong>:
-   <code>bash
-   git add .</code></li>
-<li><strong>Commit the changes</strong>:
-   <code>bash
-   git commit -m "Added my new page"</code></li>
-<li><strong>Push to GitHub</strong>:
-   <code>bash
-   git push origin main</code></li>
-<li><strong>Deploy the site to GitHub Pages</strong>:
-   <code>bash
-   mkdocs gh-deploy</code></li>
-</ol>
-<pre><code>mkdocs build --clean
-git add .
-git commit -m &quot;comment&quot;
-git push origin main
-mkdocs gh-deploy
-</code></pre>
-<p>This will build and deploy your MkDocs site to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="configuring-github-pages">🔹 Configuring GitHub Pages</h2>
-<p>Ensure that GitHub Pages is enabled for your repository:</p>
-<ol>
-<li><strong>Go to your repository on GitHub</strong>.</li>
-<li>Navigate to <strong>Settings &gt; Pages</strong>.</li>
-<li>Under <strong>Branch</strong>, select <code>gh-pages</code>.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Your site will be available at:
-   <code>https://your-username.github.io/my-mkdocs-site/</code></li>
-</ol>
-<hr />
-<h2 id="best-practices">🔹 Best Practices</h2>
+<h2 id="importing-using-the-socket-module">🔹 Importing &amp; Using the <code>socket</code> Module</h2>
+<p>The <strong><code>socket</code></strong> module in Python allows for low-level networking. A socket provides a communication endpoint between two systems.</p>
+<h3 id="common-socket-types"><strong>Common Socket Types</strong>:</h3>
 <ul>
-<li>Always <strong>commit meaningful messages</strong> (<code>git commit -m "Updated navigation"</code>).</li>
-<li>Regularly <strong>pull updates</strong> from the repository before making changes:
-  <code>bash
-  git pull origin main</code></li>
-<li>Check <strong>Git status</strong> to review changes before committing:
-  <code>bash
-  git status</code></li>
+<li><strong><code>AF_INET</code></strong> → IPv4 addressing.</li>
+<li><strong><code>AF_INET6</code></strong> → IPv6 addressing.</li>
+<li><strong><code>SOCK_STREAM</code></strong> → TCP (connection-oriented, reliable streaming).</li>
+<li><strong><code>SOCK_DGRAM</code></strong> → UDP (connectionless, faster but unreliable).</li>
 </ul>
+<h3 id="basic-socket-script"><strong>Basic Socket Script</strong></h3>
+<pre><code class="language-python">#!/usr/bin/env python3
+import socket
+
+# Create a TCP socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Define server details
+host = '127.0.0.1'  # Localhost
+port = 8080
+
+# Bind socket to an address and port
+s.bind((host, port))
+
+# Start listening for connections (backlog of 5)
+s.listen(5)
+print(f&quot;[*] Listening on {host}:{port}&quot;)
+
+# Accept connections
+target, addr = s.accept()
+print(f&quot;[+] Connection received from {addr}&quot;)
+target.send(b'Hello, you are connected!')
+target.close()
+</code></pre>
+<h3 id="explanation"><strong>Explanation:</strong></h3>
+<ol>
+<li><strong><code>socket.socket(socket.AF_INET, socket.SOCK_STREAM)</code></strong> → Creates an <strong>IPv4 TCP socket</strong>.</li>
+<li><strong><code>s.bind((host, port))</code></strong> → Binds the socket to a local IP and port.</li>
+<li><strong><code>s.listen(5)</code></strong> → Listens for incoming connections with a backlog of 5.</li>
+<li><strong><code>s.accept()</code></strong> → Accepts a new connection and returns the target socket and address.</li>
+<li><strong><code>target.send()</code></strong> → Sends a response to the connected client.</li>
+</ol>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Using GitHub for MkDocs makes it easy to manage documentation changes and deploy updates. By following these steps, you can keep your project well-organized and version-controlled.</p>
+<h2 id="nc-nvlp-terminal-command-explained">🔹 <code>nc -nvlp</code> Terminal Command Explained</h2>
+<p><code>nc -nvlp &lt;port&gt;</code> is a <strong>Netcat</strong> command used to <strong>listen for incoming connections</strong>.</p>
+<pre><code class="language-bash">nc -nvlp 8080
+</code></pre>
+<h3 id="breakdown"><strong>Breakdown:</strong></h3>
+<ul>
+<li><strong><code>-n</code></strong> → No DNS resolution (faster lookup).</li>
+<li><strong><code>-v</code></strong> → Verbose mode (shows detailed output).</li>
+<li><strong><code>-l</code></strong> → Listen mode (waits for incoming connections).</li>
+<li><strong><code>-p</code></strong> → Specifies the port number.</li>
+</ul>
+<p>This is useful for testing socket scripts by opening a listener on a port and waiting for incoming connections.</p>
+<hr />
+<h2 id="python-port-scanner">🔹 Python Port Scanner</h2>
+<p>A <strong>simple Python script</strong> to scan for <strong>open ports</strong> on a target machine.</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+import socket
+
+# Define target IP
+host = &quot;127.0.0.1&quot;  # Change this to the target IP
+ports = [22, 80, 443, 8080]  # List of ports to scan
+
+for port in ports:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(1)  # Timeout to prevent hanging
+    result = s.connect_ex((host, port))  # 0 = open, other = closed
+    if result == 0:
+        print(f&quot;[+] Port {port} is open&quot;)
+    else:
+        print(f&quot;[-] Port {port} is closed&quot;)
+    s.close()
+</code></pre>
+<h3 id="explanation_1"><strong>Explanation:</strong></h3>
+<ol>
+<li><strong>Defines a target IP and a list of common ports</strong>.</li>
+<li><strong>Creates a new socket for each port scan</strong>.</li>
+<li><strong><code>connect_ex((host, port))</code></strong> → Returns <code>0</code> if the port is open.</li>
+<li><strong>Prints the result</strong> (open or closed).</li>
+</ol>
+<h3 id="running-the-scanner"><strong>Running the Scanner</strong></h3>
+<pre><code class="language-bash">chmod +x scanner.py
+./scanner.py
+</code></pre>
+<p>This will output which ports are <strong>open or closed</strong> on the target machine.</p>
+<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Python’s <code>socket</code> module allows for powerful <strong>network programming</strong>, from creating simple <strong>server-client</strong> connections to <strong>port scanning</strong>. Understanding <strong>Netcat (<code>nc</code>), socket types, and proper implementation</strong> is key for networking and cybersecurity applications.</p>
 
 
 

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ssh/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../bruteforce/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>Bash Scripting - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#bash-scripting-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              Bash Scripting
             
           </span>
         </div>
@@ -217,10 +217,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../bashguide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bash Scripting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -230,6 +251,236 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-bash-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction to Bash Scripting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-a-simple-ping-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Understanding a Simple Ping Script
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Understanding a Simple Ping Script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Command:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ip-sweep-script-ipsweepsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 IP Sweep Script (ipsweep.sh)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 IP Sweep Script (ipsweep.sh)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Script:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-liner-nmap-scan-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 One-Liner Nmap Scan Script
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 One-Liner Nmap Scan Script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#script_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-useful-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Additional Useful Scripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Additional Useful Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-scanner-using-netcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Port Scanner Using Netcat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-script_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Script:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-for-automated-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Script for Automated Backups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Script for Automated Backups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-script_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Script:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,19 +804,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -580,7 +829,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -591,31 +840,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Formatting Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,185 +853,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Document Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links &amp; Images
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Links & Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Links:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Images:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring mkdocs.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Local Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extending MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Plugins
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -909,37 +958,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction-to-bash-scripting" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 Introduction to Bash Scripting
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
+  <a href="#understanding-a-simple-ping-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Lists &amp; Bullet Points
+      🔹 Understanding a Simple Ping Script
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 Understanding a Simple Ping Script">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#example-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
+      Example Command:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
+  <a href="#breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Ordered List:
+      Breakdown:
     </span>
   </a>
   
@@ -951,28 +1000,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#ip-sweep-script-ipsweepsh" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 IP Sweep Script (ipsweep.sh)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="🔹 IP Sweep Script (ipsweep.sh)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      Purpose:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#script" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Script:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Script:
     </span>
   </a>
   
@@ -984,46 +1051,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#one-liner-nmap-scan-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      🔹 One-Liner Nmap Scan Script
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="🔹 One-Liner Nmap Scan Script">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#script_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Script:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#explanation_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Explanation:
     </span>
   </a>
   
@@ -1035,19 +1084,70 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#additional-useful-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      🔹 Additional Useful Scripts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="🔹 Additional Useful Scripts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#port-scanner-using-netcat" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      Port Scanner Using Netcat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explanation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-script_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Script:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-for-automated-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Script for Automated Backups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Script for Automated Backups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-the-script_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing the Script:
     </span>
   </a>
   
@@ -1061,7 +1161,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -1083,137 +1183,124 @@
 
 
 
-<hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
-<hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
+<h1 id="bash-scripting-guide">Bash Scripting Guide</h1>
+<h2 id="introduction-to-bash-scripting">🔹 Introduction to Bash Scripting</h2>
+<p>Bash scripting automates tasks and enhances productivity by executing commands in sequence. Scripts are commonly used for <strong>networking, automation, and system administration</strong>.</p>
+<p>To create and edit a Bash script:</p>
+<pre><code class="language-bash">mousepad script.sh  # Open a text editor (use nano, vim, etc.)
 </code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
+<p>Add the shebang (<code>#!</code>) at the beginning to specify the interpreter:</p>
+<pre><code class="language-bash">#!/bin/bash   # Standard shebang for Bash scripts
+</code></pre>
+<blockquote>
+<p>Some systems may use <code>#!/usr/bin/bash</code>, but <code>/bin/bash</code> is widely compatible.</p>
+</blockquote>
+<hr />
+<h2 id="understanding-a-simple-ping-script">🔹 Understanding a Simple Ping Script</h2>
+<h3 id="example-command">Example Command:</h3>
+<pre><code class="language-bash">ping 192.168.1.1 -c 1 &gt; ip.txt
+cat ip.txt | grep &quot;64 bytes&quot; | cut -d &quot; &quot; -f4 | tr -d &quot;:&quot;
+</code></pre>
+<h3 id="breakdown">Breakdown:</h3>
+<ol>
+<li><strong><code>ping 192.168.1.1 -c 1 &gt; ip.txt</code></strong> → Sends <strong>one ICMP echo request</strong> (<code>-c 1</code>) and saves output to <code>ip.txt</code>.</li>
+<li><strong><code>cat ip.txt</code></strong> → Reads the contents of <code>ip.txt</code>.</li>
+<li><strong><code>grep "64 bytes"</code></strong> → Filters lines that contain <code>"64 bytes"</code>, indicating a successful ping.</li>
+<li><strong><code>cut -d " " -f4</code></strong> → Splits the line by spaces (<code>-d " "</code>), extracts <strong>4th field (IP address)</strong>.</li>
+<li><strong><code>tr -d ":"</code></strong> → Removes trailing <code>:</code>.</li>
+</ol>
+<p>✅ <strong>Corrected One-Liner:</strong></p>
+<pre><code class="language-bash">ping -c 1 192.168.1.1 | grep &quot;64 bytes&quot; | cut -d &quot; &quot; -f4 | tr -d &quot;:&quot;
+</code></pre>
+<hr />
+<h2 id="ip-sweep-script-ipsweepsh">🔹 IP Sweep Script (<code>ipsweep.sh</code>)</h2>
+<h3 id="purpose"><strong>Purpose:</strong></h3>
+<p>This script pings all <strong>254 hosts</strong> in a subnet (<code>x.x.x.1 - x.x.x.254</code>) and returns live hosts.</p>
+<h3 id="script"><strong>Script:</strong></h3>
+<pre><code class="language-bash">#!/bin/bash
 
-## Networking Commands
+if [ &quot;$#&quot; -ne 1 ]; then
+    echo &quot;Usage: ./ipsweep.sh &lt;network-prefix&gt;&quot;
+    exit 1
+fi
 
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
+for ip in $(seq 1 254); do
+    ping -c 1 $1.$ip | grep &quot;64 bytes&quot; | cut -d &quot; &quot; -f4 | tr -d &quot;:&quot; &amp;
+done
+wait
 </code></pre>
-<pre><code>
----
+<h3 id="explanation"><strong>Explanation:</strong></h3>
+<ul>
+<li><strong><code>$1</code></strong> → First argument passed to the script (e.g., <code>192.168.1</code>).</li>
+<li><strong><code>seq 1 254</code></strong> → Loops from <strong>1 to 254</strong> (valid host addresses).</li>
+<li><strong><code>ping -c 1 $1.$ip</code></strong> → Pings each IP in the subnet.</li>
+<li><strong><code>grep "64 bytes"</code></strong> → Filters successful responses.</li>
+<li><strong><code>cut -d " " -f4 | tr -d ":"</code></strong> → Extracts and cleans up the responding IP.</li>
+<li><strong><code>&amp;</code></strong> → Runs pings in parallel for speed.</li>
+<li><strong><code>wait</code></strong> → Ensures all background processes complete before script exits.</li>
+</ul>
+<h3 id="executing-the-script"><strong>Executing the Script:</strong></h3>
+<pre><code class="language-bash">chmod +x ipsweep.sh  # Make it executable
+./ipsweep.sh 192.168.1  # Run the script with a subnet prefix
+</code></pre>
+<hr />
+<h2 id="one-liner-nmap-scan-script">🔹 One-Liner Nmap Scan Script</h2>
+<h3 id="script_1"><strong>Script:</strong></h3>
+<pre><code class="language-bash">for ip in $(cat ips.txt); do nmap -sn $ip; done
+</code></pre>
+<h3 id="explanation_1"><strong>Explanation:</strong></h3>
+<ul>
+<li><strong><code>cat ips.txt</code></strong> → Reads IPs from <code>ips.txt</code> (each IP on a new line).</li>
+<li><strong><code>for ip in $(cat ips.txt); do ... done</code></strong> → Iterates over each IP.</li>
+<li><strong><code>nmap -sP $ip</code></strong> → Runs a <strong>ping scan</strong> (<code>-sn</code> checks if host is up).</li>
+</ul>
+<hr />
+<h2 id="additional-useful-scripts">🔹 Additional Useful Scripts</h2>
+<h3 id="port-scanner-using-netcat"><strong>Port Scanner Using Netcat</strong></h3>
+<pre><code class="language-bash">#!/bin/bash
 
-## Code Blocks
+if [ &quot;$#&quot; -ne 2 ]; then
+    echo &quot;Usage: ./portscan.sh &lt;IP&gt; &lt;Port-Range&gt;&quot;
+    exit 1
+fi
 
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
+for port in $(seq $2); do
+    (echo &gt; /dev/tcp/$1/$port) &gt;/dev/null 2&gt;&amp;1 &amp;&amp; echo &quot;Port $port is open&quot; || echo &quot;Port $port is closed&quot;
+done
 </code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
-</code></pre>
-<hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
-</code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
+<h3 id="explanation_2"><strong>Explanation:</strong></h3>
+<ul>
+<li><strong><code>/dev/tcp/$1/$port</code></strong> → Uses <strong>Bash TCP sockets</strong> to check port status.</li>
+<li><strong><code>&gt;/dev/null 2&gt;&amp;1</code></strong> → Suppresses errors for closed ports.</li>
+<li><strong><code>echo "Port $port is open"</code></strong> → Prints open ports.</li>
+</ul>
+<h3 id="executing-the-script_1"><strong>Executing the Script:</strong></h3>
+<pre><code class="language-bash">chmod +x portscan.sh
+./portscan.sh 192.168.1.1 80-100  # Scan ports 80-100
 </code></pre>
 <hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
+<h2 id="script-for-automated-backups">🔹 Script for Automated Backups</h2>
+<pre><code class="language-bash">#!/bin/bash
+BACKUP_DIR=&quot;$HOME/backup&quot;
+mkdir -p $BACKUP_DIR
+tar -czf $BACKUP_DIR/backup_$(date +%F).tar.gz $HOME/Documents
 </code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
-</code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
-<hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
-</code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
+<h3 id="explanation_3"><strong>Explanation:</strong></h3>
+<ul>
+<li><strong><code>mkdir -p $BACKUP_DIR</code></strong> → Creates backup directory if not exists.</li>
+<li><strong><code>tar -czf</code></strong> → Compresses files into a <code>.tar.gz</code> archive.</li>
+<li><strong><code>$(date +%F)</code></strong> → Appends current date to backup file name.</li>
+</ul>
+<h3 id="executing-the-script_2"><strong>Executing the Script:</strong></h3>
+<pre><code class="language-bash">chmod +x backup.sh
+./backup.sh
 </code></pre>
 <hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
-</code></pre>
-<p>This renders as:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
-</tr>
-<tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
-</code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
-<hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
-</code></pre>
-<hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
-<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Bash scripting is a powerful tool for <strong>networking, automation, and security tasks</strong>. This guide covered:
+- <strong>Ping sweeps &amp; Nmap automation</strong>
+- <strong>Loops, arguments (<code>$1</code>), and conditionals</strong>
+- <strong>Useful scripts for scanning &amp; backups</strong></p>
 
 
 

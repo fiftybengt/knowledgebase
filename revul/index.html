@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ssh/">
+        <link rel="prev" href="../pynet/">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../scanenum/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>Researching Vulnerabilities - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#identifying-and-researching-vulnerabilities" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              Researching Vulnerabilities
             
           </span>
         </div>
@@ -448,10 +448,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../revul/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Researching Vulnerabilities
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -461,6 +482,221 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifying-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Identifying Vulnerabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Identifying Vulnerabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-enumerate-open-ports-and-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Enumerate Open Ports and Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Enumerate Open Ports and Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-nmap-for-port-service-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Nmap for Port &amp; Service Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-for-known-vulnerabilities-in-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking for Known Vulnerabilities in Nmap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#researching-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Researching Exploits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Researching Exploits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-google-dorking-for-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Google Dorking for Vulnerabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Google Dorking for Vulnerabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-google-dorks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful Google Dorks:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-searching-exploit-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Searching Exploit Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Searching Exploit Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exploit-db-exploit-dbcom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploit-DB (exploit-db.com)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cve-details-cvedetailscom" class="md-nav__link">
+    <span class="md-ellipsis">
+      CVE Details (cvedetails.com)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rapid7-metasploit-rapid7com" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rapid7 &amp; Metasploit (rapid7.com)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-proof-of-concept-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub (Proof-of-Concept Exploits)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploit-testing-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Exploit Testing &amp; Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Exploit Testing & Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-testing-an-exploit-in-a-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Testing an Exploit in a Lab
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Testing an Exploit in a Lab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-metasploit-exploit-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Metasploit Exploit Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,19 +789,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -580,7 +814,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -591,31 +825,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Formatting Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,185 +838,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Document Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links &amp; Images
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Links & Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Links:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Images:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring mkdocs.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Local Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extending MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Plugins
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -909,37 +943,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
+  <a href="#identifying-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Lists &amp; Bullet Points
+      🔹 Identifying Vulnerabilities
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 Identifying Vulnerabilities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#1-enumerate-open-ports-and-services" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
+      1️⃣ Enumerate Open Ports and Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Enumerate Open Ports and Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-nmap-for-port-service-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Nmap for Port &amp; Service Detection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
+  <a href="#checking-for-known-vulnerabilities-in-nmap" class="md-nav__link">
     <span class="md-ellipsis">
-      Ordered List:
+      Checking for Known Vulnerabilities in Nmap
     </span>
   </a>
   
@@ -949,30 +993,36 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#researching-exploits" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 Researching Exploits
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="🔹 Researching Exploits">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#2-google-dorking-for-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      2️⃣ Google Dorking for Vulnerabilities
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="2️⃣ Google Dorking for Vulnerabilities">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#useful-google-dorks" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Useful Google Dorks:
     </span>
   </a>
   
@@ -982,48 +1032,48 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-searching-exploit-databases" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      3️⃣ Searching Exploit Databases
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="3️⃣ Searching Exploit Databases">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#exploit-db-exploit-dbcom" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Exploit-DB (exploit-db.com)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#cve-details-cvedetailscom" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      CVE Details (cvedetails.com)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rapid7-metasploit-rapid7com" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rapid7 &amp; Metasploit (rapid7.com)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-proof-of-concept-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub (Proof-of-Concept Exploits)
     </span>
   </a>
   
@@ -1033,23 +1083,43 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#exploit-testing-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      🔹 Exploit Testing &amp; Validation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="🔹 Exploit Testing & Validation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#4-testing-an-exploit-in-a-lab" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      4️⃣ Testing an Exploit in a Lab
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Testing an Exploit in a Lab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-metasploit-exploit-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Metasploit Exploit Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1061,7 +1131,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -1083,137 +1153,128 @@
 
 
 
+<h1 id="identifying-and-researching-vulnerabilities">Identifying and Researching Vulnerabilities</h1>
+<h2 id="introduction">🔹 Introduction</h2>
+<p>Identifying vulnerabilities is a crucial part of penetration testing and security assessments. Once open ports and running services are detected, <strong>researching exploits</strong> can help determine potential attack vectors.</p>
 <hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
+<h2 id="identifying-vulnerabilities">🔹 Identifying Vulnerabilities</h2>
+<h3 id="1-enumerate-open-ports-and-services"><strong>1️⃣ Enumerate Open Ports and Services</strong></h3>
+<p>Before searching for vulnerabilities, it's essential to <strong>identify active services</strong> on a target machine.</p>
+<h4 id="using-nmap-for-port-service-detection"><strong>Using Nmap for Port &amp; Service Detection</strong></h4>
+<pre><code class="language-bash">nmap -sV -O -p- &lt;target&gt;
+</code></pre>
+<ul>
+<li><strong><code>-sV</code></strong> → Detects service versions.</li>
+<li><strong><code>-O</code></strong> → Attempts OS detection.</li>
+<li><strong><code>-p-</code></strong> → Scans all <strong>65,535</strong> ports.</li>
+</ul>
+<h4 id="checking-for-known-vulnerabilities-in-nmap"><strong>Checking for Known Vulnerabilities in Nmap</strong></h4>
+<pre><code class="language-bash">nmap --script vuln &lt;target&gt;
+</code></pre>
+<ul>
+<li>Runs Nmap's built-in vulnerability detection scripts.</li>
+</ul>
 <hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
-</code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
-
-## Networking Commands
-
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
-</code></pre>
-<pre><code>
----
-
-## Code Blocks
-
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
-</code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
-</code></pre>
-<hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
-</code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
-</code></pre>
-<hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
-</code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
-</code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
-<hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
-</code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
-</code></pre>
-<hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
-</code></pre>
-<p>This renders as:</p>
+<h2 id="researching-exploits">🔹 Researching Exploits</h2>
+<p>Once the <strong>running services and versions</strong> are identified, research can begin to find <strong>exploits</strong> associated with those versions.</p>
+<h3 id="2-google-dorking-for-vulnerabilities"><strong>2️⃣ Google Dorking for Vulnerabilities</strong></h3>
+<p>Google can help uncover exploits and research papers related to a specific service.</p>
+<h4 id="useful-google-dorks"><strong>Useful Google Dorks:</strong></h4>
 <table>
 <thead>
 <tr>
-<th>Command</th>
-<th>Description</th>
+<th>Query</th>
+<th>Example</th>
+<th>Use Case</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
+<td><code>site:exploit-db.com</code></td>
+<td><code>site:exploit-db.com OpenSSH 7.2</code></td>
+<td>Find exploits on Exploit-DB</td>
 </tr>
 <tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
+<td><code>site:cvedetails.com</code></td>
+<td><code>site:cvedetails.com Apache 2.4</code></td>
+<td>View CVEs related to Apache</td>
+</tr>
+<tr>
+<td><code>inurl:github</code></td>
+<td><code>OpenSSH exploit inurl:github</code></td>
+<td>Look for PoC exploits on GitHub</td>
+</tr>
+<tr>
+<td><code>site:rapid7.com</code></td>
+<td><code>site:rapid7.com Tomcat</code></td>
+<td>Look for Metasploit modules</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
-</code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
+<h3 id="3-searching-exploit-databases"><strong>3️⃣ Searching Exploit Databases</strong></h3>
+<h4 id="exploit-db-exploit-dbcom"><strong>Exploit-DB (exploit-db.com)</strong></h4>
+<p>Exploit-DB contains a vast collection of publicly known exploits.
+- <strong>Website:</strong> <a href="https://www.exploit-db.com">https://www.exploit-db.com</a>
+- <strong>Manual Search:</strong> Enter a service name and version in the search bar.
+- <strong>Command-line Search:</strong>
+  <code>bash
+  searchsploit &lt;service name&gt;</code>
+  <strong>Example:</strong>
+  <code>bash
+  searchsploit OpenSSH 7.2</code>
+  - If an exploit exists, <strong>searchsploit</strong> will display it.
+  - To view exploit details:
+    <code>bash
+    searchsploit -x &lt;exploit_path&gt;</code></p>
+<h4 id="cve-details-cvedetailscom"><strong>CVE Details (cvedetails.com)</strong></h4>
+<ul>
+<li>Provides detailed information on <strong>known vulnerabilities (CVEs)</strong>.</li>
+<li><strong>Website:</strong> <a href="https://www.cvedetails.com">https://www.cvedetails.com</a></li>
+<li><strong>How to Use:</strong> Search for a software name or CVE ID (e.g., <code>CVE-2021-3156</code>).</li>
+</ul>
+<h4 id="rapid7-metasploit-rapid7com"><strong>Rapid7 &amp; Metasploit (rapid7.com)</strong></h4>
+<ul>
+<li><strong>Rapid7</strong> is the creator of Metasploit and provides <strong>prebuilt exploits</strong>.</li>
+<li><strong>Website:</strong> <a href="https://www.rapid7.com/db/">https://www.rapid7.com/db/</a></li>
+<li><strong>Metasploit Framework Command:</strong>
+  <code>bash
+  msfconsole
+  search &lt;service name&gt;</code>
+  <strong>Example:</strong>
+  <code>bash
+  search vsftpd</code></li>
+<li>If a module exists, load it:
+    <code>bash
+    use exploit/unix/ftp/vsftpd_234_backdoor</code></li>
+</ul>
+<h4 id="github-proof-of-concept-exploits"><strong>GitHub (Proof-of-Concept Exploits)</strong></h4>
+<ul>
+<li>Many researchers upload PoC (Proof-of-Concept) exploits on GitHub.</li>
+<li><strong>Search Example:</strong>
+  <code>bash
+  OpenSSH 7.2 exploit site:github.com</code></li>
+<li>Look for Python or Bash scripts that demonstrate vulnerabilities.</li>
+</ul>
 <hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
+<h2 id="exploit-testing-validation">🔹 Exploit Testing &amp; Validation</h2>
+<p>Once a potential exploit is found, it must be tested <strong>responsibly</strong> in a controlled environment.</p>
+<h3 id="4-testing-an-exploit-in-a-lab"><strong>4️⃣ Testing an Exploit in a Lab</strong></h3>
+<ul>
+<li>Set up a <strong>virtual machine</strong> with the vulnerable software.</li>
+<li>Use <strong>Metasploit</strong> or manual methods to execute the exploit.</li>
+<li>Ensure <strong>proper permissions</strong> and <strong>ethical guidelines</strong> are followed.</li>
+</ul>
+<h4 id="basic-metasploit-exploit-workflow"><strong>Basic Metasploit Exploit Workflow</strong></h4>
+<pre><code class="language-bash">msfconsole
+use exploit/&lt;exploit_path&gt;
+set RHOSTS &lt;target IP&gt;
+set PAYLOAD &lt;payload_type&gt;
+exploit
 </code></pre>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
-<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Identifying and researching vulnerabilities requires <strong>careful analysis of open ports, service versions, and known exploits</strong>. By leveraging <strong>Google dorking, exploit databases, and Metasploit</strong>, security researchers can stay updated on <strong>emerging threats</strong> and proactively defend against them.</p>
 
 
 

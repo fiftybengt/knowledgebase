@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ssh/">
+        <link rel="prev" href="../linux-commands/">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../manuexpl/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>Linux Users and Privileges - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#linux-users-and-privileges" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              Linux Users and Privileges
             
           </span>
         </div>
@@ -343,10 +343,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../linuxuserpriv/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux Users and Privileges
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -356,6 +377,209 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-file-permissions-ls-la-drwxrwxrwx" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Understanding File Permissions (ls -la &amp; drwxrwxrwx)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Understanding File Permissions (ls -la & drwxrwxrwx)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-down-drwxr-xr-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking Down drwxr-xr--
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-permissions-with-chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Changing Permissions with chmod
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Changing Permissions with chmod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-numeric-mode-octal-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Numeric Mode (Octal Representation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-symbolic-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Symbolic Mode
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Managing Users
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Managing Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a User
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-users-in-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Users in Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-passwords-etcshadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Passwords (/etc/shadow)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-users-running-commands-as-another-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Switching Users &amp; Running Commands as Another User
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Switching Users & Running Commands as Another User">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switching-users-su-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      **Switching Users (su &amp; sudo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-sudo-for-privileged-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Sudo for Privileged Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-user-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Managing User Groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Managing User Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-modifying-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating &amp; Modifying Groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Useful Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,19 +777,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -580,7 +802,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -591,31 +813,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Formatting Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,185 +826,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Document Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links &amp; Images
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Links & Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Links:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Images:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring mkdocs.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Local Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extending MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Plugins
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -909,37 +931,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#understanding-file-permissions-ls-la-drwxrwxrwx" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 Understanding File Permissions (ls -la &amp; drwxrwxrwx)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 Understanding File Permissions (ls -la & drwxrwxrwx)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#breaking-down-drwxr-xr-" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
+      Breaking Down drwxr-xr--
     </span>
   </a>
   
@@ -951,28 +955,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#changing-permissions-with-chmod" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 Changing Permissions with chmod
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="🔹 Changing Permissions with chmod">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#using-numeric-mode-octal-representation" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      Using Numeric Mode (Octal Representation)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#using-symbolic-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Using Symbolic Mode
     </span>
   </a>
   
@@ -984,46 +988,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#managing-users" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      🔹 Managing Users
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="🔹 Managing Users">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#adding-a-user" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Adding a User
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#viewing-users-in-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Viewing Users in Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-passwords-etcshadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Passwords (/etc/shadow)
     </span>
   </a>
   
@@ -1035,19 +1030,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#switching-users-running-commands-as-another-user" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      🔹 Switching Users &amp; Running Commands as Another User
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="🔹 Switching Users & Running Commands as Another User">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#switching-users-su-sudo" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      **Switching Users (su &amp; sudo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-sudo-for-privileged-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Sudo for Privileged Commands
     </span>
   </a>
   
@@ -1055,13 +1059,55 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-user-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Managing User Groups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Managing User Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-modifying-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating &amp; Modifying Groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Useful Commands
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -1083,89 +1129,155 @@
 
 
 
+<h1 id="linux-users-and-privileges">Linux - Users and Privileges</h1>
+<h2 id="understanding-file-permissions-ls-la-drwxrwxrwx">🔹 Understanding File Permissions (<code>ls -la</code> &amp; <code>drwxrwxrwx</code>)</h2>
+<p>In Linux, file and directory permissions are fundamental for security and access control. You can view permissions using:</p>
+<pre><code class="language-bash">ls -la
+</code></pre>
+<p>This command lists all files, including <strong>hidden files</strong>, along with their permissions. Example output:</p>
+<pre><code class="language-bash">drwxr-xr--  3 user group 4096 Feb 8 10:00 myfolder
+-rw-r--r--  1 user group  123 Feb 8 10:01 myfile.txt
+</code></pre>
+<h3 id="breaking-down-drwxr-xr-"><strong>Breaking Down <code>drwxr-xr--</code></strong></h3>
+<p>Each file or directory has a permission structure consisting of <strong>three parts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Represents</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First character</strong></td>
+<td>Type (directory/file)</td>
+<td><code>d</code> (directory), <code>-</code> (file), <code>l</code> (symlink)</td>
+</tr>
+<tr>
+<td><strong>Next 3 (<code>rwx</code>)</strong></td>
+<td>Owner permissions</td>
+<td><code>r</code> (read), <code>w</code> (write), <code>x</code> (execute)</td>
+</tr>
+<tr>
+<td><strong>Next 3 (<code>r-x</code>)</strong></td>
+<td>Group permissions</td>
+<td>Similar to owner section</td>
+</tr>
+<tr>
+<td><strong>Last 3 (<code>r--</code>)</strong></td>
+<td>Others (everyone else)</td>
+<td>Similar to previous sections</td>
+</tr>
+</tbody>
+</table>
+<p>Example:
+- <strong><code>drwxr-xr--</code></strong> → Directory (<code>d</code>), owner has full rights (<code>rwx</code>), group has read &amp; execute (<code>r-x</code>), others have read (<code>r--</code>).
+- <strong><code>-rw-r--r--</code></strong> → Regular file, readable by everyone but writable only by owner.</p>
 <hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
-<hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
+<h2 id="changing-permissions-with-chmod">🔹 Changing Permissions with <code>chmod</code></h2>
+<p><strong><code>chmod</code> (Change Mode)</strong> modifies file permissions.</p>
+<h3 id="using-numeric-mode-octal-representation"><strong>Using Numeric Mode (Octal Representation)</strong></h3>
+<p>Each permission type corresponds to a number:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Binary</th>
+<th>Octal Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r--</code> (read)</td>
+<td>100</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>-w-</code> (write)</td>
+<td>010</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>--x</code> (execute)</td>
+<td>001</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>rwx</code> (full access)</td>
+<td>111</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>To grant <strong>full access (777) to all users</strong>:</p>
+<pre><code class="language-bash">chmod 777 myfile.txt
 </code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
-
-## Networking Commands
-
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
-</code></pre>
-<pre><code>
----
-
-## Code Blocks
-
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
-</code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
-</code></pre>
-<hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
-</code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
+<p>Example usage:
+- <code>chmod 755 script.sh</code> → Owner can <strong>read, write, execute</strong>, others can <strong>read and execute</strong>.
+- <code>chmod 644 document.txt</code> → Owner can <strong>read &amp; write</strong>, others can <strong>read only</strong>.</p>
+<h3 id="using-symbolic-mode"><strong>Using Symbolic Mode</strong></h3>
+<p>Instead of numbers, you can use <code>u</code> (user/owner), <code>g</code> (group), <code>o</code> (others), and <code>a</code> (all).</p>
+<pre><code class="language-bash">chmod u+x script.sh  # Give execute permission to the owner
+chmod g-w file.txt   # Remove write permission from group
+chmod o+r file.txt   # Allow others to read the file
 </code></pre>
 <hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
+<h2 id="managing-users">🔹 Managing Users</h2>
+<h3 id="adding-a-user"><strong>Adding a User</strong></h3>
+<p>To create a new user and set a password:</p>
+<pre><code class="language-bash">sudo adduser username
 </code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
+<p>You'll be prompted to enter details such as <strong>password, full name, and optional info</strong>.</p>
+<h3 id="viewing-users-in-linux"><strong>Viewing Users in Linux</strong></h3>
+<p>Linux users are stored in <code>/etc/passwd</code>:</p>
+<pre><code class="language-bash">cat /etc/passwd
 </code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
+<p>Each user entry consists of:</p>
+<pre><code>username:x:1000:1000:Full Name:/home/username:/bin/bash
+</code></pre>
+<h3 id="managing-passwords-etcshadow"><strong>Managing Passwords (<code>/etc/shadow</code>)</strong></h3>
+<p>Passwords are stored in <code>/etc/shadow</code> in <strong>hashed format</strong>:</p>
+<pre><code class="language-bash">sudo cat /etc/shadow
+</code></pre>
+<p>To <strong>crack password hashes</strong>, tools like <strong>John the Ripper</strong> can be used:</p>
+<pre><code class="language-bash">john --wordlist=rockyou.txt hashfile.txt
+</code></pre>
 <hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
+<h2 id="switching-users-running-commands-as-another-user">🔹 Switching Users &amp; Running Commands as Another User</h2>
+<h3 id="switching-users-su-sudo">**Switching Users (<code>su</code> &amp; <code>sudo</code>)</h3>
+<ul>
+<li><code>su username</code> → Switch to another user.</li>
+<li><code>su - username</code> → Switch and load their environment.</li>
+<li><code>exit</code> → Return to the previous user.</li>
+</ul>
+<h3 id="using-sudo-for-privileged-commands"><strong>Using Sudo for Privileged Commands</strong></h3>
+<p>Regular users <strong>cannot execute administrative commands</strong> unless they have <strong>sudo</strong> permissions.
+To run a command as a superuser:</p>
+<pre><code class="language-bash">sudo apt update
 </code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
+<p>To allow a user to use <code>sudo</code>, they must be added to the <strong>sudoers file</strong>:</p>
+<pre><code class="language-bash">sudo usermod -aG sudo username
+</code></pre>
+<p>To manually edit sudoers (use caution!):</p>
+<pre><code class="language-bash">sudo visudo
 </code></pre>
 <hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
+<h2 id="managing-user-groups">🔹 Managing User Groups</h2>
+<h3 id="viewing-groups"><strong>Viewing Groups</strong></h3>
+<pre><code class="language-bash">groups username
+cat /etc/group
 </code></pre>
-<p>This renders as:</p>
+<h3 id="creating-modifying-groups"><strong>Creating &amp; Modifying Groups</strong></h3>
+<ul>
+<li><code>sudo groupadd newgroup</code> → Create a new group.</li>
+<li><code>sudo usermod -aG groupname username</code> → Add user to a group.</li>
+<li><code>sudo gpasswd -d username groupname</code> → Remove user from a group.</li>
+<li><code>sudo deluser username</code> → Remove a user.</li>
+<li><code>sudo delgroup groupname</code> → Remove a group.</li>
+</ul>
+<hr />
+<h2 id="useful-commands">🔹 Useful Commands</h2>
 <table>
 <thead>
 <tr>
@@ -1175,45 +1287,38 @@ ls -lah
 </thead>
 <tbody>
 <tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
+<td><code>whoami</code></td>
+<td>Show current logged-in user</td>
 </tr>
 <tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
+<td><code>id</code></td>
+<td>Show user ID and group ID</td>
+</tr>
+<tr>
+<td><code>passwd</code></td>
+<td>Change user password</td>
+</tr>
+<tr>
+<td><code>finger username</code></td>
+<td>Get user details (install package if missing)</td>
+</tr>
+<tr>
+<td><code>last</code></td>
+<td>Show last logged-in users</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>Show currently logged-in users</td>
+</tr>
+<tr>
+<td><code>sudo !!</code></td>
+<td>Run the last command with <code>sudo</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
-</code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
-<hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
-</code></pre>
-<hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
-<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Understanding <strong>users, groups, and permissions</strong> is crucial for managing a Linux system securely. Using the correct permission structure, ensuring proper sudo configurations, and managing users effectively prevents unauthorized access and enhances security.</p>
 
 
 

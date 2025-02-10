@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ssh/">
+        <link rel="prev" href="../msfc/">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../pynet/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>Networking - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#networking-basics" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              Networking
             
           </span>
         </div>
@@ -406,10 +406,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../networking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Networking
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -419,6 +440,194 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ip-addressing-layer-3-network-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 IP Addressing (Layer 3 - Network Layer)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 IP Addressing (Layer 3 - Network Layer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      IPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-we-still-using-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Are We Still Using IPv4?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-ipv4-address-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Private IPv4 Address Ranges
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac-addressing-layer-2-data-link-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 MAC Addressing (Layer 2 - Data Link Layer)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-vs-udp-layer-4-transport-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 TCP vs. UDP (Layer 4 - Transport Layer)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 TCP vs. UDP (Layer 4 - Transport Layer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-transmission-control-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP (Transmission Control Protocol)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp-user-datagram-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP (User Datagram Protocol)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osi-model-7-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 OSI Model - 7 Layers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Subnetting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Subnetting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subnet-mask-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subnet Mask Breakdown
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-network-protocols-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Common Network Protocols &amp; Ports
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Common Network Protocols & Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#well-known-ports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Well-Known Ports:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,19 +762,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -580,7 +787,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -591,31 +798,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Formatting Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,185 +811,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Document Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links &amp; Images
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Links & Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Links:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Images:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring mkdocs.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Local Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extending MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Plugins
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -909,37 +916,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#ip-addressing-layer-3-network-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 IP Addressing (Layer 3 - Network Layer)
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 IP Addressing (Layer 3 - Network Layer)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#ipv4" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
+      IPv4
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
+  <a href="#ipv6" class="md-nav__link">
     <span class="md-ellipsis">
-      Ordered List:
+      IPv6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-we-still-using-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Are We Still Using IPv4?
     </span>
   </a>
   
@@ -951,28 +958,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#private-ipv4-address-ranges" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 Private IPv4 Address Ranges
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac-addressing-layer-2-data-link-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 MAC Addressing (Layer 2 - Data Link Layer)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-vs-udp-layer-4-transport-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 TCP vs. UDP (Layer 4 - Transport Layer)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 TCP vs. UDP (Layer 4 - Transport Layer)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#tcp-transmission-control-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      TCP (Transmission Control Protocol)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#udp-user-datagram-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      UDP (User Datagram Protocol)
     </span>
   </a>
   
@@ -984,46 +1009,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#osi-model-7-layers" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      🔹 OSI Model - 7 Layers
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
+  <a href="#subnetting" class="md-nav__link">
     <span class="md-ellipsis">
-      Tables
+      🔹 Subnetting
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="🔹 Subnetting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Key Concepts:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#subnet-mask-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Subnet Mask Breakdown
     </span>
   </a>
   
@@ -1035,19 +1051,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#common-network-protocols-ports" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      🔹 Common Network Protocols &amp; Ports
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="🔹 Common Network Protocols & Ports">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#well-known-ports" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      Well-Known Ports:
     </span>
   </a>
   
@@ -1061,7 +1077,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -1083,137 +1099,227 @@
 
 
 
+<h1 id="networking-basics">Networking Basics</h1>
+<h2 id="ip-addressing-layer-3-network-layer">🔹 IP Addressing (Layer 3 - Network Layer)</h2>
+<p>An <strong>IP address</strong> is a unique identifier assigned to each device on a network, allowing communication between devices. IP operates at <strong>Layer 3 (Network Layer)</strong> of the OSI model.</p>
+<h3 id="ipv4">IPv4</h3>
+<ul>
+<li><strong>32-bit address space</strong> → Supports <strong>2³² (~4.2 billion)</strong> unique addresses.</li>
+<li>Address format: <strong><code>xxx.xxx.xxx.xxx</code></strong> (four octets, each 8 bits).</li>
+<li>Due to address exhaustion, IPv4 requires techniques like <strong>NAT (Network Address Translation)</strong>.</li>
+</ul>
+<h3 id="ipv6">IPv6</h3>
+<ul>
+<li><strong>128-bit address space</strong> → Supports <strong>2¹²⁸</strong> addresses (virtually unlimited).</li>
+<li>Address format: <strong><code>xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx</code></strong> (hexadecimal).</li>
+<li>Designed to replace IPv4, but adoption is ongoing.</li>
+</ul>
+<h3 id="why-are-we-still-using-ipv4">Why Are We Still Using IPv4?</h3>
+<p>Due to address exhaustion, <strong>NAT (Network Address Translation)</strong> allows multiple devices in a private network to share a single public IPv4 address. This helps extend the usability of IPv4.</p>
 <hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
-<hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
-</code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
-
-## Networking Commands
-
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
-</code></pre>
-<pre><code>
----
-
-## Code Blocks
-
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
-</code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
-</code></pre>
-<hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
-</code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
-</code></pre>
-<hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
-</code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
-</code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
-<hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
-</code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
-</code></pre>
-<hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
-</code></pre>
-<p>This renders as:</p>
+<h2 id="private-ipv4-address-ranges">🔹 Private IPv4 Address Ranges</h2>
+<p>IPv4 addresses are categorized into different <strong>classes</strong>, with specific private IP ranges:</p>
 <table>
 <thead>
 <tr>
-<th>Command</th>
+<th>Class</th>
+<th>Address Range</th>
+<th>Number of Hosts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><code>10.0.0.0 – 10.255.255.255</code></td>
+<td>16 million</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><code>172.16.0.0 – 172.31.255.255</code></td>
+<td>65,000</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><code>192.168.0.0 – 192.168.255.255</code></td>
+<td>254</td>
+</tr>
+</tbody>
+</table>
+<p>These private addresses <strong>cannot</strong> be routed on the public internet and require NAT for external communication.</p>
+<hr />
+<h2 id="mac-addressing-layer-2-data-link-layer">🔹 MAC Addressing (Layer 2 - Data Link Layer)</h2>
+<p>A <strong>MAC address</strong> (Media Access Control address) is a <strong>48-bit unique identifier</strong> assigned to network interfaces and operates at <strong>Layer 2 (Data Link Layer)</strong> of the OSI model.</p>
+<ul>
+<li>Format: <strong><code>XX:XX:XX:XX:XX:XX</code></strong> (six pairs of hexadecimal digits).</li>
+<li>The first three pairs (<strong>OUI - Organizationally Unique Identifier</strong>) identify the manufacturer.</li>
+<li>You can look up MAC addresses using online databases.</li>
+</ul>
+<hr />
+<h2 id="tcp-vs-udp-layer-4-transport-layer">🔹 TCP vs. UDP (Layer 4 - Transport Layer)</h2>
+<h3 id="tcp-transmission-control-protocol"><strong>TCP (Transmission Control Protocol)</strong></h3>
+<ul>
+<li><strong>Connection-oriented</strong> protocol (ensures reliable communication).</li>
+<li>Uses a <strong>3-way handshake</strong> to establish a connection:</li>
+<li><strong>SYN</strong> → Client sends a request to initiate communication.</li>
+<li><strong>SYN-ACK</strong> → Server acknowledges the request.</li>
+<li><strong>ACK</strong> → Client confirms the connection is established.</li>
+<li><strong>Use case:</strong> Web browsing (HTTP/HTTPS), emails (SMTP/IMAP/POP3), file transfers (FTP).</li>
+</ul>
+<h3 id="udp-user-datagram-protocol"><strong>UDP (User Datagram Protocol)</strong></h3>
+<ul>
+<li><strong>Connectionless</strong> protocol (faster but unreliable).</li>
+<li>No handshake; packets are sent without guarantee of arrival.</li>
+<li><strong>Use case:</strong> Video streaming, VoIP calls, online gaming (low-latency applications).</li>
+</ul>
+<hr />
+<h2 id="osi-model-7-layers">🔹 OSI Model - 7 Layers</h2>
+<p>The <strong>OSI (Open Systems Interconnection) Model</strong> standardizes communication functions across networks.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Function &amp; Protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>7</strong></td>
+<td>Application</td>
+<td>HTTP, HTTPS, FTP, SMTP, DNS</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Presentation</td>
+<td>Encryption, SSL/TLS, ASCII</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Session</td>
+<td>Manages connections (RPC, NetBIOS)</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Transport</td>
+<td>TCP, UDP</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Network</td>
+<td>IP, ICMP, ARP, RIP</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Data Link</td>
+<td>MAC addresses, Ethernet</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>Physical</td>
+<td>Cables, NICs, Wi-Fi</td>
+</tr>
+</tbody>
+</table>
+<p>Each layer provides specific functionality to ensure smooth data transmission.</p>
+<hr />
+<h2 id="subnetting">🔹 Subnetting</h2>
+<p><strong>Subnetting</strong> divides a large network into smaller sub-networks (subnets) to improve efficiency and security.</p>
+<h3 id="key-concepts"><strong>Key Concepts:</strong></h3>
+<ul>
+<li><strong>Subnet Mask</strong>: Determines how many bits are used for the <strong>network</strong> vs. <strong>hosts</strong>.</li>
+<li><strong>CIDR (Classless Inter-Domain Routing)</strong>: Defines subnet masks using <code>/</code> notation (e.g., <code>192.168.1.0/24</code>).</li>
+<li><strong>Whack (<code>/</code> Notation)</strong>: The number after <code>/</code> indicates how many bits belong to the network.</li>
+</ul>
+<h3 id="subnet-mask-breakdown"><strong>Subnet Mask Breakdown</strong></h3>
+<table>
+<thead>
+<tr>
+<th>CIDR Notation</th>
+<th>Subnet Mask</th>
+<th># of Hosts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/8</code></td>
+<td><code>255.0.0.0</code></td>
+<td>16M hosts</td>
+</tr>
+<tr>
+<td><code>/16</code></td>
+<td><code>255.255.0.0</code></td>
+<td>65K hosts</td>
+</tr>
+<tr>
+<td><code>/24</code></td>
+<td><code>255.255.255.0</code></td>
+<td>254 hosts</td>
+</tr>
+</tbody>
+</table>
+<p>For subnetting calculations, <strong>IP calculators</strong> like <a href="https://www.ipaddressguide.com/cidr">IPaddressguide.com</a> help determine IP ranges and hosts available.</p>
+<hr />
+<h2 id="common-network-protocols-ports">🔹 Common Network Protocols &amp; Ports</h2>
+<h3 id="well-known-ports"><strong>Well-Known Ports:</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Port</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
+<td>HTTP</td>
+<td>80</td>
+<td>Web traffic (unencrypted)</td>
 </tr>
 <tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>Secure web traffic (SSL/TLS)</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>21</td>
+<td>File transfer</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>Secure shell access</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>Domain name resolution</td>
+</tr>
+<tr>
+<td>DHCP</td>
+<td>67/68</td>
+<td>Dynamic IP allocation</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+<td>Email sending</td>
+</tr>
+<tr>
+<td>IMAP</td>
+<td>143</td>
+<td>Email retrieval</td>
+</tr>
+<tr>
+<td>RDP</td>
+<td>3389</td>
+<td>Remote desktop protocol</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
-</code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
-<hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
-</code></pre>
-<hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
-<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Understanding <strong>IP addressing, MAC addresses, TCP/UDP, OSI model, and subnetting</strong> is essential for networking. Subnetting efficiently divides networks, while protocols ensure seamless communication. By leveraging these concepts, network engineers and security professionals can design and troubleshoot robust networks effectively.</p>
 
 
 
