@@ -1,6 +1,6 @@
 # Python Networking & Socket Programming Guide
 
-## 🔹 Shebang for Python Scripts
+##  Shebang for Python Scripts
 The **shebang** (`#!`) tells the system which interpreter to use when executing a script.
 
 For Python 3, use:
@@ -11,7 +11,7 @@ This ensures the script runs with the default `python3` interpreter in the syste
 
 ---
 
-## 🔹 Importing & Using the `socket` Module
+##  Importing & Using the `socket` Module
 The **`socket`** module in Python allows for low-level networking. A socket provides a communication endpoint between two systems.
 
 ### **Common Socket Types**:
@@ -55,7 +55,7 @@ target.close()
 
 ---
 
-## 🔹 `nc -nvlp` Terminal Command Explained
+##  `nc -nvlp` Terminal Command Explained
 `nc -nvlp <port>` is a **Netcat** command used to **listen for incoming connections**.
 ```bash
 nc -nvlp 8080
@@ -70,7 +70,7 @@ This is useful for testing socket scripts by opening a listener on a port and wa
 
 ---
 
-## 🔹 Python Port Scanner
+##  Python Port Scanner
 A **simple Python script** to scan for **open ports** on a target machine.
 
 ```python
@@ -107,6 +107,6 @@ This will output which ports are **open or closed** on the target machine.
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Python’s `socket` module allows for powerful **network programming**, from creating simple **server-client** connections to **port scanning**. Understanding **Netcat (`nc`), socket types, and proper implementation** is key for networking and cybersecurity applications.
 

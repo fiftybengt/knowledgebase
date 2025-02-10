@@ -1,6 +1,6 @@
 # SMB (Server Message Block) - Port 139 & 445
 
-## 🔹 Introduction to SMB
+##  Introduction to SMB
 **SMB (Server Message Block)** is a **network file sharing protocol** that allows applications or users to read and write files over a network. It enables **file sharing, printer sharing, and remote access** to Windows-based resources. SMB operates mainly over **port 139 (NetBIOS) and port 445 (Direct TCP/IP)**.
 
 ### **Ports Used by SMB:**
@@ -14,7 +14,7 @@
 
 ---
 
-## 🔹 Enumerating SMB Shares
+##  Enumerating SMB Shares
 To discover **shared folders**, we can use **smbclient** (a command-line tool for SMB access) to list available shares on a target system.
 
 ### **Listing SMB Shares**
@@ -36,7 +36,7 @@ smbclient -L \\192.168.0.0\ADMIN$
 
 ---
 
-## 🔹 SMB Anonymous Access
+##  SMB Anonymous Access
 Some SMB servers allow **unauthenticated (anonymous) access**, meaning that no username or password is required to view or access shared resources.
 
 ### **Checking for Anonymous SMB Access:**
@@ -58,7 +58,7 @@ smbclient \\192.168.0.0\public -N
 
 ---
 
-## 🔹 Additional SMB Enumeration & Exploitation Tools
+##  Additional SMB Enumeration & Exploitation Tools
 ### **Nmap SMB Scripts**
 Nmap has built-in scripts for **SMB enumeration** and **vulnerability detection**.
 ```bash
@@ -81,7 +81,7 @@ nmap --script smb-vuln* -p 139,445 192.168.0.0  # Checks for known SMB vulnerabi
 
 ---
 
-## 🔹 SMB Exploits & Security Concerns
+##  SMB Exploits & Security Concerns
 ### **Common SMB Exploits:**
 - **SMB Null Sessions** (unauthorized access to shared resources).
 - **EternalBlue (MS17-010)** → Remote code execution vulnerability in older SMB versions.
@@ -95,7 +95,7 @@ nmap --script smb-vuln* -p 139,445 192.168.0.0  # Checks for known SMB vulnerabi
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 SMB is a **powerful network protocol** for file sharing, but it also presents **security risks** when misconfigured. Understanding SMB enumeration techniques can help identify potential vulnerabilities and secure network resources.
 
 

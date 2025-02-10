@@ -1,12 +1,12 @@
 # Identifying and Researching Vulnerabilities
 
-## 🔹 Introduction
+##  Introduction
 Identifying vulnerabilities is a crucial part of penetration testing and security assessments. Once open ports and running services are detected, **researching exploits** can help determine potential attack vectors.
 
 ---
 
-## 🔹 Identifying Vulnerabilities
-### **1️⃣ Enumerate Open Ports and Services**
+##  Identifying Vulnerabilities
+### **1️ Enumerate Open Ports and Services**
 Before searching for vulnerabilities, it's essential to **identify active services** on a target machine.
 
 #### **Using Nmap for Port & Service Detection**
@@ -25,10 +25,10 @@ nmap --script vuln <target>
 
 ---
 
-## 🔹 Researching Exploits
+##  Researching Exploits
 Once the **running services and versions** are identified, research can begin to find **exploits** associated with those versions.
 
-### **2️⃣ Google Dorking for Vulnerabilities**
+### **2️ Google Dorking for Vulnerabilities**
 Google can help uncover exploits and research papers related to a specific service.
 #### **Useful Google Dorks:**
 | Query | Example | Use Case |
@@ -40,7 +40,7 @@ Google can help uncover exploits and research papers related to a specific servi
 
 ---
 
-### **3️⃣ Searching Exploit Databases**
+### **3️ Searching Exploit Databases**
 #### **Exploit-DB (exploit-db.com)**
 Exploit-DB contains a vast collection of publicly known exploits.
 - **Website:** [https://www.exploit-db.com](https://www.exploit-db.com)
@@ -91,10 +91,10 @@ Exploit-DB contains a vast collection of publicly known exploits.
 
 ---
 
-## 🔹 Exploit Testing & Validation
+##  Exploit Testing & Validation
 Once a potential exploit is found, it must be tested **responsibly** in a controlled environment.
 
-### **4️⃣ Testing an Exploit in a Lab**
+### **4️ Testing an Exploit in a Lab**
 - Set up a **virtual machine** with the vulnerable software.
 - Use **Metasploit** or manual methods to execute the exploit.
 - Ensure **proper permissions** and **ethical guidelines** are followed.
@@ -110,7 +110,7 @@ exploit
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Identifying and researching vulnerabilities requires **careful analysis of open ports, service versions, and known exploits**. By leveraging **Google dorking, exploit databases, and Metasploit**, security researchers can stay updated on **emerging threats** and proactively defend against them.
 
 

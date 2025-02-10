@@ -1,6 +1,6 @@
 # SSH (Secure Shell) Guide
 
-## 🔹 Introduction to SSH
+##  Introduction to SSH
 **SSH (Secure Shell)** is a cryptographic network protocol used for **secure remote login and file transfers** over an unsecured network. It replaces older protocols like **Telnet and FTP** by providing **encryption and authentication**.
 
 ### **Ports Used by SSH:**
@@ -15,7 +15,7 @@
 
 ---
 
-## 🔹 Connecting to an SSH Server
+##  Connecting to an SSH Server
 ### **Basic SSH Connection**
 ```bash
 ssh username@192.168.1.1
@@ -40,7 +40,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@192.168.1.1
 
 ---
 
-## 🔹 File Transfers via SSH
+##  File Transfers via SSH
 ### **Using SCP (Secure Copy Protocol)**
 ```bash
 scp file.txt username@192.168.1.1:/home/username/
@@ -62,7 +62,7 @@ sftp username@192.168.1.1
 
 ---
 
-## 🔹 Port Forwarding with SSH
+##  Port Forwarding with SSH
 SSH can tunnel traffic securely by forwarding ports.
 
 ### **Local Port Forwarding**
@@ -88,7 +88,7 @@ ssh -D 9050 -N username@192.168.1.1
 
 ---
 
-## 🔹 Hardening SSH Security
+##  Hardening SSH Security
 ### **Disable Root Login**
 Edit `/etc/ssh/sshd_config` and set:
 ```ini
@@ -136,7 +136,7 @@ sudo systemctl restart fail2ban
 
 ---
 
-## 🔹 SSH Enumeration & Penetration Testing
+##  SSH Enumeration & Penetration Testing
 ### **Enumerate SSH Version**
 ```bash
 nmap -p 22 --script ssh-hostkey,sshv1 192.168.1.1
@@ -158,6 +158,6 @@ ssh-audit 192.168.1.1
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 SSH is an essential tool for **secure remote administration**, but it must be **properly configured** to prevent unauthorized access. Hardening SSH, using **key-based authentication**, and **limiting root login** are critical steps for securing SSH servers.
 

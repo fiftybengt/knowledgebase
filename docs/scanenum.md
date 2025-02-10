@@ -1,11 +1,11 @@
 # Scanning & Enumeration
 
-## 🔹 Introduction
+##  Introduction
 Scanning and enumeration are essential steps in **penetration testing** and **network reconnaissance**. These techniques help identify **live hosts, open ports, running services, and potential vulnerabilities** within a network.
 
 ---
 
-## 🔹 Network Discovery
+##  Network Discovery
 Before scanning a target, we need to identify **active devices** in a network.
 
 ### **Netdiscover**
@@ -32,7 +32,7 @@ Before scanning a target, we need to identify **active devices** in a network.
 
 ---
 
-## 🔹 Port Scanning & Service Enumeration
+##  Port Scanning & Service Enumeration
 ### **Nmap - Network Mapper**
 Nmap is one of the most powerful **port scanners** for network reconnaissance.
 
@@ -57,7 +57,7 @@ sudo nmap -sS -sV -O -p 22,80,443 <target>
 
 ---
 
-## 🔹 Web Vulnerability Scanning
+##  Web Vulnerability Scanning
 ### **Nikto - Web Server Scanner**
 - **Use Case**: Scans web servers for **misconfigurations, outdated software, and vulnerabilities**.
 - **Command:**
@@ -76,7 +76,7 @@ nikto -h http://target.com -p 8080
 
 ---
 
-## 🔹 Directory & File Enumeration
+##  Directory & File Enumeration
 Many web applications **hide directories or files** that may contain sensitive information. Tools like **Dirbuster, Dirb, and Gobuster** help discover them.
 
 ### **Dirbuster**
@@ -114,7 +114,7 @@ Many web applications **hide directories or files** that may contain sensitive i
 
 ---
 
-## 🔹 What to Look For During Scanning & Enumeration
+##  What to Look For During Scanning & Enumeration
 ### **Key Information to Gather:**
 - **Live hosts** (IPs and MAC addresses).
 - **Open ports and running services.**
@@ -139,6 +139,6 @@ Many web applications **hide directories or files** that may contain sensitive i
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 **Scanning & enumeration** are crucial in any security assessment. Using **Nmap, Netdiscover, Nikto, and directory busters**, you can **map out a network, identify vulnerabilities, and find hidden resources**.
 

@@ -6,7 +6,7 @@ MkDocs is a powerful static site generator designed for documentation projects. 
 
 ---
 
-## 🔹 Creating a New MkDocs Page
+##  Creating a New MkDocs Page
 
 Each page in MkDocs is a **Markdown (********`.md`********\*\*\*\*\*\*\*\*) file** stored in the `docs/` directory.
 
@@ -33,7 +33,7 @@ Each page in MkDocs is a **Markdown (********`.md`********\*\*\*\*\*\*\*\*) file
 
 ---
 
-## 🔹 Managing Navigation in `mkdocs.yml`
+##  Managing Navigation in `mkdocs.yml`
 
 Navigation is defined in **`mkdocs.yml`** under the `nav:` section.
 
@@ -59,7 +59,7 @@ nav:
 
 ---
 
-## 🔹 Previewing Changes Locally
+##  Previewing Changes Locally
 
 After adding pages or updating navigation, preview the changes using:
 
@@ -71,7 +71,7 @@ Visit `http://127.0.0.1:8000/` in your browser to see the live site.
 
 ---
 
-## 🔹 Deploying the Site
+##  Deploying the Site
 
 When ready, build and deploy the MkDocs site:
 
@@ -84,7 +84,7 @@ This will generate static files in the `site/` folder and deploy them to GitHub 
 
 ---
 
-## 🔹 Best Practices
+##  Best Practices
 
 - Keep **file names lowercase** and use `-` instead of spaces.
 - Structure navigation **logically** for easy access.

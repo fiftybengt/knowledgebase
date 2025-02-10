@@ -1,11 +1,11 @@
 # Hacking Methodology
 
-## 🔹 The 5 Stages of Hacking
+##  The 5 Stages of Hacking
 Hacking follows a structured methodology to assess and exploit security weaknesses. Below are the **five key stages** of hacking, from reconnaissance to covering tracks.
 
 ---
 
-## 1️⃣ Passive & Active Reconnaissance
+## 1️ Passive & Active Reconnaissance
 ### **Passive Reconnaissance**
 - Involves gathering **information** about the target without directly interacting with it.
 - **Techniques:**
@@ -25,7 +25,7 @@ Hacking follows a structured methodology to assess and exploit security weakness
 
 ---
 
-## 2️⃣ Enumeration
+## 2️ Enumeration
 Enumeration is the process of extracting detailed system **information**, such as usernames, shares, and services, to identify potential entry points.
 
 ### **Common Enumeration Techniques:**
@@ -37,7 +37,7 @@ Enumeration is the process of extracting detailed system **information**, such a
 
 ---
 
-## 3️⃣ Gaining Access
+## 3️ Gaining Access
 This phase involves **exploiting vulnerabilities** to gain unauthorized access.
 
 ### **Common Attack Vectors:**
@@ -49,7 +49,7 @@ This phase involves **exploiting vulnerabilities** to gain unauthorized access.
 
 ---
 
-## 4️⃣ Maintaining Access
+## 4️ Maintaining Access
 Once access is gained, the next step is ensuring continued access for later use.
 
 ### **Persistence Techniques:**
@@ -70,7 +70,7 @@ Once access is gained, the next step is ensuring continued access for later use.
 
 ---
 
-## 5️⃣ Covering Tracks
+## 5️ Covering Tracks
 To avoid detection, hackers remove traces of their activities.
 
 ### **Log Clearing & Evidence Removal:**
@@ -91,7 +91,7 @@ To avoid detection, hackers remove traces of their activities.
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Understanding the **five stages of hacking** is essential for recognizing and mitigating potential threats. Ethical professionals use these concepts to strengthen security and protect systems from real-world attacks.
 
 

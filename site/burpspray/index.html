@@ -312,7 +312,7 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Introduction
+      Introduction
     </span>
   </a>
   
@@ -321,11 +321,11 @@
         <li class="md-nav__item">
   <a href="#credential-stuffing" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Credential Stuffing
+      Credential Stuffing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Credential Stuffing">
+    <nav class="md-nav" aria-label="Credential Stuffing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -354,11 +354,11 @@
         <li class="md-nav__item">
   <a href="#password-spraying" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Password Spraying
+      Password Spraying
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Password Spraying">
+    <nav class="md-nav" aria-label="Password Spraying">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -387,7 +387,7 @@
         <li class="md-nav__item">
   <a href="#best-practices-detection-avoidance" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices &amp; Detection Avoidance
+      Best Practices &amp; Detection Avoidance
     </span>
   </a>
   
@@ -396,7 +396,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Conclusion
+      Conclusion
     </span>
   </a>
   
@@ -789,11 +789,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
+      <a href="../create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Formatting Guide
+    Create post
     
   </span>
   
@@ -833,11 +833,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../create/" class="md-nav__link">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Create post
+    Formatting Guide
     
   </span>
   
@@ -906,7 +906,7 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Introduction
+      Introduction
     </span>
   </a>
   
@@ -915,11 +915,11 @@
         <li class="md-nav__item">
   <a href="#credential-stuffing" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Credential Stuffing
+      Credential Stuffing
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Credential Stuffing">
+    <nav class="md-nav" aria-label="Credential Stuffing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -948,11 +948,11 @@
         <li class="md-nav__item">
   <a href="#password-spraying" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Password Spraying
+      Password Spraying
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Password Spraying">
+    <nav class="md-nav" aria-label="Password Spraying">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -981,7 +981,7 @@
         <li class="md-nav__item">
   <a href="#best-practices-detection-avoidance" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices &amp; Detection Avoidance
+      Best Practices &amp; Detection Avoidance
     </span>
   </a>
   
@@ -990,7 +990,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Conclusion
+      Conclusion
     </span>
   </a>
   
@@ -1013,51 +1013,51 @@
 
 
 <h1 id="burp-suite-credential-stuffing-password-spraying">Burp Suite - Credential Stuffing &amp; Password Spraying</h1>
-<h2 id="introduction">🔹 Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>Burp Suite is a powerful <strong>web security testing tool</strong> used for <strong>testing login security, performing credential stuffing, and executing password spraying attacks</strong>. These techniques help identify <strong>weak authentication mechanisms and misconfigured login systems</strong>.</p>
-<p>⚠️ <strong>Warning:</strong> These attacks can trigger <strong>account lockouts</strong>, so always test <strong>ethically</strong> and in a controlled environment.</p>
+<p><strong>Warning:</strong> These attacks can trigger <strong>account lockouts</strong>, so always test <strong>ethically</strong> and in a controlled environment.</p>
 <hr />
-<h2 id="credential-stuffing">🔹 Credential Stuffing</h2>
+<h2 id="credential-stuffing">Credential Stuffing</h2>
 <h3 id="what-is-credential-stuffing"><strong>What is Credential Stuffing?</strong></h3>
 <p>Credential stuffing is an <strong>automated attack</strong> where attackers use <strong>breached username/password pairs</strong> in hopes that users have <strong>reused their credentials</strong> across multiple sites.</p>
 <h3 id="how-to-perform-credential-stuffing-in-burp-suite"><strong>How to Perform Credential Stuffing in Burp Suite</strong></h3>
-<p>1️⃣ <strong>Intercept Login Request:</strong>
+<p>1️ <strong>Intercept Login Request:</strong>
 - Enable <strong>Burp Suite Proxy</strong>.
 - Log in to the target website using <strong>any credentials</strong> (to capture the request).
 - <strong>Forward</strong> the request to see how the login works.</p>
-<p>2️⃣ <strong>Send to Intruder:</strong>
+<p>2️ <strong>Send to Intruder:</strong>
 - Right-click on the login request → <strong>Send to Intruder</strong>.
 - Clear existing positions (<code>Clear</code> button).
 - Highlight <strong>username</strong> and <strong>password</strong> fields → Click <code>Add</code>.</p>
-<p>3️⃣ <strong>Select Attack Type - Pitchfork:</strong>
+<p>3️ <strong>Select Attack Type - Pitchfork:</strong>
 - Use <code>Pitchfork Mode</code> (matches each username with its respective password in order).</p>
-<p>4️⃣ <strong>Configure Payloads:</strong>
+<p>4️ <strong>Configure Payloads:</strong>
 - Go to the <strong>Payloads</strong> tab.
 - <strong>Payload Set 1:</strong> Add a <strong>list of breached usernames</strong>.
 - <strong>Payload Set 2:</strong> Add a <strong>list of breached passwords</strong>.</p>
-<p>5️⃣ <strong>Analyze Responses:</strong>
+<p>5️ <strong>Analyze Responses:</strong>
 - Run the attack and analyze <strong>response codes</strong>.
 - Look for <strong>successful logins</strong> (e.g., HTTP 200 instead of 401 or 403).
 - Use <strong>Grep Extract</strong> to highlight error messages (e.g., <code>Cannot sign in</code>).</p>
 <hr />
-<h2 id="password-spraying">🔹 Password Spraying</h2>
+<h2 id="password-spraying">Password Spraying</h2>
 <h3 id="what-is-password-spraying"><strong>What is Password Spraying?</strong></h3>
 <p>Password spraying is an attack where <strong>a few common passwords</strong> are tested against <strong>many known usernames</strong>. Unlike brute force attacks, it avoids account lockouts by limiting attempts per user.</p>
 <h3 id="how-to-perform-password-spraying-in-burp-suite"><strong>How to Perform Password Spraying in Burp Suite</strong></h3>
-<p>1️⃣ <strong>Capture a Login Request:</strong>
+<p>1️ <strong>Capture a Login Request:</strong>
 - Enable Burp Suite Proxy.
 - Log in with <strong>any credentials</strong> and <strong>send the request to Intruder</strong>.</p>
-<p>2️⃣ <strong>Modify the Intruder Attack:</strong>
+<p>2️ <strong>Modify the Intruder Attack:</strong>
 - Select <strong>Sniper Mode</strong> (focuses on one list at a time).
 - Highlight the <strong>password field</strong> → Click <code>Add</code>.
 - Set the <strong>Payload Set 1</strong> to include weak passwords (e.g., <code>Fall2024!</code>, <code>Password123!</code>).
 - Set the <strong>username field</strong> to a known list of usernames.</p>
-<p>3️⃣ <strong>Control Attack Speed:</strong>
+<p>3️ <strong>Control Attack Speed:</strong>
 - Run <strong>only 1-2 attempts per user</strong> to avoid triggering security mechanisms.</p>
-<p>4️⃣ <strong>Check Responses:</strong>
+<p>4️ <strong>Check Responses:</strong>
 - Analyze <strong>status codes</strong> or <strong>error messages</strong> to identify successful login attempts.</p>
 <hr />
-<h2 id="best-practices-detection-avoidance">🔹 Best Practices &amp; Detection Avoidance</h2>
+<h2 id="best-practices-detection-avoidance">Best Practices &amp; Detection Avoidance</h2>
 <ul>
 <li>Use <strong>low request rates</strong> to avoid account lockouts.</li>
 <li>Monitor <strong>response codes</strong> to detect successful login attempts.</li>
@@ -1065,7 +1065,7 @@
 <li>Use <strong>proxy rotation</strong> (e.g., Burp Collaborator) to evade detection.</li>
 </ul>
 <hr />
-<h2 id="conclusion">🔹 Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>Burp Suite provides <strong>powerful automation for testing authentication security</strong>. Credential stuffing and password spraying can help identify <strong>weak login protections</strong>, but they should only be used in <strong>authorized security testing engagements</strong>.</p>
 
 

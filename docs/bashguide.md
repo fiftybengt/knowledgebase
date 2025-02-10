@@ -1,6 +1,6 @@
 # Bash Scripting Guide
 
-## 🔹 Introduction to Bash Scripting
+##  Introduction to Bash Scripting
 Bash scripting automates tasks and enhances productivity by executing commands in sequence. Scripts are commonly used for **networking, automation, and system administration**.
 
 To create and edit a Bash script:
@@ -15,7 +15,7 @@ Add the shebang (`#!`) at the beginning to specify the interpreter:
 
 ---
 
-## 🔹 Understanding a Simple Ping Script
+##  Understanding a Simple Ping Script
 ### Example Command:
 ```bash
 ping 192.168.1.1 -c 1 > ip.txt
@@ -28,14 +28,14 @@ cat ip.txt | grep "64 bytes" | cut -d " " -f4 | tr -d ":"
 4. **`cut -d " " -f4`** → Splits the line by spaces (`-d " "`), extracts **4th field (IP address)**.
 5. **`tr -d ":"`** → Removes trailing `:`.
 
-✅ **Corrected One-Liner:**
+**One-Liner:**
 ```bash
 ping -c 1 192.168.1.1 | grep "64 bytes" | cut -d " " -f4 | tr -d ":"
 ```
 
 ---
 
-## 🔹 IP Sweep Script (`ipsweep.sh`)
+##  IP Sweep Script (`ipsweep.sh`)
 ### **Purpose:**
 This script pings all **254 hosts** in a subnet (`x.x.x.1 - x.x.x.254`) and returns live hosts.
 
@@ -71,7 +71,7 @@ chmod +x ipsweep.sh  # Make it executable
 
 ---
 
-## 🔹 One-Liner Nmap Scan Script
+##  One-Liner Nmap Scan Script
 ### **Script:**
 ```bash
 for ip in $(cat ips.txt); do nmap -sn $ip; done
@@ -84,7 +84,7 @@ for ip in $(cat ips.txt); do nmap -sn $ip; done
 
 ---
 
-## 🔹 Additional Useful Scripts
+##  Additional Useful Scripts
 
 ### **Port Scanner Using Netcat**
 ```bash
@@ -112,7 +112,7 @@ chmod +x portscan.sh
 
 ---
 
-## 🔹 Script for Automated Backups
+##  Script for Automated Backups
 ```bash
 #!/bin/bash
 BACKUP_DIR="$HOME/backup"
@@ -133,7 +133,7 @@ chmod +x backup.sh
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Bash scripting is a powerful tool for **networking, automation, and security tasks**. This guide covered:
 - **Ping sweeps & Nmap automation**
 - **Loops, arguments (`$1`), and conditionals**

@@ -5,7 +5,7 @@ Using **GitHub** for version control and deployment is an essential practice whe
 
 ---
 
-## 🔹 Creating a New GitHub Repository
+##  Creating a New GitHub Repository
 
 1. **Go to GitHub** and log in.
 2. **Click on** `+` (top-right) → `New repository`.
@@ -26,7 +26,7 @@ cd my-mkdocs-site
 
 ---
 
-## 🔹 Updating MkDocs and Pushing to GitHub
+##  Updating MkDocs and Pushing to GitHub
 When making changes to MkDocs documentation, follow these steps:
 
 1. **Stage all changes**:
@@ -57,7 +57,7 @@ This will build and deploy your MkDocs site to **GitHub Pages**.
 
 ---
 
-## 🔹 Configuring GitHub Pages
+##  Configuring GitHub Pages
 Ensure that GitHub Pages is enabled for your repository:
 
 1. **Go to your repository on GitHub**.
@@ -71,7 +71,7 @@ Ensure that GitHub Pages is enabled for your repository:
 
 ---
 
-## 🔹 Best Practices
+##  Best Practices
 - Always **commit meaningful messages** (`git commit -m "Updated navigation"`).
 - Regularly **pull updates** from the repository before making changes:
   ```bash

@@ -1,13 +1,13 @@
 # Information Gathering Tools
 
-## 🔹 Introduction
+##  Introduction
 Information gathering, also known as **reconnaissance**, is the first phase in penetration testing. It involves collecting **publicly available data** about a target before attempting an attack. The goal is to identify weaknesses, technologies in use, and potential entry points.
 
 ---
 
-## 🔹 Useful Reconnaissance Tools & Websites
+##  Useful Reconnaissance Tools & Websites
 
-### **1️⃣ Email & Breach Lookup**
+### **1️ Email & Breach Lookup**
 #### **Hunter.io**
 - **Use Case**: Finds publicly available emails associated with a domain.
 - **Website**: [https://hunter.io](https://hunter.io)
@@ -24,7 +24,7 @@ Information gathering, also known as **reconnaissance**, is the first phase in p
 
 ---
 
-### **2️⃣ Subdomain Enumeration**
+### **2️ Subdomain Enumeration**
 #### **Sublist3r**
 - **Use Case**: Finds subdomains of a target domain.
 - **Command:**
@@ -54,7 +54,7 @@ Information gathering, also known as **reconnaissance**, is the first phase in p
 
 ---
 
-### **3️⃣ Technology Fingerprinting**
+### **3️ Technology Fingerprinting**
 #### **BuiltWith**
 - **Use Case**: Identifies the technologies used on a website.
 - **Website**: [https://builtwith.com](https://builtwith.com)
@@ -74,7 +74,7 @@ Information gathering, also known as **reconnaissance**, is the first phase in p
 
 ---
 
-### **4️⃣ HTTP/S Traffic Analysis**
+### **4️ HTTP/S Traffic Analysis**
 #### **Burp Suite**
 - **Use Case**: Web application security testing tool.
 - **Capabilities**:
@@ -87,7 +87,7 @@ Information gathering, also known as **reconnaissance**, is the first phase in p
 
 ---
 
-### **5️⃣ Google Dorking (Google-Fu)**
+### **5️ Google Dorking (Google-Fu)**
 Google’s search operators help find **sensitive information** online.
 
 #### **Common Google Dorks:**
@@ -103,7 +103,7 @@ Google’s search operators help find **sensitive information** online.
 
 ---
 
-### **6️⃣ Additional Reconnaissance Tools**
+### **6️ Additional Reconnaissance Tools**
 #### **TomNomNom’s Tools**
 TomNomNom is a security researcher who has created powerful recon tools:
 - **`assetfinder`** → Finds subdomains from multiple sources.
@@ -130,7 +130,7 @@ TomNomNom is a security researcher who has created powerful recon tools:
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Reconnaissance is an essential phase in security assessments. Using the right tools and techniques can help gather **valuable intelligence** on a target. By leveraging **Google Dorking, subdomain enumeration, breach lookups, and traffic analysis**, professionals can uncover hidden vulnerabilities before an attack occurs.
 
 

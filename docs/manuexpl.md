@@ -1,14 +1,14 @@
 # Manual Exploitation Guide
 
-## 🔹 Introduction
+##  Introduction
 Manual exploitation is the process of **identifying, downloading, and executing exploits** without using automated tools like Metasploit. This approach is useful when **Metasploit does not have a suitable exploit** or when testing requires **manual control** over execution.
 
 ---
 
-## 🔹 Finding an Exploit
+##  Finding an Exploit
 Before manually exploiting a target, research and obtain a working exploit.
 
-### **1️⃣ Searching for Exploits on GitHub**
+### **1️ Searching for Exploits on GitHub**
 Many proof-of-concept (PoC) exploits are published on **GitHub**.
 #### **Google Dork to Search GitHub**
 ```bash
@@ -32,10 +32,10 @@ searchsploit -m exploits/unix/remote/4091.py
 
 ---
 
-## 🔹 Cloning & Setting Up the Exploit
+##  Cloning & Setting Up the Exploit
 Once a suitable exploit is found on GitHub, clone and set it up.
 
-### **2️⃣ Cloning the Exploit Repository**
+### **2️ Cloning the Exploit Repository**
 ```bash
 git clone https://github.com/username/exploit-repo.git
 ```
@@ -44,7 +44,7 @@ Then, **navigate into the directory**:
 cd exploit-repo
 ```
 
-### **3️⃣ Install Dependencies**
+### **3️ Install Dependencies**
 Many exploits require additional dependencies. Check the **README** or `requirements.txt`.
 ```bash
 pip install -r requirements.txt
@@ -56,8 +56,8 @@ gcc exploit.c -o exploit
 
 ---
 
-## 🔹 Exploiting the Target
-### **4️⃣ Running the Exploit**
+##  Exploiting the Target
+### **4️ Running the Exploit**
 #### **Python Exploit Example**
 ```bash
 python3 exploit.py --target 192.168.1.100 --port 8080
@@ -74,21 +74,21 @@ chmod +x exploit.sh
 
 ---
 
-## 🔹 Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)
+##  Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)
 This vulnerability allows **local privilege escalation**.
 
-### **1️⃣ Download the Exploit**
+### **1️ Download the Exploit**
 ```bash
 git clone https://github.com/blasty/CVE-2021-3156.git
 cd CVE-2021-3156
 ```
 
-### **2️⃣ Compile the Exploit**
+### **2️ Compile the Exploit**
 ```bash
 gcc exploit.c -o sudo_exploit
 ```
 
-### **3️⃣ Run the Exploit**
+### **3️ Run the Exploit**
 ```bash
 ./sudo_exploit
 ```
@@ -96,7 +96,7 @@ gcc exploit.c -o sudo_exploit
 
 ---
 
-## 🔹 Troubleshooting & Tips
+##  Troubleshooting & Tips
 ### **If the Exploit Fails:**
 1. **Check the Target System Version**
    ```bash
@@ -114,6 +114,6 @@ gcc exploit.c -o sudo_exploit
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Manual exploitation requires **careful research, correct setup, and debugging skills**. Using **GitHub, Exploit-DB, and SearchSploit**, security testers can find and execute exploits when automated tools are unavailable.
 

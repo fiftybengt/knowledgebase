@@ -1,11 +1,11 @@
 # Metasploit - MSFConsole Guide
 
-## 🔹 Introduction
+##  Introduction
 Metasploit is a powerful **penetration testing framework** that provides a variety of exploits, payloads, and auxiliary tools for security assessments. The **MSFConsole** is the main command-line interface for interacting with Metasploit.
 
 ---
 
-## 🔹 Finding Exploits
+##  Finding Exploits
 Before using Metasploit, you can search for available exploits using **SearchSploit** or within **MSFConsole**.
 
 ### **Using SearchSploit (Offline Exploit Database)**
@@ -31,7 +31,7 @@ search <query>
 
 ---
 
-## 🔹 Using an Exploit
+##  Using an Exploit
 Once an exploit is found, load it into the console.
 
 ### **Select an Exploit**
@@ -51,7 +51,7 @@ options
 
 ---
 
-## 🔹 Setting Target & Payload
+##  Setting Target & Payload
 ### **Set the Target IP Address**
 ```bash
 set RHOSTS <target_ip>
@@ -81,7 +81,7 @@ run
 
 ---
 
-## 🔹 Troubleshooting: If the Exploit Fails
+##  Troubleshooting: If the Exploit Fails
 Sometimes, an exploit may fail or **crash unexpectedly**. Try the following steps:
 
 1. **Check Available Options Again**
@@ -112,6 +112,6 @@ Sometimes, an exploit may fail or **crash unexpectedly**. Try the following step
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Metasploit is an essential tool for penetration testing, and **understanding how to search, configure, and troubleshoot exploits** is key. If an exploit fails, **experiment with different payloads and configurations** to improve success rates.
 

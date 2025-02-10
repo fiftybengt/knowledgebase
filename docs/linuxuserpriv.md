@@ -1,6 +1,6 @@
 # Linux - Users and Privileges
 
-## 🔹 Understanding File Permissions (`ls -la` & `drwxrwxrwx`)
+##  Understanding File Permissions (`ls -la` & `drwxrwxrwx`)
 
 In Linux, file and directory permissions are fundamental for security and access control. You can view permissions using:
 
@@ -31,7 +31,7 @@ Example:
 
 ---
 
-## 🔹 Changing Permissions with `chmod`
+##  Changing Permissions with `chmod`
 **`chmod` (Change Mode)** modifies file permissions.
 
 ### **Using Numeric Mode (Octal Representation)**
@@ -63,7 +63,7 @@ chmod o+r file.txt   # Allow others to read the file
 
 ---
 
-## 🔹 Managing Users
+##  Managing Users
 ### **Adding a User**
 To create a new user and set a password:
 ```bash
@@ -93,7 +93,7 @@ john --wordlist=rockyou.txt hashfile.txt
 
 ---
 
-## 🔹 Switching Users & Running Commands as Another User
+##  Switching Users & Running Commands as Another User
 ### **Switching Users (`su` & `sudo`)
 - `su username` → Switch to another user.
 - `su - username` → Switch and load their environment.
@@ -116,7 +116,7 @@ sudo visudo
 
 ---
 
-## 🔹 Managing User Groups
+##  Managing User Groups
 ### **Viewing Groups**
 ```bash
 groups username
@@ -131,7 +131,7 @@ cat /etc/group
 
 ---
 
-## 🔹 Useful Commands
+##  Useful Commands
 | Command | Description |
 |---------|------------|
 | `whoami` | Show current logged-in user |
@@ -144,7 +144,7 @@ cat /etc/group
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Understanding **users, groups, and permissions** is crucial for managing a Linux system securely. Using the correct permission structure, ensuring proper sudo configurations, and managing users effectively prevents unauthorized access and enhances security.
 
 

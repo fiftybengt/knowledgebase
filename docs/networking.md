@@ -1,6 +1,6 @@
 # Networking Basics
 
-## 🔹 IP Addressing (Layer 3 - Network Layer)
+##  IP Addressing (Layer 3 - Network Layer)
 An **IP address** is a unique identifier assigned to each device on a network, allowing communication between devices. IP operates at **Layer 3 (Network Layer)** of the OSI model.
 
 ### IPv4
@@ -18,7 +18,7 @@ Due to address exhaustion, **NAT (Network Address Translation)** allows multiple
 
 ---
 
-## 🔹 Private IPv4 Address Ranges
+##  Private IPv4 Address Ranges
 IPv4 addresses are categorized into different **classes**, with specific private IP ranges:
 
 | Class  | Address Range                   | Number of Hosts  |
@@ -31,7 +31,7 @@ These private addresses **cannot** be routed on the public internet and require 
 
 ---
 
-## 🔹 MAC Addressing (Layer 2 - Data Link Layer)
+##  MAC Addressing (Layer 2 - Data Link Layer)
 A **MAC address** (Media Access Control address) is a **48-bit unique identifier** assigned to network interfaces and operates at **Layer 2 (Data Link Layer)** of the OSI model.
 
 - Format: **`XX:XX:XX:XX:XX:XX`** (six pairs of hexadecimal digits).
@@ -40,7 +40,7 @@ A **MAC address** (Media Access Control address) is a **48-bit unique identifier
 
 ---
 
-## 🔹 TCP vs. UDP (Layer 4 - Transport Layer)
+##  TCP vs. UDP (Layer 4 - Transport Layer)
 
 ### **TCP (Transmission Control Protocol)**
 - **Connection-oriented** protocol (ensures reliable communication).
@@ -57,7 +57,7 @@ A **MAC address** (Media Access Control address) is a **48-bit unique identifier
 
 ---
 
-## 🔹 OSI Model - 7 Layers
+##  OSI Model - 7 Layers
 The **OSI (Open Systems Interconnection) Model** standardizes communication functions across networks.
 
 | Layer | Name                  | Function & Protocols               |
@@ -74,7 +74,7 @@ Each layer provides specific functionality to ensure smooth data transmission.
 
 ---
 
-## 🔹 Subnetting
+##  Subnetting
 **Subnetting** divides a large network into smaller sub-networks (subnets) to improve efficiency and security.
 
 ### **Key Concepts:**
@@ -93,7 +93,7 @@ For subnetting calculations, **IP calculators** like [IPaddressguide.com](https:
 
 ---
 
-## 🔹 Common Network Protocols & Ports
+##  Common Network Protocols & Ports
 ### **Well-Known Ports:**
 | Protocol | Port | Description |
 |----------|------|-------------|
@@ -109,5 +109,5 @@ For subnetting calculations, **IP calculators** like [IPaddressguide.com](https:
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Understanding **IP addressing, MAC addresses, TCP/UDP, OSI model, and subnetting** is essential for networking. Subnetting efficiently divides networks, while protocols ensure seamless communication. By leveraging these concepts, network engineers and security professionals can design and troubleshoot robust networks effectively.

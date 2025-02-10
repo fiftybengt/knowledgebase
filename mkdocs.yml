@@ -28,8 +28,8 @@ nav:
   - SMB (Server Message Block): smb.md
   - SSH (Secure Shell): ssh.md
   - Wordpress exploitation: wpexplo.md
-  - MkDocs:
-    - Formatting Guide: mkdocs-formatting-guide.md
-    - Create Virtual Enviroment: venv.md
+  - MkDocs:  
     - Create post: create.md
+    - Create Virtual Enviroment: venv.md
+    - Formatting Guide: mkdocs-formatting-guide.md
     - Github create & update: github.md

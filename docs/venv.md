@@ -5,7 +5,7 @@ Using a **virtual environment (venv)** for MkDocs ensures a clean, isolated work
 
 ---
 
-## 🔹 Creating a Virtual Environment
+##  Creating a Virtual Environment
 To create a virtual environment named `mkdocs-venv`, run:
 
 ```bash
@@ -16,7 +16,7 @@ This will generate a virtual environment inside the `mkdocs-venv` directory.
 
 ---
 
-## 🔹 Activating the Virtual Environment
+##  Activating the Virtual Environment
 After creating the virtual environment, activate it:
 
 ```bash
@@ -31,7 +31,7 @@ Once activated, your terminal prompt will change to indicate that the **venv is 
 
 ---
 
-## 🔹 Installing MkDocs
+##  Installing MkDocs
 With the virtual environment activated, install MkDocs:
 
 ```bash
@@ -48,7 +48,7 @@ If the command returns a version number, MkDocs is successfully installed.
 
 ---
 
-## 🔹 Deactivating the Virtual Environment
+##  Deactivating the Virtual Environment
 To exit the virtual environment, run:
 
 ```bash
@@ -59,7 +59,7 @@ Your prompt should revert to the system default, indicating that the virtual env
 
 ---
 
-## 🔹 Best Practices
+##  Best Practices
 - Always **activate** the virtual environment before running MkDocs-related commands.
 - Install additional MkDocs **plugins and themes** inside the virtual environment to avoid conflicts.
 - Use `requirements.txt` to save dependencies for easy reinstallation:

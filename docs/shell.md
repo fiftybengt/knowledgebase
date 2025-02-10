@@ -1,11 +1,11 @@
 # Exploitation Shells
 
-## 🔹 Introduction
+##  Introduction
 An **exploitation shell** is a command-line interface established after successfully exploiting a system, allowing an attacker to execute commands remotely. Shells can be categorized into **Reverse Shells** and **Bind Shells**, and they often use different types of **payloads**.
 
 ---
 
-## 🔹 Reverse Shell
+##  Reverse Shell
 ### **How It Works:**
 A **Reverse Shell** is when the **target machine** initiates a connection back to the **attacker’s machine**, which is listening for incoming connections.
 
@@ -48,7 +48,7 @@ exploit
 
 ---
 
-## 🔹 Bind Shell
+##  Bind Shell
 ### **How It Works:**
 A **Bind Shell** is when the **target machine** opens a specific port and waits for the attacker to connect to it.
 
@@ -69,7 +69,7 @@ nc 192.168.1.100 4444
 
 ---
 
-## 🔹 Staged vs Non-Staged Payloads
+##  Staged vs Non-Staged Payloads
 ### **Staged Payloads**
 - **Delivers the payload in small parts** to avoid detection.
 - The first-stage shell establishes a connection and downloads a **larger second stage payload**.
@@ -88,6 +88,6 @@ nc 192.168.1.100 4444
 
 ---
 
-## 🔹 Conclusion
+##  Conclusion
 Understanding **Reverse Shells, Bind Shells, and Payload Types** is crucial in exploitation. Using the right payload and technique can help bypass security defenses and maintain access.
 
