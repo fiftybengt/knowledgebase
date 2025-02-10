@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../shell/">
+        <link rel="prev" href="../manuexpl/">
       
       
-        <link rel="next" href="../ssh/">
+        <link rel="next" href="../msfc/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SMB (Server Message Block) - My Knowledge Base</title>
+        <title>Mapping Hostnames to IPs - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smb-server-message-block-port-139-445" class="md-skip">
+        <a href="#mapping-hostnames-to-ips-using-etchosts" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMB (Server Message Block)
+              Mapping Hostnames to IPs
             
           </span>
         </div>
@@ -406,10 +406,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../hostnamemapping/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Mapping Hostnames to IPs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -419,6 +440,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing /etc/hosts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing /etc/hosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Command:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-modify-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Modify /etc/hosts?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-browsing-a-target-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Browsing a Target Web Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-using-curl-for-http-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Using Curl for HTTP Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fuzzing-virtual-hosts-with-ffuf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Fuzzing Virtual Hosts with FFUF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scanning-the-target-with-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Scanning the Target with Nmap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-with-wfuzz" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Testing with Wfuzz
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -574,31 +753,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SMB (Server Message Block)
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../smb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,185 +766,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction-to-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to SMB
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introduction to SMB">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ports-used-by-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ports Used by SMB:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Use Cases:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#enumerating-smb-shares" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enumerating SMB Shares
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Enumerating SMB Shares">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#listing-smb-shares" class="md-nav__link">
-    <span class="md-ellipsis">
-      Listing SMB Shares
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#breakdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      Breakdown:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#accessing-an-smb-share-anonymously" class="md-nav__link">
-    <span class="md-ellipsis">
-      Accessing an SMB Share Anonymously:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#additional-smb-enumeration-exploitation-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional SMB Enumeration &amp; Exploitation Tools
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Additional SMB Enumeration & Exploitation Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap-smb-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nmap SMB Scripts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum4linux-smb-enumeration-on-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enum4Linux (SMB Enumeration on Linux)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-smb-version-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking SMB Version &amp; Vulnerabilities
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smb-exploits-security-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      SMB Exploits &amp; Security Concerns
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SMB Exploits & Security Concerns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-smb-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common SMB Exploits:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securing-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securing SMB:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1056,52 +1035,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-smb" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to SMB
+      Introduction
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Introduction to SMB">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ports-used-by-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ports Used by SMB:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#common-use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Use Cases:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#enumerating-smb-shares" class="md-nav__link">
+  <a href="#editing-etchosts" class="md-nav__link">
     <span class="md-ellipsis">
-      Enumerating SMB Shares
+      Editing /etc/hosts
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Enumerating SMB Shares">
+    <nav class="md-nav" aria-label="Editing /etc/hosts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#listing-smb-shares" class="md-nav__link">
+  <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Listing SMB Shares
+      Syntax:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Command:
     </span>
   </a>
   
@@ -1116,10 +1080,70 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#accessing-an-smb-share-anonymously" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-modify-etchosts" class="md-nav__link">
     <span class="md-ellipsis">
-      Accessing an SMB Share Anonymously:
+      Why Modify /etc/hosts?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-browsing-a-target-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Browsing a Target Web Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-using-curl-for-http-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Using Curl for HTTP Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fuzzing-virtual-hosts-with-ffuf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Fuzzing Virtual Hosts with FFUF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scanning-the-target-with-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Scanning the Target with Nmap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-with-wfuzz" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Testing with Wfuzz
     </span>
   </a>
   
@@ -1131,77 +1155,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-smb-enumeration-exploitation-tools" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional SMB Enumeration &amp; Exploitation Tools
+      Best Practices
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Additional SMB Enumeration & Exploitation Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nmap-smb-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nmap SMB Scripts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum4linux-smb-enumeration-on-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Enum4Linux (SMB Enumeration on Linux)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-smb-version-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking SMB Version &amp; Vulnerabilities
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smb-exploits-security-concerns" class="md-nav__link">
-    <span class="md-ellipsis">
-      SMB Exploits &amp; Security Concerns
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SMB Exploits & Security Concerns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-smb-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common SMB Exploits:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#securing-smb" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securing SMB:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1230,98 +1188,67 @@
 
 
 
-<h1 id="smb-server-message-block-port-139-445">SMB (Server Message Block) - Port 139 &amp; 445</h1>
-<h2 id="introduction-to-smb">Introduction to SMB</h2>
-<p><strong>SMB (Server Message Block)</strong> is a <strong>network file sharing protocol</strong> that allows applications or users to read and write files over a network. It enables <strong>file sharing, printer sharing, and remote access</strong> to Windows-based resources. SMB operates mainly over <strong>port 139 (NetBIOS) and port 445 (Direct TCP/IP)</strong>.</p>
-<h3 id="ports-used-by-smb"><strong>Ports Used by SMB:</strong></h3>
+<h1 id="mapping-hostnames-to-ips-using-etchosts">Mapping Hostnames to IPs Using /etc/hosts</h1>
+<h2 id="introduction">Introduction</h2>
+<p>When performing <strong>penetration testing</strong> or <strong>web reconnaissance</strong>, there are cases where a domain name does not resolve correctly, or a target system uses <strong>virtual hosting</strong>. By modifying the <code>/etc/hosts</code> file, you can <strong>manually map an IP address to a hostname</strong>, allowing you to interact with the domain without relying on external DNS resolution.</p>
+<p>This technique is <strong>particularly useful</strong> when a target application has <strong>multiple virtual hosts</strong> or when conducting <strong>subdomain enumeration</strong> and <strong>fuzzing attacks</strong>.</p>
+<hr />
+<h2 id="editing-etchosts">Editing /etc/hosts</h2>
+<p>The <code>/etc/hosts</code> file is a system file that <strong>maps IP addresses to hostnames manually</strong>. When a hostname is added to this file, the system resolves it <strong>before querying external DNS servers</strong>.</p>
+<h3 id="syntax">Syntax:</h3>
+<pre><code class="language-plaintext">&lt;IP Address&gt; &lt;Hostname&gt;
+</code></pre>
+<h3 id="example-command">Example Command:</h3>
+<pre><code class="language-bash">echo &quot;10.129.99.11 thetoppers.tbh&quot; | sudo tee -a /etc/hosts
+</code></pre>
+<h3 id="breakdown">Breakdown:</h3>
 <ul>
-<li><strong>Port 139</strong>: Used for SMB communication over NetBIOS.</li>
-<li><strong>Port 445</strong>: Used for SMB communication directly over TCP/IP (modern implementations).</li>
-</ul>
-<h3 id="common-use-cases"><strong>Common Use Cases:</strong></h3>
-<ul>
-<li>File and folder sharing between <strong>Windows and Linux systems</strong>.</li>
-<li>Authentication and access control for shared resources.</li>
-<li>Network-based <strong>privilege escalation and exploitation</strong> in penetration testing.</li>
+<li><strong><code>echo "10.129.99.11 thetoppers.tbh"</code></strong> → Prepares the entry.</li>
+<li><strong><code>sudo tee -a /etc/hosts</code></strong> → Appends (<code>-a</code>) the entry to <code>/etc/hosts</code> with elevated privileges.</li>
 </ul>
 <hr />
-<h2 id="enumerating-smb-shares">Enumerating SMB Shares</h2>
-<p>To discover <strong>shared folders</strong>, we can use <strong>smbclient</strong> (a command-line tool for SMB access) to list available shares on a target system.</p>
-<h3 id="listing-smb-shares"><strong>Listing SMB Shares</strong></h3>
-<pre><code class="language-bash">smbclient -L \\192.168.0.0\ADMIN$
-</code></pre>
-<h3 id="breakdown"><strong>Breakdown:</strong></h3>
+<h2 id="why-modify-etchosts">Why Modify /etc/hosts?</h2>
 <ul>
-<li><strong><code>smbclient</code></strong> → The tool used to interact with SMB shares.</li>
-<li><strong><code>-L</code></strong> → Lists all available shares on the specified server.</li>
-<li><strong><code>\\192.168.0.0\ADMIN$</code></strong> → The target <strong>IP address</strong> and <strong>share name</strong> (in this case, <code>ADMIN$</code>, a hidden administrative share).</li>
-</ul>
-<p><strong>Example Output:</strong>
-``` Sharename       Type      Comment
-    ---------       ----      -------
-    ADMIN$         Disk      Remote Admin
-    C$             Disk      Default share
-    IPC$           IPC       Remote IPC</p>
-<pre><code>
----
-
-##  SMB Anonymous Access
-Some SMB servers allow **unauthenticated (anonymous) access**, meaning that no username or password is required to view or access shared resources.
-
-### **Checking for Anonymous SMB Access:**
-```bash
-smbclient -L \\192.168.0.0\ -N
-</code></pre>
-<ul>
-<li><strong><code>-N</code></strong> → Disables password prompt (attempts to access SMB shares without authentication).</li>
-<li>If anonymous access is <strong>enabled</strong>, the shares may be listed and <strong>publicly accessible</strong>.</li>
-</ul>
-<h3 id="accessing-an-smb-share-anonymously"><strong>Accessing an SMB Share Anonymously:</strong></h3>
-<pre><code class="language-bash">smbclient \\192.168.0.0\public -N
-</code></pre>
-<ul>
-<li>If successful, you'll get an <strong>SMB interactive shell</strong> where you can navigate and download files:
-  <code>smb: \&gt; ls
-  smb: \&gt; get important_document.txt</code></li>
+<li><strong>Bypass DNS Resolution</strong>: If the target server does not have a public DNS record, adding the hostname manually allows direct access.</li>
+<li><strong>Enable Virtual Host Enumeration</strong>: Some websites serve different content based on the hostname. By modifying <code>/etc/hosts</code>, you can interact with these vhosts.</li>
+<li><strong>Improve Web Fuzzing &amp; Recon</strong>: Many fuzzing tools (e.g., <strong>FFUF, Gobuster, and Wfuzz</strong>) require proper domain resolution for effective scanning.</li>
+<li><strong>Useful for Internal Networks</strong>: When working inside an internal network, mapping known IPs to hostnames can simplify testing.</li>
 </ul>
 <hr />
-<h2 id="additional-smb-enumeration-exploitation-tools">Additional SMB Enumeration &amp; Exploitation Tools</h2>
-<h3 id="nmap-smb-scripts"><strong>Nmap SMB Scripts</strong></h3>
-<p>Nmap has built-in scripts for <strong>SMB enumeration</strong> and <strong>vulnerability detection</strong>.</p>
-<pre><code class="language-bash">nmap -p 139,445 --script=smb-enum-shares,smb-enum-users 192.168.0.0
+<h2 id="practical-use-cases">Practical Use Cases</h2>
+<h3 id="1-browsing-a-target-web-application">1. Browsing a Target Web Application</h3>
+<p>After adding an entry to <code>/etc/hosts</code>, you can now access the target domain in your browser:</p>
+<pre><code class="language-bash">firefox http://thetoppers.tbh
 </code></pre>
-<ul>
-<li><strong><code>smb-enum-shares</code></strong> → Lists shared folders.</li>
-<li><strong><code>smb-enum-users</code></strong> → Enumerates SMB users.</li>
-</ul>
-<h3 id="enum4linux-smb-enumeration-on-linux"><strong>Enum4Linux (SMB Enumeration on Linux)</strong></h3>
-<pre><code class="language-bash">enum4linux -a 192.168.0.0
+<h3 id="2-using-curl-for-http-requests">2. Using Curl for HTTP Requests</h3>
+<pre><code class="language-bash">curl -I http://thetoppers.tbh
 </code></pre>
-<ul>
-<li>Gathers <strong>user accounts, shares, group memberships, and policies</strong>.</li>
-</ul>
-<h3 id="checking-smb-version-vulnerabilities"><strong>Checking SMB Version &amp; Vulnerabilities</strong></h3>
-<pre><code class="language-bash">smbclient -V  # Displays installed SMB client version
-nmap --script smb-vuln* -p 139,445 192.168.0.0  # Checks for known SMB vulnerabilities
+<h3 id="3-fuzzing-virtual-hosts-with-ffuf">3. Fuzzing Virtual Hosts with FFUF</h3>
+<pre><code class="language-bash">ffuf -u http://FUZZ.thetoppers.tbh -w /usr/share/wordlists/wfuzz/general/common.txt
+</code></pre>
+<h3 id="4-scanning-the-target-with-nmap">4. Scanning the Target with Nmap</h3>
+<pre><code class="language-bash">nmap -p 80,443 thetoppers.tbh
+</code></pre>
+<h3 id="5-testing-with-wfuzz">5. Testing with Wfuzz</h3>
+<pre><code class="language-bash">wfuzz -c -w /usr/share/wordlists/wfuzz/general/common.txt --hc 404 http://thetoppers.tbh/FUZZ
 </code></pre>
 <hr />
-<h2 id="smb-exploits-security-concerns">SMB Exploits &amp; Security Concerns</h2>
-<h3 id="common-smb-exploits"><strong>Common SMB Exploits:</strong></h3>
+<h2 id="best-practices">Best Practices</h2>
 <ul>
-<li><strong>SMB Null Sessions</strong> (unauthorized access to shared resources).</li>
-<li><strong>EternalBlue (MS17-010)</strong> → Remote code execution vulnerability in older SMB versions.</li>
-<li><strong>Relay Attacks</strong> (Intercepting SMB authentication for lateral movement).</li>
-</ul>
-<h3 id="securing-smb"><strong>Securing SMB:</strong></h3>
-<ul>
-<li><strong>Disable SMBv1</strong> (Older versions are vulnerable to exploits like EternalBlue).</li>
-<li><strong>Enforce authentication</strong> for accessing shares.</li>
-<li><strong>Limit SMB access</strong> to trusted IPs and networks.</li>
-<li><strong>Use strong credentials</strong> and disable anonymous access.</li>
+<li><strong>Always Backup <code>/etc/hosts</code> Before Editing</strong>
+  <code>bash
+  sudo cp /etc/hosts /etc/hosts.bak</code></li>
+<li><strong>Remove Unnecessary Entries After Testing</strong>
+  <code>bash
+  sudo sed -i '/thetoppers.tbh/d' /etc/hosts</code></li>
+<li><strong>Ensure Proper Permissions</strong>
+  <code>bash
+  ls -l /etc/hosts  # Should be writable by root only</code></li>
 </ul>
 <hr />
 <h2 id="conclusion">Conclusion</h2>
-<p>SMB is a <strong>powerful network protocol</strong> for file sharing, but it also presents <strong>security risks</strong> when misconfigured. Understanding SMB enumeration techniques can help identify potential vulnerabilities and secure network resources.</p>
+<p>Manually mapping an IP address to a hostname using <code>/etc/hosts</code> is a <strong>powerful technique</strong> for <strong>pentesting</strong>, <strong>virtual host enumeration</strong>, and <strong>web fuzzing</strong>. This method allows <strong>bypassing DNS dependencies</strong>, improving <strong>scanning accuracy</strong>, and testing <strong>subdomains efficiently</strong>.</p>
+<p>Use it wisely in authorized security assessments to <strong>enhance reconnaissance capabilities</strong>.</p>
 
 
 

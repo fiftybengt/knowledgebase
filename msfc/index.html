@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../manuexpl/">
+        <link rel="prev" href="../hostnamemapping/">
       
       
         <link rel="next" href="../networking/">
@@ -406,6 +406,27 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../hostnamemapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping Hostnames to IPs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -460,6 +481,15 @@
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different modules
     </span>
   </a>
   
@@ -811,10 +841,75 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
         
           
-          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTB
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            HTB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threeawsshell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three - S3 Reverse Shell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -826,8 +921,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_21">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
           </label>
@@ -958,6 +1053,15 @@
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
       Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#different-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different modules
     </span>
   </a>
   
@@ -1117,6 +1221,30 @@
 <h1 id="metasploit-msfconsole-guide">Metasploit - MSFConsole Guide</h1>
 <h2 id="introduction">Introduction</h2>
 <p>Metasploit is a powerful <strong>penetration testing framework</strong> that provides a variety of exploits, payloads, and auxiliary tools for security assessments. The <strong>MSFConsole</strong> is the main command-line interface for interacting with Metasploit.</p>
+<hr />
+<h2 id="different-modules">Different modules</h2>
+<table>
+<thead>
+<tr>
+<th>Module Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Auxiliary</strong></td>
+<td>Used for scanning, enumeration, brute-force attacks, or DoS</td>
+</tr>
+<tr>
+<td><strong>Exploit</strong></td>
+<td>Executes an attack on a vulnerability to gain access</td>
+</tr>
+<tr>
+<td><strong>Payload</strong></td>
+<td>Defines post-exploit actions (shells, persistence, data exfiltration)</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="finding-exploits">Finding Exploits</h2>
 <p>Before using Metasploit, you can search for available exploits using <strong>SearchSploit</strong> or within <strong>MSFConsole</strong>.</p>
