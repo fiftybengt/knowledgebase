@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../bruteforce/">
+        <link rel="prev" href="../burpspray/">
       
       
-        <link rel="next" href="../cherry/">
+        <link rel="next" href="../hmet/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Burpsuite - Stuffing & Spraying - My Knowledge Base</title>
+        <title>Cherrytree - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#burp-suite-credential-stuffing-password-spraying" class="md-skip">
+        <a href="#using-linux-cherrytree-for-documentation" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Burpsuite - Stuffing & Spraying
+              Cherrytree
             
           </span>
         </div>
@@ -259,6 +259,27 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../burpspray/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Burpsuite - Stuffing & Spraying
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -275,7 +296,7 @@
           
   
   <span class="md-ellipsis">
-    Burpsuite - Stuffing & Spraying
+    Cherrytree
     
   </span>
   
@@ -287,7 +308,7 @@
         
   
   <span class="md-ellipsis">
-    Burpsuite - Stuffing & Spraying
+    Cherrytree
     
   </span>
   
@@ -312,35 +333,53 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Introduction
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#credential-stuffing" class="md-nav__link">
+  <a href="#installing-cherrytree-on-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Credential Stuffing
+      Installing Cherrytree on Linux
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Credential Stuffing">
+    <nav class="md-nav" aria-label="Installing Cherrytree on Linux">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-credential-stuffing" class="md-nav__link">
+  <a href="#ubuntudebian" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Credential Stuffing?
+      Ubuntu/Debian
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-to-perform-credential-stuffing-in-burp-suite" class="md-nav__link">
+  <a href="#arch-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Perform Credential Stuffing in Burp Suite
+      Arch Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kali-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kali Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatpak-any-linux-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak (Any Linux Distribution)
     </span>
   </a>
   
@@ -352,28 +391,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-spraying" class="md-nav__link">
+  <a href="#navigating-cherrytree" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Password Spraying
+      Navigating Cherrytree
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Password Spraying">
+    <nav class="md-nav" aria-label="Navigating Cherrytree">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-password-spraying" class="md-nav__link">
+  <a href="#1-creating-a-new-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Password Spraying?
+      1. Creating a New Notebook
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-to-perform-password-spraying-in-burp-suite" class="md-nav__link">
+  <a href="#2-organizing-notes-with-nodes-subnodes" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Perform Password Spraying in Burp Suite
+      2. Organizing Notes with Nodes &amp; Subnodes
     </span>
   </a>
   
@@ -385,18 +424,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-detection-avoidance" class="md-nav__link">
+  <a href="#documenting-findings" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices &amp; Detection Avoidance
+      Documenting Findings
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Documenting Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-adding-text-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Adding Text &amp; Code Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inserting-images-attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inserting Images &amp; Attachments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-encrypting-notes-for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Encrypting Notes for Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-using-search-for-quick-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Using Search for Quick Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-keep-everything-structured" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Keep Everything Structured
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-timestamp-key-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Timestamp Key Findings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-backup-your-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Backup Your Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-sync-notes-across-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Sync Notes Across Devices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Conclusion
+      Conclusion
     </span>
   </a>
   
@@ -406,27 +538,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cherry/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Cherrytree
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -906,35 +1017,53 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Introduction
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#credential-stuffing" class="md-nav__link">
+  <a href="#installing-cherrytree-on-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Credential Stuffing
+      Installing Cherrytree on Linux
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Credential Stuffing">
+    <nav class="md-nav" aria-label="Installing Cherrytree on Linux">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-credential-stuffing" class="md-nav__link">
+  <a href="#ubuntudebian" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Credential Stuffing?
+      Ubuntu/Debian
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-to-perform-credential-stuffing-in-burp-suite" class="md-nav__link">
+  <a href="#arch-linux" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Perform Credential Stuffing in Burp Suite
+      Arch Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kali-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kali Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatpak-any-linux-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak (Any Linux Distribution)
     </span>
   </a>
   
@@ -946,28 +1075,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-spraying" class="md-nav__link">
+  <a href="#navigating-cherrytree" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Password Spraying
+      Navigating Cherrytree
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Password Spraying">
+    <nav class="md-nav" aria-label="Navigating Cherrytree">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-password-spraying" class="md-nav__link">
+  <a href="#1-creating-a-new-notebook" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Password Spraying?
+      1. Creating a New Notebook
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-to-perform-password-spraying-in-burp-suite" class="md-nav__link">
+  <a href="#2-organizing-notes-with-nodes-subnodes" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Perform Password Spraying in Burp Suite
+      2. Organizing Notes with Nodes &amp; Subnodes
     </span>
   </a>
   
@@ -979,18 +1108,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-detection-avoidance" class="md-nav__link">
+  <a href="#documenting-findings" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices &amp; Detection Avoidance
+      Documenting Findings
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Documenting Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3-adding-text-code-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Adding Text &amp; Code Blocks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-inserting-images-attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Inserting Images &amp; Attachments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-encrypting-notes-for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Encrypting Notes for Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-using-search-for-quick-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Using Search for Quick Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-for-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices for Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-keep-everything-structured" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Keep Everything Structured
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-timestamp-key-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Timestamp Key Findings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-backup-your-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Backup Your Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-sync-notes-across-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Sync Notes Across Devices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Conclusion
+      Conclusion
     </span>
   </a>
   
@@ -1012,61 +1234,106 @@
 
 
 
-<h1 id="burp-suite-credential-stuffing-password-spraying">Burp Suite - Credential Stuffing &amp; Password Spraying</h1>
-<h2 id="introduction">🔹 Introduction</h2>
-<p>Burp Suite is a powerful <strong>web security testing tool</strong> used for <strong>testing login security, performing credential stuffing, and executing password spraying attacks</strong>. These techniques help identify <strong>weak authentication mechanisms and misconfigured login systems</strong>.</p>
-<p>⚠️ <strong>Warning:</strong> These attacks can trigger <strong>account lockouts</strong>, so always test <strong>ethically</strong> and in a controlled environment.</p>
+<h1 id="using-linux-cherrytree-for-documentation">Using Linux Cherrytree for Documentation</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Cherrytree is a powerful <strong>hierarchical note-taking application</strong> that allows penetration testers and security professionals to <strong>document findings, organize research, and store structured data</strong>. It supports <strong>rich text, code highlighting, and encryption</strong>, making it an ideal tool for <strong>security assessments and documentation</strong>.</p>
 <hr />
-<h2 id="credential-stuffing">🔹 Credential Stuffing</h2>
-<h3 id="what-is-credential-stuffing"><strong>What is Credential Stuffing?</strong></h3>
-<p>Credential stuffing is an <strong>automated attack</strong> where attackers use <strong>breached username/password pairs</strong> in hopes that users have <strong>reused their credentials</strong> across multiple sites.</p>
-<h3 id="how-to-perform-credential-stuffing-in-burp-suite"><strong>How to Perform Credential Stuffing in Burp Suite</strong></h3>
-<p>1️⃣ <strong>Intercept Login Request:</strong>
-- Enable <strong>Burp Suite Proxy</strong>.
-- Log in to the target website using <strong>any credentials</strong> (to capture the request).
-- <strong>Forward</strong> the request to see how the login works.</p>
-<p>2️⃣ <strong>Send to Intruder:</strong>
-- Right-click on the login request → <strong>Send to Intruder</strong>.
-- Clear existing positions (<code>Clear</code> button).
-- Highlight <strong>username</strong> and <strong>password</strong> fields → Click <code>Add</code>.</p>
-<p>3️⃣ <strong>Select Attack Type - Pitchfork:</strong>
-- Use <code>Pitchfork Mode</code> (matches each username with its respective password in order).</p>
-<p>4️⃣ <strong>Configure Payloads:</strong>
-- Go to the <strong>Payloads</strong> tab.
-- <strong>Payload Set 1:</strong> Add a <strong>list of breached usernames</strong>.
-- <strong>Payload Set 2:</strong> Add a <strong>list of breached passwords</strong>.</p>
-<p>5️⃣ <strong>Analyze Responses:</strong>
-- Run the attack and analyze <strong>response codes</strong>.
-- Look for <strong>successful logins</strong> (e.g., HTTP 200 instead of 401 or 403).
-- Use <strong>Grep Extract</strong> to highlight error messages (e.g., <code>Cannot sign in</code>).</p>
+<h2 id="installing-cherrytree-on-linux">Installing Cherrytree on Linux</h2>
+<p>Cherrytree can be installed on most Linux distributions via package managers.</p>
+<h3 id="ubuntudebian"><strong>Ubuntu/Debian</strong></h3>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install cherrytree -y
+</code></pre>
+<h3 id="arch-linux"><strong>Arch Linux</strong></h3>
+<pre><code class="language-bash">sudo pacman -S cherrytree
+</code></pre>
+<h3 id="kali-linux"><strong>Kali Linux</strong></h3>
+<pre><code class="language-bash">sudo apt install cherrytree -y
+</code></pre>
+<h3 id="flatpak-any-linux-distribution"><strong>Flatpak (Any Linux Distribution)</strong></h3>
+<pre><code class="language-bash">flatpak install flathub com.giuspen.cherrytree
+</code></pre>
 <hr />
-<h2 id="password-spraying">🔹 Password Spraying</h2>
-<h3 id="what-is-password-spraying"><strong>What is Password Spraying?</strong></h3>
-<p>Password spraying is an attack where <strong>a few common passwords</strong> are tested against <strong>many known usernames</strong>. Unlike brute force attacks, it avoids account lockouts by limiting attempts per user.</p>
-<h3 id="how-to-perform-password-spraying-in-burp-suite"><strong>How to Perform Password Spraying in Burp Suite</strong></h3>
-<p>1️⃣ <strong>Capture a Login Request:</strong>
-- Enable Burp Suite Proxy.
-- Log in with <strong>any credentials</strong> and <strong>send the request to Intruder</strong>.</p>
-<p>2️⃣ <strong>Modify the Intruder Attack:</strong>
-- Select <strong>Sniper Mode</strong> (focuses on one list at a time).
-- Highlight the <strong>password field</strong> → Click <code>Add</code>.
-- Set the <strong>Payload Set 1</strong> to include weak passwords (e.g., <code>Fall2024!</code>, <code>Password123!</code>).
-- Set the <strong>username field</strong> to a known list of usernames.</p>
-<p>3️⃣ <strong>Control Attack Speed:</strong>
-- Run <strong>only 1-2 attempts per user</strong> to avoid triggering security mechanisms.</p>
-<p>4️⃣ <strong>Check Responses:</strong>
-- Analyze <strong>status codes</strong> or <strong>error messages</strong> to identify successful login attempts.</p>
-<hr />
-<h2 id="best-practices-detection-avoidance">🔹 Best Practices &amp; Detection Avoidance</h2>
+<h2 id="navigating-cherrytree">Navigating Cherrytree</h2>
+<h3 id="1-creating-a-new-notebook"><strong>1. Creating a New Notebook</strong></h3>
 <ul>
-<li>Use <strong>low request rates</strong> to avoid account lockouts.</li>
-<li>Monitor <strong>response codes</strong> to detect successful login attempts.</li>
-<li>Change <strong>user agents &amp; headers</strong> to mimic normal traffic.</li>
-<li>Use <strong>proxy rotation</strong> (e.g., Burp Collaborator) to evade detection.</li>
+<li>Open Cherrytree.</li>
+<li>Click <strong>File &gt; New Instance</strong> to create a new notebook.</li>
+<li>Save the file as <strong>pentest-notes.ctb</strong> (or <code>.ctx</code> for XML format).</li>
+</ul>
+<h3 id="2-organizing-notes-with-nodes-subnodes"><strong>2. Organizing Notes with Nodes &amp; Subnodes</strong></h3>
+<ul>
+<li>Click <strong>“+”</strong> to create a new <strong>Node</strong> (acts as a section).</li>
+<li>Right-click a node → <strong>New Subnode</strong> (nested categories).</li>
+<li>Rename nodes by double-clicking.</li>
+</ul>
+<p><strong>Example Folder Structure for Pentesting:</strong></p>
+<pre><code>📂 Pentest Engagement
+ ├── 🗂️ Recon
+ │    ├── Nmap Scan Results
+ │    ├── Subdomain Enumeration
+ ├── 🗂️ Exploitation
+ │    ├── Credentials &amp; Payloads
+ │    ├── Exploit PoCs
+ ├── 🗂️ Post-Exploitation
+ │    ├── Persistence Methods
+ │    ├── Data Exfiltration Notes
+</code></pre>
+<hr />
+<h2 id="documenting-findings">Documenting Findings</h2>
+<h3 id="3-adding-text-code-blocks"><strong>3. Adding Text &amp; Code Blocks</strong></h3>
+<ul>
+<li>Use <strong>rich text formatting</strong> for headers, bullet points, and highlights.</li>
+<li>Insert <strong>code snippets</strong> with syntax highlighting:</li>
+<li>Click <strong>Insert &gt; Codebox</strong>.</li>
+<li>Choose the appropriate language (e.g., Bash, Python, SQL, etc.).</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-bash">nmap -p- -A -T4 target.com
+</code></pre>
+<h3 id="4-inserting-images-attachments"><strong>4. Inserting Images &amp; Attachments</strong></h3>
+<ul>
+<li>Drag &amp; drop images into a node to include screenshots.</li>
+<li>Click <strong>Insert &gt; File</strong> to attach external reports.</li>
+</ul>
+<h3 id="5-encrypting-notes-for-security"><strong>5. Encrypting Notes for Security</strong></h3>
+<ul>
+<li>Click <strong>File &gt; Password Protection</strong> to <strong>encrypt the entire document</strong>.</li>
+<li>Uses <strong>AES encryption</strong> to protect sensitive information.</li>
+</ul>
+<h3 id="6-using-search-for-quick-access"><strong>6. Using Search for Quick Access</strong></h3>
+<ul>
+<li>Use <code>CTRL + F</code> to search within notes.</li>
+<li><code>CTRL + Shift + F</code> allows <strong>searching across all nodes</strong>.</li>
 </ul>
 <hr />
-<h2 id="conclusion">🔹 Conclusion</h2>
-<p>Burp Suite provides <strong>powerful automation for testing authentication security</strong>. Credential stuffing and password spraying can help identify <strong>weak login protections</strong>, but they should only be used in <strong>authorized security testing engagements</strong>.</p>
+<h2 id="best-practices-for-documentation">Best Practices for Documentation</h2>
+<h3 id="7-keep-everything-structured"><strong>7. Keep Everything Structured</strong></h3>
+<ul>
+<li>Use <strong>consistent naming conventions</strong> for nodes (e.g., <code>Target - Service - Details</code>).</li>
+<li>Organize findings logically in <strong>Recon &gt; Exploitation &gt; Post-Exploitation</strong>.</li>
+</ul>
+<h3 id="8-timestamp-key-findings"><strong>8. Timestamp Key Findings</strong></h3>
+<ul>
+<li>Use <code>CTRL + SHIFT + T</code> to insert a <strong>timestamp</strong>.</li>
+<li>Helps track when vulnerabilities were found and reported.</li>
+</ul>
+<h3 id="9-backup-your-notes"><strong>9. Backup Your Notes</strong></h3>
+<ul>
+<li>Export notes to <strong>plaintext, PDF, or HTML</strong> for backups.</li>
+<li>Store backups securely in an <strong>encrypted volume</strong>.</li>
+</ul>
+<p>Example Backup Command:</p>
+<pre><code class="language-bash">tar -czf pentest-notes-backup.tar.gz pentest-notes.ctb
+</code></pre>
+<h3 id="10-sync-notes-across-devices"><strong>10. Sync Notes Across Devices</strong></h3>
+<ul>
+<li>Use <strong>Nextcloud, Syncthing, or Encrypted USB</strong> for syncing across machines.</li>
+<li>Avoid storing sensitive Cherrytree files in unencrypted cloud storage.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Cherrytree is a <strong>structured, secure, and versatile</strong> note-taking tool for penetration testers and cybersecurity professionals. By following <strong>best practices</strong>, you can effectively document and protect findings throughout an assessment.</p>
+<p>Stay organized, document findings properly, and secure your notes efficiently.</p>
 
 
 

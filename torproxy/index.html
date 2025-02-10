@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../bruteforce/">
+        <link rel="prev" href="../networking/">
       
       
-        <link rel="next" href="../cherry/">
+        <link rel="next" href="../pynet/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Burpsuite - Stuffing & Spraying - My Knowledge Base</title>
+        <title>Proxychains Tor - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#burp-suite-credential-stuffing-password-spraying" class="md-skip">
+        <a href="#connecting-to-tor-via-proxychains" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Burpsuite - Stuffing & Spraying
+              Proxychains Tor
             
           </span>
         </div>
@@ -259,31 +259,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Burpsuite - Stuffing & Spraying
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../burpspray/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -293,119 +272,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#credential-stuffing" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Credential Stuffing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Credential Stuffing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-credential-stuffing" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Credential Stuffing?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-perform-credential-stuffing-in-burp-suite" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Perform Credential Stuffing in Burp Suite
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#password-spraying" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Password Spraying
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Password Spraying">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-password-spraying" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Password Spraying?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-perform-password-spraying-in-burp-suite" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Perform Password Spraying in Burp Suite
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-detection-avoidance" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Best Practices &amp; Detection Avoidance
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -582,10 +448,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../torproxy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Proxychains Tor
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -595,6 +482,200 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-tor-proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Tor &amp; ProxyChains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Tor & ProxyChains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-tor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Tor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install ProxyChains
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring ProxyChains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring ProxyChains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-proxychains-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit ProxyChains Configuration File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit ProxyChains Configuration File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Configurations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Save &amp; Exit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-tor-using-proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting Tor &amp; Using ProxyChains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting Tor & Using ProxyChains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-the-tor-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the Tor Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-applications-through-proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Applications Through ProxyChains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Applications Through ProxyChains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-ip-address-before-after" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check IP Address Before &amp; After
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browse-anonymously-using-firefox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browse Anonymously Using Firefox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-nmap-through-tor-stealth-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Nmap Through Tor (Stealth Scan)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -906,35 +987,35 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Introduction
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#credential-stuffing" class="md-nav__link">
+  <a href="#installing-tor-proxychains" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Credential Stuffing
+      Installing Tor &amp; ProxyChains
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Credential Stuffing">
+    <nav class="md-nav" aria-label="Installing Tor & ProxyChains">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-credential-stuffing" class="md-nav__link">
+  <a href="#install-tor" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Credential Stuffing?
+      Install Tor
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-to-perform-credential-stuffing-in-burp-suite" class="md-nav__link">
+  <a href="#install-proxychains" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Perform Credential Stuffing in Burp Suite
+      Install ProxyChains
     </span>
   </a>
   
@@ -946,28 +1027,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#password-spraying" class="md-nav__link">
+  <a href="#configuring-proxychains" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Password Spraying
+      Configuring ProxyChains
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Password Spraying">
+    <nav class="md-nav" aria-label="Configuring ProxyChains">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-password-spraying" class="md-nav__link">
+  <a href="#edit-proxychains-configuration-file" class="md-nav__link">
     <span class="md-ellipsis">
-      What is Password Spraying?
+      Edit ProxyChains Configuration File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit ProxyChains Configuration File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-configurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Configurations:
     </span>
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#how-to-perform-password-spraying-in-burp-suite" class="md-nav__link">
+  <a href="#save-exit" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Perform Password Spraying in Burp Suite
+      Save &amp; Exit
     </span>
   </a>
   
@@ -979,9 +1075,75 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices-detection-avoidance" class="md-nav__link">
+  <a href="#starting-tor-using-proxychains" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices &amp; Detection Avoidance
+      Starting Tor &amp; Using ProxyChains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting Tor & Using ProxyChains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-the-tor-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start the Tor Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-applications-through-proxychains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Applications Through ProxyChains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Applications Through ProxyChains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-ip-address-before-after" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check IP Address Before &amp; After
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#browse-anonymously-using-firefox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Browse Anonymously Using Firefox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-nmap-through-tor-stealth-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Nmap Through Tor (Stealth Scan)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Tips
     </span>
   </a>
   
@@ -990,7 +1152,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Conclusion
+      Conclusion
     </span>
   </a>
   
@@ -1012,61 +1174,89 @@
 
 
 
-<h1 id="burp-suite-credential-stuffing-password-spraying">Burp Suite - Credential Stuffing &amp; Password Spraying</h1>
-<h2 id="introduction">🔹 Introduction</h2>
-<p>Burp Suite is a powerful <strong>web security testing tool</strong> used for <strong>testing login security, performing credential stuffing, and executing password spraying attacks</strong>. These techniques help identify <strong>weak authentication mechanisms and misconfigured login systems</strong>.</p>
-<p>⚠️ <strong>Warning:</strong> These attacks can trigger <strong>account lockouts</strong>, so always test <strong>ethically</strong> and in a controlled environment.</p>
+<h1 id="connecting-to-tor-via-proxychains">Connecting to Tor via Proxychains</h1>
+<h2 id="introduction">Introduction</h2>
+<p><strong>ProxyChains</strong> is a tool that routes network traffic through <strong>multiple proxies</strong>, including <strong>Tor</strong>, to <strong>anonymize</strong> connections. This guide covers how to configure ProxyChains and use it with Tor for enhanced privacy.</p>
+<p><strong>Warning:</strong> While ProxyChains and Tor improve anonymity, they are <strong>not foolproof</strong>. Always follow best practices to avoid leaks.</p>
 <hr />
-<h2 id="credential-stuffing">🔹 Credential Stuffing</h2>
-<h3 id="what-is-credential-stuffing"><strong>What is Credential Stuffing?</strong></h3>
-<p>Credential stuffing is an <strong>automated attack</strong> where attackers use <strong>breached username/password pairs</strong> in hopes that users have <strong>reused their credentials</strong> across multiple sites.</p>
-<h3 id="how-to-perform-credential-stuffing-in-burp-suite"><strong>How to Perform Credential Stuffing in Burp Suite</strong></h3>
-<p>1️⃣ <strong>Intercept Login Request:</strong>
-- Enable <strong>Burp Suite Proxy</strong>.
-- Log in to the target website using <strong>any credentials</strong> (to capture the request).
-- <strong>Forward</strong> the request to see how the login works.</p>
-<p>2️⃣ <strong>Send to Intruder:</strong>
-- Right-click on the login request → <strong>Send to Intruder</strong>.
-- Clear existing positions (<code>Clear</code> button).
-- Highlight <strong>username</strong> and <strong>password</strong> fields → Click <code>Add</code>.</p>
-<p>3️⃣ <strong>Select Attack Type - Pitchfork:</strong>
-- Use <code>Pitchfork Mode</code> (matches each username with its respective password in order).</p>
-<p>4️⃣ <strong>Configure Payloads:</strong>
-- Go to the <strong>Payloads</strong> tab.
-- <strong>Payload Set 1:</strong> Add a <strong>list of breached usernames</strong>.
-- <strong>Payload Set 2:</strong> Add a <strong>list of breached passwords</strong>.</p>
-<p>5️⃣ <strong>Analyze Responses:</strong>
-- Run the attack and analyze <strong>response codes</strong>.
-- Look for <strong>successful logins</strong> (e.g., HTTP 200 instead of 401 or 403).
-- Use <strong>Grep Extract</strong> to highlight error messages (e.g., <code>Cannot sign in</code>).</p>
-<hr />
-<h2 id="password-spraying">🔹 Password Spraying</h2>
-<h3 id="what-is-password-spraying"><strong>What is Password Spraying?</strong></h3>
-<p>Password spraying is an attack where <strong>a few common passwords</strong> are tested against <strong>many known usernames</strong>. Unlike brute force attacks, it avoids account lockouts by limiting attempts per user.</p>
-<h3 id="how-to-perform-password-spraying-in-burp-suite"><strong>How to Perform Password Spraying in Burp Suite</strong></h3>
-<p>1️⃣ <strong>Capture a Login Request:</strong>
-- Enable Burp Suite Proxy.
-- Log in with <strong>any credentials</strong> and <strong>send the request to Intruder</strong>.</p>
-<p>2️⃣ <strong>Modify the Intruder Attack:</strong>
-- Select <strong>Sniper Mode</strong> (focuses on one list at a time).
-- Highlight the <strong>password field</strong> → Click <code>Add</code>.
-- Set the <strong>Payload Set 1</strong> to include weak passwords (e.g., <code>Fall2024!</code>, <code>Password123!</code>).
-- Set the <strong>username field</strong> to a known list of usernames.</p>
-<p>3️⃣ <strong>Control Attack Speed:</strong>
-- Run <strong>only 1-2 attempts per user</strong> to avoid triggering security mechanisms.</p>
-<p>4️⃣ <strong>Check Responses:</strong>
-- Analyze <strong>status codes</strong> or <strong>error messages</strong> to identify successful login attempts.</p>
-<hr />
-<h2 id="best-practices-detection-avoidance">🔹 Best Practices &amp; Detection Avoidance</h2>
+<h2 id="installing-tor-proxychains">Installing Tor &amp; ProxyChains</h2>
+<h3 id="install-tor">Install Tor</h3>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install tor -y
+</code></pre>
 <ul>
-<li>Use <strong>low request rates</strong> to avoid account lockouts.</li>
-<li>Monitor <strong>response codes</strong> to detect successful login attempts.</li>
-<li>Change <strong>user agents &amp; headers</strong> to mimic normal traffic.</li>
-<li>Use <strong>proxy rotation</strong> (e.g., Burp Collaborator) to evade detection.</li>
+<li><strong>Tor</strong> routes your traffic through an <strong>encrypted onion network</strong>.</li>
+</ul>
+<h3 id="install-proxychains">Install ProxyChains</h3>
+<pre><code class="language-bash">sudo apt install proxychains
+</code></pre>
+<ul>
+<li><strong>ProxyChains</strong> forces applications to route traffic through proxies (Tor, SOCKS, HTTP, etc.).</li>
 </ul>
 <hr />
-<h2 id="conclusion">🔹 Conclusion</h2>
-<p>Burp Suite provides <strong>powerful automation for testing authentication security</strong>. Credential stuffing and password spraying can help identify <strong>weak login protections</strong>, but they should only be used in <strong>authorized security testing engagements</strong>.</p>
+<h2 id="configuring-proxychains">Configuring ProxyChains</h2>
+<h3 id="edit-proxychains-configuration-file">Edit ProxyChains Configuration File</h3>
+<pre><code class="language-bash">sudo nano /etc/proxychains.conf
+</code></pre>
+<ul>
+<li>Scroll to the <strong>bottom</strong> and ensure the following lines are set:</li>
+</ul>
+<h4 id="important-configurations">Important Configurations:</h4>
+<pre><code class="language-ini">strict_chain
+proxy_dns
+socks5 127.0.0.1 9050  # Tor default SOCKS proxy
+</code></pre>
+<ul>
+<li><strong><code>strict_chain</code></strong> → Forces traffic through each proxy in the order listed.</li>
+<li><strong><code>proxy_dns</code></strong> → Prevents DNS leaks.</li>
+<li><strong><code>socks5 127.0.0.1 9050</code></strong> → Directs traffic through Tor’s SOCKS5 proxy.</li>
+</ul>
+<h3 id="save-exit">Save &amp; Exit</h3>
+<ul>
+<li>Press <strong>CTRL + X</strong>, then <strong>Y</strong>, then <strong>ENTER</strong> to save the changes.</li>
+</ul>
+<hr />
+<h2 id="starting-tor-using-proxychains">Starting Tor &amp; Using ProxyChains</h2>
+<h3 id="start-the-tor-service">Start the Tor Service</h3>
+<pre><code class="language-bash">sudo systemctl start tor
+</code></pre>
+<ul>
+<li>To enable Tor at boot:
+  <code>bash
+  sudo systemctl enable tor</code></li>
+<li>To check the status:
+  <code>bash
+  systemctl status tor</code></li>
+</ul>
+<h3 id="running-applications-through-proxychains">Running Applications Through ProxyChains</h3>
+<h4 id="check-ip-address-before-after">Check IP Address Before &amp; After</h4>
+<pre><code class="language-bash">curl ifconfig.me
+proxychains curl ifconfig.me
+</code></pre>
+<ul>
+<li>The second command should return a <strong>Tor exit node IP</strong>.</li>
+</ul>
+<h4 id="browse-anonymously-using-firefox">Browse Anonymously Using Firefox</h4>
+<pre><code class="language-bash">proxychains firefox
+</code></pre>
+<h4 id="run-nmap-through-tor-stealth-scan">Run Nmap Through Tor (Stealth Scan)</h4>
+<pre><code class="language-bash">proxychains nmap -sT -Pn -n &lt;target&gt;
+</code></pre>
+<ul>
+<li><strong><code>-sT</code></strong> → TCP Connect Scan (Tor does not support SYN scans <code>-sS</code>).</li>
+<li><strong><code>-Pn</code></strong> → No Ping (Tor blocks ICMP requests).</li>
+<li><strong><code>-n</code></strong> → Disables DNS resolution (prevents leaks).</li>
+</ul>
+<hr />
+<h2 id="additional-tips">Additional Tips</h2>
+<ul>
+<li><strong>Use <code>proxychains -q</code></strong> to suppress ProxyChains logs.</li>
+<li><strong>Combine with VPN</strong> for extra security.</li>
+<li><strong>Modify exit nodes</strong> in <code>/etc/tor/torrc</code> for specific geolocations.</li>
+<li><strong>Use bridges</strong> if Tor is blocked in your country.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>ProxyChains with Tor provides an <strong>extra layer of anonymity</strong> for web browsing, network scanning, and other activities. However, <strong>no system is 100% anonymous</strong>, so always use caution.</p>
 
 
 
