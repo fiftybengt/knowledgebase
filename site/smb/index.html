@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../create/">
+        <link rel="prev" href="../shell/">
       
+      
+        <link rel="next" href="../ssh/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Github create & update - My Knowledge Base</title>
+        <title>SMB (Server Message Block) - My Knowledge Base</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-mkdocs-with-github" class="md-skip">
+        <a href="#smb-server-message-block-port-139-445" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github create & update
+              SMB (Server Message Block)
             
           </span>
         </div>
@@ -509,10 +511,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../smb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SMB (Server Message Block)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -522,6 +545,185 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-smb" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction to SMB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Introduction to SMB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ports-used-by-smb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ports Used by SMB:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerating-smb-shares" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Enumerating SMB Shares
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Enumerating SMB Shares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-smb-shares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing SMB Shares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-an-smb-share-anonymously" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing an SMB Share Anonymously:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-smb-enumeration-exploitation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Additional SMB Enumeration &amp; Exploitation Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Additional SMB Enumeration & Exploitation Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nmap-smb-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nmap SMB Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum4linux-smb-enumeration-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enum4Linux (SMB Enumeration on Linux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-smb-version-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking SMB Version &amp; Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smb-exploits-security-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 SMB Exploits &amp; Security Concerns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 SMB Exploits & Security Concerns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-smb-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SMB Exploits:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-smb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Securing SMB:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -551,19 +753,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -578,7 +778,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -655,31 +855,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Github create & update
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,95 +868,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the Repository
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -817,28 +907,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#introduction-to-smb" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      🔹 Introduction to SMB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Introduction to SMB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ports-used-by-smb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ports Used by SMB:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
+  <a href="#common-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloning the Repository
+      Common Use Cases:
     </span>
   </a>
   
@@ -850,36 +940,126 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
+  <a href="#enumerating-smb-shares" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
+      🔹 Enumerating SMB Shares
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Enumerating SMB Shares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listing-smb-shares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing SMB Shares
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
+      Breakdown:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-an-smb-share-anonymously" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices
+      Accessing an SMB Share Anonymously:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-smb-enumeration-exploitation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Additional SMB Enumeration &amp; Exploitation Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Additional SMB Enumeration & Exploitation Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nmap-smb-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nmap SMB Scripts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum4linux-smb-enumeration-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enum4Linux (SMB Enumeration on Linux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-smb-version-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking SMB Version &amp; Vulnerabilities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smb-exploits-security-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 SMB Exploits &amp; Security Concerns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 SMB Exploits & Security Concerns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-smb-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SMB Exploits:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#securing-smb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Securing SMB:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -901,75 +1081,98 @@
 
 
 
-<h1 id="managing-mkdocs-with-github">Managing MkDocs with GitHub</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Using <strong>GitHub</strong> for version control and deployment is an essential practice when managing MkDocs projects. This guide covers how to <strong>create a new repository</strong>, update documentation, and deploy it to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="creating-a-new-github-repository">🔹 Creating a New GitHub Repository</h2>
-<ol>
-<li><strong>Go to GitHub</strong> and log in.</li>
-<li><strong>Click on</strong> <code>+</code> (top-right) → <code>New repository</code>.</li>
-<li><strong>Enter repository details</strong>:</li>
-<li>Repository name: <code>my-mkdocs-site</code></li>
-<li>Description (optional): "Documentation for my project"</li>
-<li>Choose <strong>Public</strong> or <strong>Private</strong>.</li>
-<li>Check <strong>Add a README</strong> (optional).</li>
-<li><strong>Click</strong> <code>Create repository</code>.</li>
-</ol>
-<h3 id="cloning-the-repository">Cloning the Repository</h3>
-<p>After creating the repository, clone it to your local machine:</p>
-<pre><code class="language-bash">git clone https://github.com/your-username/my-mkdocs-site.git
-cd my-mkdocs-site
-</code></pre>
-<hr />
-<h2 id="updating-mkdocs-and-pushing-to-github">🔹 Updating MkDocs and Pushing to GitHub</h2>
-<p>When making changes to MkDocs documentation, follow these steps:</p>
-<ol>
-<li><strong>Stage all changes</strong>:
-   <code>bash
-   git add .</code></li>
-<li><strong>Commit the changes</strong>:
-   <code>bash
-   git commit -m "Added my new page"</code></li>
-<li><strong>Push to GitHub</strong>:
-   <code>bash
-   git push origin main</code></li>
-<li><strong>Deploy the site to GitHub Pages</strong>:
-   <code>bash
-   mkdocs gh-deploy</code></li>
-</ol>
-<pre><code>mkdocs build --clean
-git add .
-git commit -m &quot;comment&quot;
-git push origin main
-mkdocs gh-deploy
-</code></pre>
-<p>This will build and deploy your MkDocs site to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="configuring-github-pages">🔹 Configuring GitHub Pages</h2>
-<p>Ensure that GitHub Pages is enabled for your repository:</p>
-<ol>
-<li><strong>Go to your repository on GitHub</strong>.</li>
-<li>Navigate to <strong>Settings &gt; Pages</strong>.</li>
-<li>Under <strong>Branch</strong>, select <code>gh-pages</code>.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Your site will be available at:
-   <code>https://your-username.github.io/my-mkdocs-site/</code></li>
-</ol>
-<hr />
-<h2 id="best-practices">🔹 Best Practices</h2>
+<h1 id="smb-server-message-block-port-139-445">SMB (Server Message Block) - Port 139 &amp; 445</h1>
+<h2 id="introduction-to-smb">🔹 Introduction to SMB</h2>
+<p><strong>SMB (Server Message Block)</strong> is a <strong>network file sharing protocol</strong> that allows applications or users to read and write files over a network. It enables <strong>file sharing, printer sharing, and remote access</strong> to Windows-based resources. SMB operates mainly over <strong>port 139 (NetBIOS) and port 445 (Direct TCP/IP)</strong>.</p>
+<h3 id="ports-used-by-smb"><strong>Ports Used by SMB:</strong></h3>
 <ul>
-<li>Always <strong>commit meaningful messages</strong> (<code>git commit -m "Updated navigation"</code>).</li>
-<li>Regularly <strong>pull updates</strong> from the repository before making changes:
-  <code>bash
-  git pull origin main</code></li>
-<li>Check <strong>Git status</strong> to review changes before committing:
-  <code>bash
-  git status</code></li>
+<li><strong>Port 139</strong>: Used for SMB communication over NetBIOS.</li>
+<li><strong>Port 445</strong>: Used for SMB communication directly over TCP/IP (modern implementations).</li>
+</ul>
+<h3 id="common-use-cases"><strong>Common Use Cases:</strong></h3>
+<ul>
+<li>File and folder sharing between <strong>Windows and Linux systems</strong>.</li>
+<li>Authentication and access control for shared resources.</li>
+<li>Network-based <strong>privilege escalation and exploitation</strong> in penetration testing.</li>
 </ul>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Using GitHub for MkDocs makes it easy to manage documentation changes and deploy updates. By following these steps, you can keep your project well-organized and version-controlled.</p>
+<h2 id="enumerating-smb-shares">🔹 Enumerating SMB Shares</h2>
+<p>To discover <strong>shared folders</strong>, we can use <strong>smbclient</strong> (a command-line tool for SMB access) to list available shares on a target system.</p>
+<h3 id="listing-smb-shares"><strong>Listing SMB Shares</strong></h3>
+<pre><code class="language-bash">smbclient -L \\192.168.0.0\ADMIN$
+</code></pre>
+<h3 id="breakdown"><strong>Breakdown:</strong></h3>
+<ul>
+<li><strong><code>smbclient</code></strong> → The tool used to interact with SMB shares.</li>
+<li><strong><code>-L</code></strong> → Lists all available shares on the specified server.</li>
+<li><strong><code>\\192.168.0.0\ADMIN$</code></strong> → The target <strong>IP address</strong> and <strong>share name</strong> (in this case, <code>ADMIN$</code>, a hidden administrative share).</li>
+</ul>
+<p><strong>Example Output:</strong>
+``` Sharename       Type      Comment
+    ---------       ----      -------
+    ADMIN$         Disk      Remote Admin
+    C$             Disk      Default share
+    IPC$           IPC       Remote IPC</p>
+<pre><code>
+---
+
+## 🔹 SMB Anonymous Access
+Some SMB servers allow **unauthenticated (anonymous) access**, meaning that no username or password is required to view or access shared resources.
+
+### **Checking for Anonymous SMB Access:**
+```bash
+smbclient -L \\192.168.0.0\ -N
+</code></pre>
+<ul>
+<li><strong><code>-N</code></strong> → Disables password prompt (attempts to access SMB shares without authentication).</li>
+<li>If anonymous access is <strong>enabled</strong>, the shares may be listed and <strong>publicly accessible</strong>.</li>
+</ul>
+<h3 id="accessing-an-smb-share-anonymously"><strong>Accessing an SMB Share Anonymously:</strong></h3>
+<pre><code class="language-bash">smbclient \\192.168.0.0\public -N
+</code></pre>
+<ul>
+<li>If successful, you'll get an <strong>SMB interactive shell</strong> where you can navigate and download files:
+  <code>smb: \&gt; ls
+  smb: \&gt; get important_document.txt</code></li>
+</ul>
+<hr />
+<h2 id="additional-smb-enumeration-exploitation-tools">🔹 Additional SMB Enumeration &amp; Exploitation Tools</h2>
+<h3 id="nmap-smb-scripts"><strong>Nmap SMB Scripts</strong></h3>
+<p>Nmap has built-in scripts for <strong>SMB enumeration</strong> and <strong>vulnerability detection</strong>.</p>
+<pre><code class="language-bash">nmap -p 139,445 --script=smb-enum-shares,smb-enum-users 192.168.0.0
+</code></pre>
+<ul>
+<li><strong><code>smb-enum-shares</code></strong> → Lists shared folders.</li>
+<li><strong><code>smb-enum-users</code></strong> → Enumerates SMB users.</li>
+</ul>
+<h3 id="enum4linux-smb-enumeration-on-linux"><strong>Enum4Linux (SMB Enumeration on Linux)</strong></h3>
+<pre><code class="language-bash">enum4linux -a 192.168.0.0
+</code></pre>
+<ul>
+<li>Gathers <strong>user accounts, shares, group memberships, and policies</strong>.</li>
+</ul>
+<h3 id="checking-smb-version-vulnerabilities"><strong>Checking SMB Version &amp; Vulnerabilities</strong></h3>
+<pre><code class="language-bash">smbclient -V  # Displays installed SMB client version
+nmap --script smb-vuln* -p 139,445 192.168.0.0  # Checks for known SMB vulnerabilities
+</code></pre>
+<hr />
+<h2 id="smb-exploits-security-concerns">🔹 SMB Exploits &amp; Security Concerns</h2>
+<h3 id="common-smb-exploits"><strong>Common SMB Exploits:</strong></h3>
+<ul>
+<li><strong>SMB Null Sessions</strong> (unauthorized access to shared resources).</li>
+<li><strong>EternalBlue (MS17-010)</strong> → Remote code execution vulnerability in older SMB versions.</li>
+<li><strong>Relay Attacks</strong> (Intercepting SMB authentication for lateral movement).</li>
+</ul>
+<h3 id="securing-smb"><strong>Securing SMB:</strong></h3>
+<ul>
+<li><strong>Disable SMBv1</strong> (Older versions are vulnerable to exploits like EternalBlue).</li>
+<li><strong>Enforce authentication</strong> for accessing shares.</li>
+<li><strong>Limit SMB access</strong> to trusted IPs and networks.</li>
+<li><strong>Use strong credentials</strong> and disable anonymous access.</li>
+</ul>
+<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>SMB is a <strong>powerful network protocol</strong> for file sharing, but it also presents <strong>security risks</strong> when misconfigured. Understanding SMB enumeration techniques can help identify potential vulnerabilities and secure network resources.</p>
 
 
 

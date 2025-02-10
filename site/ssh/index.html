@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ssh/">
+        <link rel="prev" href="../smb/">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../mkdocs-formatting-guide/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>SSH (Secure Shell) - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#ssh-secure-shell-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              SSH (Secure Shell)
             
           </span>
         </div>
@@ -532,65 +532,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../ssh/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SSH (Secure Shell)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    MkDocs
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_18">
-            <span class="md-nav__icon md-icon"></span>
-            MkDocs
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
     
   
   
@@ -607,7 +548,7 @@
           
   
   <span class="md-ellipsis">
-    Formatting Guide
+    SSH (Secure Shell)
     
   </span>
   
@@ -619,7 +560,7 @@
         
   
   <span class="md-ellipsis">
-    Formatting Guide
+    SSH (Secure Shell)
     
   </span>
   
@@ -642,37 +583,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction-to-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 Introduction to SSH
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 Introduction to SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#ports-used-by-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
+      Ports Used by SSH:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
+  <a href="#common-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Ordered List:
+      Common Use Cases:
     </span>
   </a>
   
@@ -684,28 +616,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#connecting-to-an-ssh-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 Connecting to an SSH Server
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="🔹 Connecting to an SSH Server">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#basic-ssh-connection" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      Basic SSH Connection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#using-a-custom-port" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Using a Custom Port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-an-ssh-key-for-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using an SSH Key for Authentication
     </span>
   </a>
   
@@ -717,46 +658,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#file-transfers-via-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      🔹 File Transfers via SSH
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="🔹 File Transfers via SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#using-scp-secure-copy-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Using SCP (Secure Copy Protocol)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#using-sftp-ssh-file-transfer-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Using SFTP (SSH File Transfer Protocol)
     </span>
   </a>
   
@@ -768,19 +691,130 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#port-forwarding-with-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      🔹 Port Forwarding with SSH
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="🔹 Port Forwarding with SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#local-port-forwarding" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      Local Port Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-port-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Port Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-port-forwarding-socks-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Port Forwarding (SOCKS Proxy)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardening-ssh-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Hardening SSH Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Hardening SSH Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-root-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Root Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-default-ssh-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Default SSH Port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-key-based-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Key-Based Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail2ban-for-ssh-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2Ban for SSH Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-enumeration-penetration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 SSH Enumeration &amp; Penetration Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 SSH Enumeration & Penetration Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-ssh-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate SSH Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brute-force-ssh-credentials-with-hydra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brute Force SSH Credentials with Hydra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-weak-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Weak SSH Keys
     </span>
   </a>
   
@@ -794,7 +828,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -804,6 +838,63 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting Guide
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -909,37 +1000,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction-to-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 Introduction to SSH
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 Introduction to SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#ports-used-by-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
+      Ports Used by SSH:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
+  <a href="#common-use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Ordered List:
+      Common Use Cases:
     </span>
   </a>
   
@@ -951,28 +1033,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#connecting-to-an-ssh-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 Connecting to an SSH Server
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="🔹 Connecting to an SSH Server">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#basic-ssh-connection" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      Basic SSH Connection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#using-a-custom-port" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Using a Custom Port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-an-ssh-key-for-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using an SSH Key for Authentication
     </span>
   </a>
   
@@ -984,46 +1075,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#file-transfers-via-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      🔹 File Transfers via SSH
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="🔹 File Transfers via SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#using-scp-secure-copy-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
+      Using SCP (Secure Copy Protocol)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
+  <a href="#using-sftp-ssh-file-transfer-protocol" class="md-nav__link">
     <span class="md-ellipsis">
-      Running the Local Server
+      Using SFTP (SSH File Transfer Protocol)
     </span>
   </a>
   
@@ -1035,19 +1108,130 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
+  <a href="#port-forwarding-with-ssh" class="md-nav__link">
     <span class="md-ellipsis">
-      Extending MkDocs
+      🔹 Port Forwarding with SSH
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Extending MkDocs">
+    <nav class="md-nav" aria-label="🔹 Port Forwarding with SSH">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
+  <a href="#local-port-forwarding" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Plugins
+      Local Port Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-port-forwarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Port Forwarding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-port-forwarding-socks-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Port Forwarding (SOCKS Proxy)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardening-ssh-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Hardening SSH Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Hardening SSH Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-root-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable Root Login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-default-ssh-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Default SSH Port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-key-based-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Key-Based Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fail2ban-for-ssh-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2Ban for SSH Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-enumeration-penetration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 SSH Enumeration &amp; Penetration Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 SSH Enumeration & Penetration Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enumerate-ssh-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate SSH Version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#brute-force-ssh-credentials-with-hydra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Brute Force SSH Credentials with Hydra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-for-weak-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check for Weak SSH Keys
     </span>
   </a>
   
@@ -1061,7 +1245,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -1083,137 +1267,151 @@
 
 
 
+<h1 id="ssh-secure-shell-guide">SSH (Secure Shell) Guide</h1>
+<h2 id="introduction-to-ssh">🔹 Introduction to SSH</h2>
+<p><strong>SSH (Secure Shell)</strong> is a cryptographic network protocol used for <strong>secure remote login and file transfers</strong> over an unsecured network. It replaces older protocols like <strong>Telnet and FTP</strong> by providing <strong>encryption and authentication</strong>.</p>
+<h3 id="ports-used-by-ssh"><strong>Ports Used by SSH:</strong></h3>
+<ul>
+<li><strong>Default Port:</strong> <code>22</code></li>
+<li>Can be changed in <code>/etc/ssh/sshd_config</code> for security purposes.</li>
+</ul>
+<h3 id="common-use-cases"><strong>Common Use Cases:</strong></h3>
+<ul>
+<li>Secure <strong>remote access</strong> to a server.</li>
+<li><strong>Tunneling</strong> traffic through SSH.</li>
+<li><strong>File transfers</strong> using SCP and SFTP.</li>
+<li><strong>Port forwarding</strong> for secure access to internal services.</li>
+</ul>
 <hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
+<h2 id="connecting-to-an-ssh-server">🔹 Connecting to an SSH Server</h2>
+<h3 id="basic-ssh-connection"><strong>Basic SSH Connection</strong></h3>
+<pre><code class="language-bash">ssh username@192.168.1.1
+</code></pre>
+<ul>
+<li><strong><code>username</code></strong> → The user on the remote machine.</li>
+<li><strong><code>192.168.1.1</code></strong> → The IP address or hostname of the SSH server.</li>
+</ul>
+<h3 id="using-a-custom-port"><strong>Using a Custom Port</strong></h3>
+<pre><code class="language-bash">ssh -p 2222 username@192.168.1.1
+</code></pre>
+<ul>
+<li><strong><code>-p 2222</code></strong> → Specifies a non-default SSH port.</li>
+</ul>
+<h3 id="using-an-ssh-key-for-authentication"><strong>Using an SSH Key for Authentication</strong></h3>
+<p>SSH keys offer a more secure alternative to passwords.</p>
+<pre><code class="language-bash">ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@192.168.1.1
+</code></pre>
+<ul>
+<li><strong><code>ssh-keygen</code></strong> → Generates a new RSA SSH key pair.</li>
+<li><strong><code>ssh-copy-id</code></strong> → Copies the public key to the remote server.</li>
+</ul>
 <hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
+<h2 id="file-transfers-via-ssh">🔹 File Transfers via SSH</h2>
+<h3 id="using-scp-secure-copy-protocol"><strong>Using SCP (Secure Copy Protocol)</strong></h3>
+<pre><code class="language-bash">scp file.txt username@192.168.1.1:/home/username/
 </code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
-
-## Networking Commands
-
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
+<ul>
+<li>Copies <code>file.txt</code> from local to the remote server.</li>
+</ul>
+<pre><code class="language-bash">scp username@192.168.1.1:/home/username/file.txt ./
 </code></pre>
-<pre><code>
----
-
-## Code Blocks
-
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
+<ul>
+<li>Copies <code>file.txt</code> from the remote server to the local machine.</li>
+</ul>
+<h3 id="using-sftp-ssh-file-transfer-protocol"><strong>Using SFTP (SSH File Transfer Protocol)</strong></h3>
+<pre><code class="language-bash">sftp username@192.168.1.1
 </code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
-</code></pre>
+<ul>
+<li>Starts an interactive session similar to FTP.</li>
+<li>Use <code>get file.txt</code> to download a file.</li>
+<li>Use <code>put file.txt</code> to upload a file.</li>
+</ul>
 <hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
+<h2 id="port-forwarding-with-ssh">🔹 Port Forwarding with SSH</h2>
+<p>SSH can tunnel traffic securely by forwarding ports.</p>
+<h3 id="local-port-forwarding"><strong>Local Port Forwarding</strong></h3>
+<p>Forwards a local port to a remote system.</p>
+<pre><code class="language-bash">ssh -L 8080:localhost:80 username@192.168.1.1
 </code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
+<ul>
+<li>Access <code>http://localhost:8080/</code> to securely reach the remote system’s port <code>80</code>.</li>
+</ul>
+<h3 id="remote-port-forwarding"><strong>Remote Port Forwarding</strong></h3>
+<p>Allows external access to a local service.</p>
+<pre><code class="language-bash">ssh -R 2222:localhost:22 username@192.168.1.1
 </code></pre>
+<ul>
+<li>Remote users can SSH into the local machine using <code>ssh -p 2222 localhost</code>.</li>
+</ul>
+<h3 id="dynamic-port-forwarding-socks-proxy"><strong>Dynamic Port Forwarding (SOCKS Proxy)</strong></h3>
+<p>Creates a <strong>SOCKS proxy</strong> to route all traffic securely.</p>
+<pre><code class="language-bash">ssh -D 9050 -N username@192.168.1.1
+</code></pre>
+<ul>
+<li>Set your browser to use <code>localhost:9050</code> as a proxy.</li>
+</ul>
 <hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
+<h2 id="hardening-ssh-security">🔹 Hardening SSH Security</h2>
+<h3 id="disable-root-login"><strong>Disable Root Login</strong></h3>
+<p>Edit <code>/etc/ssh/sshd_config</code> and set:</p>
+<pre><code class="language-ini">PermitRootLogin no
 </code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
+<p>Then restart SSH:</p>
+<pre><code class="language-bash">sudo systemctl restart sshd
 </code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
-<hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
+<h3 id="change-default-ssh-port"><strong>Change Default SSH Port</strong></h3>
+<p>Edit <code>/etc/ssh/sshd_config</code> and modify:</p>
+<pre><code class="language-ini">Port 2222
 </code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
+<p>Restart SSH after changes:</p>
+<pre><code class="language-bash">sudo systemctl restart sshd
 </code></pre>
-<hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
+<h3 id="use-key-based-authentication"><strong>Use Key-Based Authentication</strong></h3>
+<p>Disable password-based logins by setting:</p>
+<pre><code class="language-ini">PasswordAuthentication no
 </code></pre>
-<p>This renders as:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
-</tr>
-<tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
+<h3 id="fail2ban-for-ssh-protection"><strong>Fail2Ban for SSH Protection</strong></h3>
+<p>Fail2Ban blocks repeated failed SSH login attempts.</p>
+<pre><code class="language-bash">sudo apt install fail2ban
 </code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
+<ul>
+<li><strong>Config File:</strong> <code>/etc/fail2ban/jail.local</code></li>
+<li>Enable SSH protection:</li>
+</ul>
+<pre><code class="language-ini">[sshd]
+enabled = true
+port = 22
+bantime = 600
+maxretry = 5
 </code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
-<hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
+<p>Restart Fail2Ban:</p>
+<pre><code class="language-bash">sudo systemctl restart fail2ban
 </code></pre>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
+<h2 id="ssh-enumeration-penetration-testing">🔹 SSH Enumeration &amp; Penetration Testing</h2>
+<h3 id="enumerate-ssh-version"><strong>Enumerate SSH Version</strong></h3>
+<pre><code class="language-bash">nmap -p 22 --script ssh-hostkey,sshv1 192.168.1.1
+</code></pre>
+<ul>
+<li>Checks for outdated <strong>SSH versions</strong> and <strong>weak keys</strong>.</li>
+</ul>
+<h3 id="brute-force-ssh-credentials-with-hydra"><strong>Brute Force SSH Credentials with Hydra</strong></h3>
+<pre><code class="language-bash">hydra -l root -P rockyou.txt 192.168.1.1 ssh
+</code></pre>
+<ul>
+<li><strong><code>-l root</code></strong> → Attempts login as root.</li>
+<li><strong><code>-P rockyou.txt</code></strong> → Uses a wordlist for password guessing.</li>
+</ul>
+<h3 id="check-for-weak-ssh-keys"><strong>Check for Weak SSH Keys</strong></h3>
+<pre><code class="language-bash">ssh-audit 192.168.1.1
+</code></pre>
+<ul>
+<li>Scans for weak cryptographic algorithms in SSH configuration.</li>
+</ul>
 <hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>SSH is an essential tool for <strong>secure remote administration</strong>, but it must be <strong>properly configured</strong> to prevent unauthorized access. Hardening SSH, using <strong>key-based authentication</strong>, and <strong>limiting root login</strong> are critical steps for securing SSH servers.</p>
 
 
 

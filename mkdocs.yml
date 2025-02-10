@@ -9,9 +9,24 @@ plugins:
 
 nav:
   - Home: index.md
+  - Bash Scripting: bashguide.md
+  - Bruteforce Attacks: bruteforce.md
+  - Burpsuite - Stuffing & Spraying: burpspray.md
+  - Hacking Methodology: hmet.md
+  - Information Gathering Tools: igtools.md
+  - Linux Commands: linux-commands.md
+  - Linux Users and Privileges: linuxuserpriv.md
+  - Manual Exploitation: manuexpl.md
+  - MSFconsole: msfc.md
+  - Networking: networking.md
+  - Python Networking: pynet.md
+  - Researching Vulnerabilities: revul.md
+  - Scanning and Enumeration: scanenum.md
+  - Shell Exploitation: shell.md
+  - SMB (Server Message Block): smb.md
+  - SSH (Secure Shell): ssh.md
   - MkDocs:
     - Formatting Guide: mkdocs-formatting-guide.md
     - Create Virtual Enviroment: venv.md
     - Create post: create.md
     - Github create & update: github.md
-  - Linux Commands: linux-commands.md
