@@ -12,6 +12,7 @@ nav:
   - Bash Scripting: bashguide.md
   - Bruteforce Attacks: bruteforce.md
   - Burpsuite - Stuffing & Spraying: burpspray.md
+  - Buffer Overflow x86: B0x86.md
   - Cherrytree: cherry.md
   - Hacking Methodology: hmet.md
   - Information Gathering Tools: igtools.md
