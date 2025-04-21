@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../msfc/">
+        <link rel="prev" href="../cherry/">
       
       
-        <link rel="next" href="../scanenum/">
+        <link rel="next" href="../linux-commands/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Researching Vulnerabilities - My Knowledge Base</title>
+        <title>cUrl - My Knowledge Base</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#identifying-and-researching-vulnerabilities" class="md-skip">
+        <a href="#curl-reference-for-api-testing-and-pentesting" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Researching Vulnerabilities
+              cUrl
             
           </span>
         </div>
@@ -265,10 +265,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../curl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    cUrl
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -279,6 +301,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-headers-and-user-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Headers and User Agent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-requests-and-data-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      POST Requests and Data Submission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-uploads" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Uploads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookie-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cookie Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-json-output-requires-jq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsing JSON Output (requires jq)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate HTTP Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-proxy-eg-with-burp-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a Proxy (e.g. with Burp Suite)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssltls-and-certificate-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSL/TLS and Certificate Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Overrides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-and-redirects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression and Redirects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-debugging-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing, Debugging, and Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-github-api-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: GitHub API Query
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -397,20 +565,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -426,7 +592,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             H4X
@@ -552,32 +718,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Researching Vulnerabilities
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../revul/" class="md-nav__link">
         
   
   
@@ -588,221 +732,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#identifying-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identifying Vulnerabilities
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Identifying Vulnerabilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-enumerate-open-ports-and-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️ Enumerate Open Ports and Services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1️ Enumerate Open Ports and Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-nmap-for-port-service-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Nmap for Port &amp; Service Detection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-for-known-vulnerabilities-in-nmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking for Known Vulnerabilities in Nmap
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#researching-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Researching Exploits
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Researching Exploits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-google-dorking-for-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️ Google Dorking for Vulnerabilities
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2️ Google Dorking for Vulnerabilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#useful-google-dorks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful Google Dorks:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-searching-exploit-databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️ Searching Exploit Databases
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3️ Searching Exploit Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exploit-db-exploit-dbcom" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploit-DB (exploit-db.com)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cve-details-cvedetailscom" class="md-nav__link">
-    <span class="md-ellipsis">
-      CVE Details (cvedetails.com)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rapid7-metasploit-rapid7com" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rapid7 &amp; Metasploit (rapid7.com)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github-proof-of-concept-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      GitHub (Proof-of-Concept Exploits)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exploit-testing-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploit Testing &amp; Validation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Exploit Testing &amp; Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#4-testing-an-exploit-in-a-lab" class="md-nav__link">
-    <span class="md-ellipsis">
-      4️ Testing an Exploit in a Lab
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4️ Testing an Exploit in a Lab">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-metasploit-exploit-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Metasploit Exploit Workflow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1208,195 +1137,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
+  <a href="#core-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      Core Usage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#identifying-vulnerabilities" class="md-nav__link">
+  <a href="#custom-headers-and-user-agent" class="md-nav__link">
     <span class="md-ellipsis">
-      Identifying Vulnerabilities
+      Custom Headers and User Agent
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Identifying Vulnerabilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-enumerate-open-ports-and-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      1️ Enumerate Open Ports and Services
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1️ Enumerate Open Ports and Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-nmap-for-port-service-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Nmap for Port &amp; Service Detection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#checking-for-known-vulnerabilities-in-nmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Checking for Known Vulnerabilities in Nmap
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#researching-exploits" class="md-nav__link">
+  <a href="#post-requests-and-data-submission" class="md-nav__link">
     <span class="md-ellipsis">
-      Researching Exploits
+      POST Requests and Data Submission
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Researching Exploits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-google-dorking-for-vulnerabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      2️ Google Dorking for Vulnerabilities
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2️ Google Dorking for Vulnerabilities">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#useful-google-dorks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful Google Dorks:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-searching-exploit-databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      3️ Searching Exploit Databases
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3️ Searching Exploit Databases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exploit-db-exploit-dbcom" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exploit-DB (exploit-db.com)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cve-details-cvedetailscom" class="md-nav__link">
-    <span class="md-ellipsis">
-      CVE Details (cvedetails.com)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rapid7-metasploit-rapid7com" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rapid7 &amp; Metasploit (rapid7.com)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#github-proof-of-concept-exploits" class="md-nav__link">
-    <span class="md-ellipsis">
-      GitHub (Proof-of-Concept Exploits)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#exploit-testing-validation" class="md-nav__link">
+  <a href="#file-uploads" class="md-nav__link">
     <span class="md-ellipsis">
-      Exploit Testing &amp; Validation
+      File Uploads
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Exploit Testing &amp; Validation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#4-testing-an-exploit-in-a-lab" class="md-nav__link">
-    <span class="md-ellipsis">
-      4️ Testing an Exploit in a Lab
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4️ Testing an Exploit in a Lab">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-metasploit-exploit-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic Metasploit Exploit Workflow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#cookie-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Cookie Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-json-output-requires-jq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parsing JSON Output (requires jq)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate HTTP Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-proxy-eg-with-burp-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a Proxy (e.g. with Burp Suite)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssltls-and-certificate-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSL/TLS and Certificate Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS Overrides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-and-redirects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression and Redirects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-debugging-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing, Debugging, and Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tips
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-github-api-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: GitHub API Query
     </span>
   </a>
   
@@ -1418,128 +1278,87 @@
 
 
 
-<h1 id="identifying-and-researching-vulnerabilities">Identifying and Researching Vulnerabilities</h1>
-<h2 id="introduction">Introduction</h2>
-<p>Identifying vulnerabilities is a crucial part of penetration testing and security assessments. Once open ports and running services are detected, <strong>researching exploits</strong> can help determine potential attack vectors.</p>
+<h1 id="curl-reference-for-api-testing-and-pentesting">cURL Reference for API Testing and Pentesting</h1>
+<p>A concise guide to using <code>curl</code> effectively for command-line HTTP interactions, useful in penetration testing, debugging, and scripting.</p>
 <hr />
-<h2 id="identifying-vulnerabilities">Identifying Vulnerabilities</h2>
-<h3 id="1-enumerate-open-ports-and-services"><strong>1️ Enumerate Open Ports and Services</strong></h3>
-<p>Before searching for vulnerabilities, it's essential to <strong>identify active services</strong> on a target machine.</p>
-<h4 id="using-nmap-for-port-service-detection"><strong>Using Nmap for Port &amp; Service Detection</strong></h4>
-<pre><code class="language-bash">nmap -sV -O -p- &lt;target&gt;
-</code></pre>
-<ul>
-<li><strong><code>-sV</code></strong> → Detects service versions.</li>
-<li><strong><code>-O</code></strong> → Attempts OS detection.</li>
-<li><strong><code>-p-</code></strong> → Scans all <strong>65,535</strong> ports.</li>
-</ul>
-<h4 id="checking-for-known-vulnerabilities-in-nmap"><strong>Checking for Known Vulnerabilities in Nmap</strong></h4>
-<pre><code class="language-bash">nmap --script vuln &lt;target&gt;
-</code></pre>
-<ul>
-<li>Runs Nmap's built-in vulnerability detection scripts.</li>
-</ul>
-<hr />
-<h2 id="researching-exploits">Researching Exploits</h2>
-<p>Once the <strong>running services and versions</strong> are identified, research can begin to find <strong>exploits</strong> associated with those versions.</p>
-<h3 id="2-google-dorking-for-vulnerabilities"><strong>2️ Google Dorking for Vulnerabilities</strong></h3>
-<p>Google can help uncover exploits and research papers related to a specific service.</p>
-<h4 id="useful-google-dorks"><strong>Useful Google Dorks:</strong></h4>
-<table>
-<thead>
-<tr>
-<th>Query</th>
-<th>Example</th>
-<th>Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>site:exploit-db.com</code></td>
-<td><code>site:exploit-db.com OpenSSH 7.2</code></td>
-<td>Find exploits on Exploit-DB</td>
-</tr>
-<tr>
-<td><code>site:cvedetails.com</code></td>
-<td><code>site:cvedetails.com Apache 2.4</code></td>
-<td>View CVEs related to Apache</td>
-</tr>
-<tr>
-<td><code>inurl:github</code></td>
-<td><code>OpenSSH exploit inurl:github</code></td>
-<td>Look for PoC exploits on GitHub</td>
-</tr>
-<tr>
-<td><code>site:rapid7.com</code></td>
-<td><code>site:rapid7.com Tomcat</code></td>
-<td>Look for Metasploit modules</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="3-searching-exploit-databases"><strong>3️ Searching Exploit Databases</strong></h3>
-<h4 id="exploit-db-exploit-dbcom"><strong>Exploit-DB (exploit-db.com)</strong></h4>
-<p>Exploit-DB contains a vast collection of publicly known exploits.
-- <strong>Website:</strong> <a href="https://www.exploit-db.com">https://www.exploit-db.com</a>
-- <strong>Manual Search:</strong> Enter a service name and version in the search bar.
-- <strong>Command-line Search:</strong>
-  <code>bash
-  searchsploit &lt;service name&gt;</code>
-  <strong>Example:</strong>
-  <code>bash
-  searchsploit OpenSSH 7.2</code>
-  - If an exploit exists, <strong>searchsploit</strong> will display it.
-  - To view exploit details:
-    <code>bash
-    searchsploit -x &lt;exploit_path&gt;</code></p>
-<h4 id="cve-details-cvedetailscom"><strong>CVE Details (cvedetails.com)</strong></h4>
-<ul>
-<li>Provides detailed information on <strong>known vulnerabilities (CVEs)</strong>.</li>
-<li><strong>Website:</strong> <a href="https://www.cvedetails.com">https://www.cvedetails.com</a></li>
-<li><strong>How to Use:</strong> Search for a software name or CVE ID (e.g., <code>CVE-2021-3156</code>).</li>
-</ul>
-<h4 id="rapid7-metasploit-rapid7com"><strong>Rapid7 &amp; Metasploit (rapid7.com)</strong></h4>
-<ul>
-<li><strong>Rapid7</strong> is the creator of Metasploit and provides <strong>prebuilt exploits</strong>.</li>
-<li><strong>Website:</strong> <a href="https://www.rapid7.com/db/">https://www.rapid7.com/db/</a></li>
-<li><strong>Metasploit Framework Command:</strong>
-  <code>bash
-  msfconsole
-  search &lt;service name&gt;</code>
-  <strong>Example:</strong>
-  <code>bash
-  search vsftpd</code></li>
-<li>If a module exists, load it:
-    <code>bash
-    use exploit/unix/ftp/vsftpd_234_backdoor</code></li>
-</ul>
-<h4 id="github-proof-of-concept-exploits"><strong>GitHub (Proof-of-Concept Exploits)</strong></h4>
-<ul>
-<li>Many researchers upload PoC (Proof-of-Concept) exploits on GitHub.</li>
-<li><strong>Search Example:</strong>
-  <code>bash
-  OpenSSH 7.2 exploit site:github.com</code></li>
-<li>Look for Python or Bash scripts that demonstrate vulnerabilities.</li>
-</ul>
-<hr />
-<h2 id="exploit-testing-validation">Exploit Testing &amp; Validation</h2>
-<p>Once a potential exploit is found, it must be tested <strong>responsibly</strong> in a controlled environment.</p>
-<h3 id="4-testing-an-exploit-in-a-lab"><strong>4️ Testing an Exploit in a Lab</strong></h3>
-<ul>
-<li>Set up a <strong>virtual machine</strong> with the vulnerable software.</li>
-<li>Use <strong>Metasploit</strong> or manual methods to execute the exploit.</li>
-<li>Ensure <strong>proper permissions</strong> and <strong>ethical guidelines</strong> are followed.</li>
-</ul>
-<h4 id="basic-metasploit-exploit-workflow"><strong>Basic Metasploit Exploit Workflow</strong></h4>
-<pre><code class="language-bash">msfconsole
-use exploit/&lt;exploit_path&gt;
-set RHOSTS &lt;target IP&gt;
-set PAYLOAD &lt;payload_type&gt;
-exploit
+<h2 id="core-usage">Core Usage</h2>
+<pre><code class="language-bash">curl https://example.com                   # Basic GET request
+curl -I https://example.com                # HEAD request (headers only)
+curl -o response.html https://example.com  # Save response to file
 </code></pre>
 <hr />
-<h2 id="conclusion">Conclusion</h2>
-<p>Identifying and researching vulnerabilities requires <strong>careful analysis of open ports, service versions, and known exploits</strong>. By leveraging <strong>Google dorking, exploit databases, and Metasploit</strong>, security researchers can stay updated on <strong>emerging threats</strong> and proactively defend against them.</p>
+<h2 id="custom-headers-and-user-agent">Custom Headers and User Agent</h2>
+<pre><code class="language-bash">curl -H &quot;User-Agent: Mozilla/5.0&quot; https://example.com
+curl -H &quot;Authorization: Bearer &lt;token&gt;&quot; https://api.example.com/data
+</code></pre>
+<hr />
+<h2 id="post-requests-and-data-submission">POST Requests and Data Submission</h2>
+<pre><code class="language-bash"># Form data
+curl -X POST -d &quot;username=admin&amp;password=1234&quot; https://target.com/login
+
+# JSON payload
+curl -X POST -H &quot;Content-Type: application/json&quot; \
+     -d '{&quot;user&quot;:&quot;admin&quot;,&quot;pass&quot;:&quot;1234&quot;}' https://api.example.com/login
+</code></pre>
+<hr />
+<h2 id="file-uploads">File Uploads</h2>
+<pre><code class="language-bash">curl -F &quot;file=@payload.zip&quot; https://target.com/upload
+</code></pre>
+<hr />
+<h2 id="cookie-handling">Cookie Handling</h2>
+<pre><code class="language-bash">curl -c cookies.txt https://target.com            # Save cookies
+curl -b cookies.txt https://target.com/dashboard  # Send cookies
+</code></pre>
+<hr />
+<h2 id="parsing-json-output-requires-jq">Parsing JSON Output (requires <code>jq</code>)</h2>
+<pre><code class="language-bash">curl https://ipinfo.io | jq '.ip'
+</code></pre>
+<hr />
+<h2 id="alternate-http-methods">Alternate HTTP Methods</h2>
+<pre><code class="language-bash">curl -X PUT -d '{&quot;enabled&quot;:true}' https://target.com/api/feature
+curl -X DELETE https://target.com/api/object/42
+</code></pre>
+<hr />
+<h2 id="using-a-proxy-eg-with-burp-suite">Using a Proxy (e.g. with Burp Suite)</h2>
+<pre><code class="language-bash">curl -x http://127.0.0.1:8080 https://target.com
+</code></pre>
+<hr />
+<h2 id="ssltls-and-certificate-handling">SSL/TLS and Certificate Handling</h2>
+<pre><code class="language-bash">curl -v https://example.com               # Verbose SSL info
+curl --insecure https://self-signed.site # Skip SSL verification (for testing only)
+</code></pre>
+<hr />
+<h2 id="dns-overrides">DNS Overrides</h2>
+<pre><code class="language-bash">curl --resolve example.com:443:10.0.0.5 https://example.com
+</code></pre>
+<blockquote>
+<p>Useful for testing services before DNS records are live.</p>
+</blockquote>
+<hr />
+<h2 id="compression-and-redirects">Compression and Redirects</h2>
+<pre><code class="language-bash">curl --compressed https://target.com     # Accept gzip/deflate
+curl -L https://short.url                # Follow redirects
+</code></pre>
+<hr />
+<h2 id="timing-debugging-and-logging">Timing, Debugging, and Logging</h2>
+<pre><code class="language-bash">curl -w &quot;@format.txt&quot; -o /dev/null -s https://target.com  # Custom output format
+curl --trace-ascii trace.log https://target.com           # Log full request/response
+</code></pre>
+<hr />
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Use <code>man curl</code> or <code>curl --help</code> to explore all available options.</li>
+<li>Combine with tools like <code>jq</code>, <code>grep</code>, or <code>awk</code> for advanced processing.</li>
+<li>Store common requests in scripts for repeatable testing.</li>
+<li><code>curl</code> is stateless — use it to replicate and isolate HTTP behavior precisely.</li>
+</ul>
+<hr />
+<h2 id="example-github-api-query">Example: GitHub API Query</h2>
+<pre><code class="language-bash">curl https://api.github.com/users/octocat | jq '.public_repos'
+</code></pre>
+<p>Retrieves the number of public repositories for the specified GitHub user.</p>
+<hr />
+<p>End of Reference</p>
 
 
 
