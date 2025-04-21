@@ -10,26 +10,29 @@ plugins:
 nav:
   - Home: index.md
   - Bash Scripting: bashguide.md
-  - Bruteforce Attacks: bruteforce.md
-  - Burpsuite - Stuffing & Spraying: burpspray.md
-  - Buffer Overflow x86: B0x86.md
   - Cherrytree: cherry.md
-  - Hacking Methodology: hmet.md
-  - Information Gathering Tools: igtools.md
+  - cUrl: curl.md
   - Linux Commands: linux-commands.md
   - Linux Users and Privileges: linuxuserpriv.md
-  - Manual Exploitation: manuexpl.md
   - Mapping Hostnames to IPs: hostnamemapping.md
-  - MSFconsole: msfc.md
   - Networking: networking.md
-  - Proxychains Tor: torproxy.md
   - Python Networking: pynet.md
-  - Researching Vulnerabilities: revul.md
-  - Scanning and Enumeration: scanenum.md
-  - Shell Exploitation: shell.md
-  - SMB (Server Message Block): smb.md
-  - SSH (Secure Shell): ssh.md
-  - Wordpress exploitation: wpexplo.md
+  
+  - H4X:
+    - Bruteforce Attacks: bruteforce.md
+    - Buffer Overflow x86: B0x86.md
+    - Hacking Methodology: hmet.md
+    - Information Gathering Tools: igtools.md
+    - MSFconsole: msfc.md
+    - Researching Vulnerabilities: revul.md
+    - Scanning and Enumeration: scanenum.md
+    - Shell Exploitation: shell.md
+    - SMB (Server Message Block): smb.md
+    - SSH (Secure Shell): ssh.md
+    - Wordpress exploitation: wpexplo.md
+    - Burpsuite - Stuffing & Spraying: burpspray.md
+    - Proxychains Tor: torproxy.md
+    
   - HTB:
     - Three - S3 Reverse Shell: threeawsshell.md
   - MkDocs:  
