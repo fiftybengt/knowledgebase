@@ -1,17 +1,9 @@
-# Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Mitt namn är Adam && Welcome to my semi-active knowledge base. Thanks to github pages of course!
+Use the search-function top-right to find out (1) of the reasons why I enjoy MkDocs.
 
-## Commands
+Here is a donut that I stole from the internet, thanks [@/Billocap/Donut-JS](https://github.com/Billocap/Donut-JS) inspired by the OG [donut.c](https://www.a1k0n.net/2011/07/20/donut-math.html)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+<canvas width="500" height="500" id="a"></canvas>
+<script src="js/ascii.js"></script>

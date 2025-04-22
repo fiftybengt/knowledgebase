@@ -6,7 +6,8 @@ theme:
 
 plugins:
   - search
-
+extra_css:
+  - css/stylesheet.css
 nav:
   - Home: index.md
   - Bash Scripting: bashguide.md
@@ -40,3 +41,4 @@ nav:
     - Create Virtual Enviroment: venv.md
     - Formatting Guide: mkdocs-formatting-guide.md
     - Github create & update: github.md
+
