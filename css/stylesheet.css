@@ -1,0 +1,8 @@
+/* Avoid global reset that can break theme layout */
+canvas {
+    display: block;
+    margin: 2rem auto;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
