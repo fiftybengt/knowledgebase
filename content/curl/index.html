@@ -9,26 +9,28 @@
       
       
       
+        <link rel="prev" href="../cherry/">
       
-        <link rel="next" href="content/git_commands/">
+      
+        <link rel="next" href="../linux-commands/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>My Knowledge Base</title>
+        <title>cUrl - My Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +49,9 @@
       
     
     
-      <link rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="../../css/stylesheet.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#curl-reference-for-api-testing-and-pentesting" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -103,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              cUrl
             
           </span>
         </div>
@@ -183,7 +190,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -198,17 +205,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -224,7 +224,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -283,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/git_commands/" class="md-nav__link">
+      <a href="../git_commands/" class="md-nav__link">
         
   
   
@@ -315,18 +314,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -347,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -365,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/bashguide/" class="md-nav__link">
+      <a href="../bashguide/" class="md-nav__link">
         
   
   
@@ -393,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/cherry/" class="md-nav__link">
+      <a href="../cherry/" class="md-nav__link">
         
   
   
@@ -418,10 +419,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="content/curl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cUrl
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -437,6 +465,180 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-headers-and-user-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Headers and User Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-requests-and-data-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST Requests and Data Submission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-uploads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Uploads
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookie-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookie Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-json-output-requires-jq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parsing JSON Output (requires jq)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate HTTP Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-proxy-eg-with-burp-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using a Proxy (e.g. with Burp Suite)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssltls-and-certificate-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL/TLS and Certificate Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Overrides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-and-redirects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression and Redirects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-debugging-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timing, Debugging, and Logging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-github-api-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: GitHub API Query
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -449,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/linux-commands/" class="md-nav__link">
+      <a href="../linux-commands/" class="md-nav__link">
         
   
   
@@ -477,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/linuxuserpriv/" class="md-nav__link">
+      <a href="../linuxuserpriv/" class="md-nav__link">
         
   
   
@@ -505,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/hostnamemapping/" class="md-nav__link">
+      <a href="../hostnamemapping/" class="md-nav__link">
         
   
   
@@ -533,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/networking/" class="md-nav__link">
+      <a href="../networking/" class="md-nav__link">
         
   
   
@@ -561,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/pynet/" class="md-nav__link">
+      <a href="../pynet/" class="md-nav__link">
         
   
   
@@ -636,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/bruteforce/" class="md-nav__link">
+      <a href="../bruteforce/" class="md-nav__link">
         
   
   
@@ -664,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/B0x86/" class="md-nav__link">
+      <a href="../B0x86/" class="md-nav__link">
         
   
   
@@ -692,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/hmet/" class="md-nav__link">
+      <a href="../hmet/" class="md-nav__link">
         
   
   
@@ -720,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/igtools/" class="md-nav__link">
+      <a href="../igtools/" class="md-nav__link">
         
   
   
@@ -748,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/msfc/" class="md-nav__link">
+      <a href="../msfc/" class="md-nav__link">
         
   
   
@@ -776,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/manuexpl/" class="md-nav__link">
+      <a href="../manuexpl/" class="md-nav__link">
         
   
   
@@ -804,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/revul/" class="md-nav__link">
+      <a href="../revul/" class="md-nav__link">
         
   
   
@@ -832,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/scanenum/" class="md-nav__link">
+      <a href="../scanenum/" class="md-nav__link">
         
   
   
@@ -860,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/shell/" class="md-nav__link">
+      <a href="../shell/" class="md-nav__link">
         
   
   
@@ -888,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/smb/" class="md-nav__link">
+      <a href="../smb/" class="md-nav__link">
         
   
   
@@ -916,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/ssh/" class="md-nav__link">
+      <a href="../ssh/" class="md-nav__link">
         
   
   
@@ -944,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/wpexplo/" class="md-nav__link">
+      <a href="../wpexplo/" class="md-nav__link">
         
   
   
@@ -972,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/burpspray/" class="md-nav__link">
+      <a href="../burpspray/" class="md-nav__link">
         
   
   
@@ -1000,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/torproxy/" class="md-nav__link">
+      <a href="../torproxy/" class="md-nav__link">
         
   
   
@@ -1083,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/threeawsshell/" class="md-nav__link">
+      <a href="../threeawsshell/" class="md-nav__link">
         
   
   
@@ -1166,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/create/" class="md-nav__link">
+      <a href="../create/" class="md-nav__link">
         
   
   
@@ -1194,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/venv/" class="md-nav__link">
+      <a href="../venv/" class="md-nav__link">
         
   
   
@@ -1222,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/mkdocs-formatting-guide/" class="md-nav__link">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   
@@ -1250,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/github/" class="md-nav__link">
+      <a href="../github/" class="md-nav__link">
         
   
   
@@ -1303,6 +1505,170 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-headers-and-user-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Headers and User Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-requests-and-data-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST Requests and Data Submission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-uploads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Uploads
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookie-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookie Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsing-json-output-requires-jq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parsing JSON Output (requires jq)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternate HTTP Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-proxy-eg-with-burp-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using a Proxy (e.g. with Burp Suite)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssltls-and-certificate-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSL/TLS and Certificate Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-overrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS Overrides
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-and-redirects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compression and Redirects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-debugging-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timing, Debugging, and Logging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-github-api-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: GitHub API Query
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1319,13 +1685,87 @@
 
 
 
-  <h1>Home</h1>
+<h1 id="curl-reference-for-api-testing-and-pentesting">cURL Reference for API Testing and Pentesting</h1>
+<p>A concise guide to using <code>curl</code> effectively for command-line HTTP interactions, useful in penetration testing, debugging, and scripting.</p>
+<hr />
+<h2 id="core-usage">Core Usage</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://example.com<span class="w">                   </span><span class="c1"># Basic GET request</span>
+curl<span class="w"> </span>-I<span class="w"> </span>https://example.com<span class="w">                </span><span class="c1"># HEAD request (headers only)</span>
+curl<span class="w"> </span>-o<span class="w"> </span>response.html<span class="w"> </span>https://example.com<span class="w">  </span><span class="c1"># Save response to file</span>
+</code></pre></div>
+<hr />
+<h2 id="custom-headers-and-user-agent">Custom Headers and User Agent</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;User-Agent: Mozilla/5.0&quot;</span><span class="w"> </span>https://example.com
+curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer &lt;token&gt;&quot;</span><span class="w"> </span>https://api.example.com/data
+</code></pre></div>
+<hr />
+<h2 id="post-requests-and-data-submission">POST Requests and Data Submission</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Form data</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;username=admin&amp;password=1234&quot;</span><span class="w"> </span>https://target.com/login
 
-<p>Mitt namn är Adam &amp;&amp; Welcome to my semi-active knowledge base. Thanks to github pages of course!<br />
-Use the search-function top-right to find out one of the reasons why I enjoy MkDocs.</p>
-<p>Here is a donut that I stole from the internet, thanks <a href="https://github.com/Billocap/Donut-JS">@/Billocap/Donut-JS</a> inspired by the OG <a href="https://www.a1k0n.net/2011/07/20/donut-math.html">donut.c</a></p>
-<canvas width="500" height="500" id="a"></canvas>
-<script src="js/ascii.js"></script>
+<span class="c1"># JSON payload</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;user&quot;:&quot;admin&quot;,&quot;pass&quot;:&quot;1234&quot;}&#39;</span><span class="w"> </span>https://api.example.com/login
+</code></pre></div>
+<hr />
+<h2 id="file-uploads">File Uploads</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;file=@payload.zip&quot;</span><span class="w"> </span>https://target.com/upload
+</code></pre></div>
+<hr />
+<h2 id="cookie-handling">Cookie Handling</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-c<span class="w"> </span>cookies.txt<span class="w"> </span>https://target.com<span class="w">            </span><span class="c1"># Save cookies</span>
+curl<span class="w"> </span>-b<span class="w"> </span>cookies.txt<span class="w"> </span>https://target.com/dashboard<span class="w">  </span><span class="c1"># Send cookies</span>
+</code></pre></div>
+<hr />
+<h2 id="parsing-json-output-requires-jq">Parsing JSON Output (requires <code>jq</code>)</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://ipinfo.io<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.ip&#39;</span>
+</code></pre></div>
+<hr />
+<h2 id="alternate-http-methods">Alternate HTTP Methods</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;enabled&quot;:true}&#39;</span><span class="w"> </span>https://target.com/api/feature
+curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>https://target.com/api/object/42
+</code></pre></div>
+<hr />
+<h2 id="using-a-proxy-eg-with-burp-suite">Using a Proxy (e.g. with Burp Suite)</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-x<span class="w"> </span>http://127.0.0.1:8080<span class="w"> </span>https://target.com
+</code></pre></div>
+<hr />
+<h2 id="ssltls-and-certificate-handling">SSL/TLS and Certificate Handling</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-v<span class="w"> </span>https://example.com<span class="w">               </span><span class="c1"># Verbose SSL info</span>
+curl<span class="w"> </span>--insecure<span class="w"> </span>https://self-signed.site<span class="w"> </span><span class="c1"># Skip SSL verification (for testing only)</span>
+</code></pre></div>
+<hr />
+<h2 id="dns-overrides">DNS Overrides</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--resolve<span class="w"> </span>example.com:443:10.0.0.5<span class="w"> </span>https://example.com
+</code></pre></div>
+<blockquote>
+<p>Useful for testing services before DNS records are live.</p>
+</blockquote>
+<hr />
+<h2 id="compression-and-redirects">Compression and Redirects</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--compressed<span class="w"> </span>https://target.com<span class="w">     </span><span class="c1"># Accept gzip/deflate</span>
+curl<span class="w"> </span>-L<span class="w"> </span>https://short.url<span class="w">                </span><span class="c1"># Follow redirects</span>
+</code></pre></div>
+<hr />
+<h2 id="timing-debugging-and-logging">Timing, Debugging, and Logging</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;@format.txt&quot;</span><span class="w"> </span>-o<span class="w"> </span>/dev/null<span class="w"> </span>-s<span class="w"> </span>https://target.com<span class="w">  </span><span class="c1"># Custom output format</span>
+curl<span class="w"> </span>--trace-ascii<span class="w"> </span>trace.log<span class="w"> </span>https://target.com<span class="w">           </span><span class="c1"># Log full request/response</span>
+</code></pre></div>
+<hr />
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Use <code>man curl</code> or <code>curl --help</code> to explore all available options.</li>
+<li>Combine with tools like <code>jq</code>, <code>grep</code>, or <code>awk</code> for advanced processing.</li>
+<li>Store common requests in scripts for repeatable testing.</li>
+<li><code>curl</code> is stateless — use it to replicate and isolate HTTP behavior precisely.</li>
+</ul>
+<hr />
+<h2 id="example-github-api-query">Example: GitHub API Query</h2>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://api.github.com/users/octocat<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.public_repos&#39;</span>
+</code></pre></div>
+<p>Retrieves the number of public repositories for the specified GitHub user.</p>
+<hr />
+<p>End of Reference</p>
 
 
 
@@ -1375,10 +1815,10 @@ Use the search-function top-right to find out one of the reasons why I enjoy MkD
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

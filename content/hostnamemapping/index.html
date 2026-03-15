@@ -9,26 +9,28 @@
       
       
       
+        <link rel="prev" href="../linuxuserpriv/">
       
-        <link rel="next" href="content/git_commands/">
+      
+        <link rel="next" href="../networking/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
     
     
       
-        <title>My Knowledge Base</title>
+        <title>Mapping Hostnames to IPs - My Knowledge Base</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +49,9 @@
       
     
     
-      <link rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="../../css/stylesheet.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mapping-hostnames-to-ips-using-etchosts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-header__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -103,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Mapping Hostnames to IPs
             
           </span>
         </div>
@@ -183,7 +190,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
+    <a href="../.." title="My Knowledge Base" class="md-nav__button md-logo" aria-label="My Knowledge Base" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -198,17 +205,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -224,7 +224,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -283,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/git_commands/" class="md-nav__link">
+      <a href="../git_commands/" class="md-nav__link">
         
   
   
@@ -315,18 +314,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -347,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -365,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/bashguide/" class="md-nav__link">
+      <a href="../bashguide/" class="md-nav__link">
         
   
   
@@ -393,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/cherry/" class="md-nav__link">
+      <a href="../cherry/" class="md-nav__link">
         
   
   
@@ -421,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/curl/" class="md-nav__link">
+      <a href="../curl/" class="md-nav__link">
         
   
   
@@ -449,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/linux-commands/" class="md-nav__link">
+      <a href="../linux-commands/" class="md-nav__link">
         
   
   
@@ -477,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/linuxuserpriv/" class="md-nav__link">
+      <a href="../linuxuserpriv/" class="md-nav__link">
         
   
   
@@ -502,10 +503,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="content/hostnamemapping/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mapping Hostnames to IPs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -521,6 +549,192 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing /etc/hosts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing /etc/hosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Command:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breakdown:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-modify-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Modify /etc/hosts?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-browsing-a-target-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Browsing a Target Web Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-using-curl-for-http-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Using Curl for HTTP Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fuzzing-virtual-hosts-with-ffuf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fuzzing Virtual Hosts with FFUF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scanning-the-target-with-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Scanning the Target with Nmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-with-wfuzz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Testing with Wfuzz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -533,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/networking/" class="md-nav__link">
+      <a href="../networking/" class="md-nav__link">
         
   
   
@@ -561,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/pynet/" class="md-nav__link">
+      <a href="../pynet/" class="md-nav__link">
         
   
   
@@ -636,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/bruteforce/" class="md-nav__link">
+      <a href="../bruteforce/" class="md-nav__link">
         
   
   
@@ -664,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/B0x86/" class="md-nav__link">
+      <a href="../B0x86/" class="md-nav__link">
         
   
   
@@ -692,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/hmet/" class="md-nav__link">
+      <a href="../hmet/" class="md-nav__link">
         
   
   
@@ -720,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/igtools/" class="md-nav__link">
+      <a href="../igtools/" class="md-nav__link">
         
   
   
@@ -748,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/msfc/" class="md-nav__link">
+      <a href="../msfc/" class="md-nav__link">
         
   
   
@@ -776,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/manuexpl/" class="md-nav__link">
+      <a href="../manuexpl/" class="md-nav__link">
         
   
   
@@ -804,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/revul/" class="md-nav__link">
+      <a href="../revul/" class="md-nav__link">
         
   
   
@@ -832,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/scanenum/" class="md-nav__link">
+      <a href="../scanenum/" class="md-nav__link">
         
   
   
@@ -860,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/shell/" class="md-nav__link">
+      <a href="../shell/" class="md-nav__link">
         
   
   
@@ -888,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/smb/" class="md-nav__link">
+      <a href="../smb/" class="md-nav__link">
         
   
   
@@ -916,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/ssh/" class="md-nav__link">
+      <a href="../ssh/" class="md-nav__link">
         
   
   
@@ -944,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/wpexplo/" class="md-nav__link">
+      <a href="../wpexplo/" class="md-nav__link">
         
   
   
@@ -972,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/burpspray/" class="md-nav__link">
+      <a href="../burpspray/" class="md-nav__link">
         
   
   
@@ -1000,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/torproxy/" class="md-nav__link">
+      <a href="../torproxy/" class="md-nav__link">
         
   
   
@@ -1083,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/threeawsshell/" class="md-nav__link">
+      <a href="../threeawsshell/" class="md-nav__link">
         
   
   
@@ -1166,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/create/" class="md-nav__link">
+      <a href="../create/" class="md-nav__link">
         
   
   
@@ -1194,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/venv/" class="md-nav__link">
+      <a href="../venv/" class="md-nav__link">
         
   
   
@@ -1222,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/mkdocs-formatting-guide/" class="md-nav__link">
+      <a href="../mkdocs-formatting-guide/" class="md-nav__link">
         
   
   
@@ -1250,7 +1464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="content/github/" class="md-nav__link">
+      <a href="../github/" class="md-nav__link">
         
   
   
@@ -1303,6 +1517,182 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing /etc/hosts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editing /etc/hosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Command:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breakdown:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-modify-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Modify /etc/hosts?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical Use Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-browsing-a-target-web-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Browsing a Target Web Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-using-curl-for-http-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Using Curl for HTTP Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-fuzzing-virtual-hosts-with-ffuf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fuzzing Virtual Hosts with FFUF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-scanning-the-target-with-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Scanning the Target with Nmap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-with-wfuzz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Testing with Wfuzz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1319,13 +1709,67 @@
 
 
 
-  <h1>Home</h1>
-
-<p>Mitt namn är Adam &amp;&amp; Welcome to my semi-active knowledge base. Thanks to github pages of course!<br />
-Use the search-function top-right to find out one of the reasons why I enjoy MkDocs.</p>
-<p>Here is a donut that I stole from the internet, thanks <a href="https://github.com/Billocap/Donut-JS">@/Billocap/Donut-JS</a> inspired by the OG <a href="https://www.a1k0n.net/2011/07/20/donut-math.html">donut.c</a></p>
-<canvas width="500" height="500" id="a"></canvas>
-<script src="js/ascii.js"></script>
+<h1 id="mapping-hostnames-to-ips-using-etchosts">Mapping Hostnames to IPs Using /etc/hosts</h1>
+<h2 id="introduction">Introduction</h2>
+<p>When performing <strong>penetration testing</strong> or <strong>web reconnaissance</strong>, there are cases where a domain name does not resolve correctly, or a target system uses <strong>virtual hosting</strong>. By modifying the <code>/etc/hosts</code> file, you can <strong>manually map an IP address to a hostname</strong>, allowing you to interact with the domain without relying on external DNS resolution.</p>
+<p>This technique is <strong>particularly useful</strong> when a target application has <strong>multiple virtual hosts</strong> or when conducting <strong>subdomain enumeration</strong> and <strong>fuzzing attacks</strong>.</p>
+<hr />
+<h2 id="editing-etchosts">Editing /etc/hosts</h2>
+<p>The <code>/etc/hosts</code> file is a system file that <strong>maps IP addresses to hostnames manually</strong>. When a hostname is added to this file, the system resolves it <strong>before querying external DNS servers</strong>.</p>
+<h3 id="syntax">Syntax:</h3>
+<div class="highlight"><pre><span></span><code>&lt;IP Address&gt; &lt;Hostname&gt;
+</code></pre></div>
+<h3 id="example-command">Example Command:</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;10.129.99.11 thetoppers.tbh&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/hosts
+</code></pre></div>
+<h3 id="breakdown">Breakdown:</h3>
+<ul>
+<li><strong><code>echo "10.129.99.11 thetoppers.tbh"</code></strong> → Prepares the entry.</li>
+<li><strong><code>sudo tee -a /etc/hosts</code></strong> → Appends (<code>-a</code>) the entry to <code>/etc/hosts</code> with elevated privileges.</li>
+</ul>
+<hr />
+<h2 id="why-modify-etchosts">Why Modify /etc/hosts?</h2>
+<ul>
+<li><strong>Bypass DNS Resolution</strong>: If the target server does not have a public DNS record, adding the hostname manually allows direct access.</li>
+<li><strong>Enable Virtual Host Enumeration</strong>: Some websites serve different content based on the hostname. By modifying <code>/etc/hosts</code>, you can interact with these vhosts.</li>
+<li><strong>Improve Web Fuzzing &amp; Recon</strong>: Many fuzzing tools (e.g., <strong>FFUF, Gobuster, and Wfuzz</strong>) require proper domain resolution for effective scanning.</li>
+<li><strong>Useful for Internal Networks</strong>: When working inside an internal network, mapping known IPs to hostnames can simplify testing.</li>
+</ul>
+<hr />
+<h2 id="practical-use-cases">Practical Use Cases</h2>
+<h3 id="1-browsing-a-target-web-application">1. Browsing a Target Web Application</h3>
+<p>After adding an entry to <code>/etc/hosts</code>, you can now access the target domain in your browser:<br />
+<div class="highlight"><pre><span></span><code>firefox<span class="w"> </span>http://thetoppers.tbh
+</code></pre></div></p>
+<h3 id="2-using-curl-for-http-requests">2. Using Curl for HTTP Requests</h3>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-I<span class="w"> </span>http://thetoppers.tbh
+</code></pre></div>
+<h3 id="3-fuzzing-virtual-hosts-with-ffuf">3. Fuzzing Virtual Hosts with FFUF</h3>
+<div class="highlight"><pre><span></span><code>ffuf<span class="w"> </span>-u<span class="w"> </span>http://FUZZ.thetoppers.tbh<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/wfuzz/general/common.txt
+</code></pre></div>
+<h3 id="4-scanning-the-target-with-nmap">4. Scanning the Target with Nmap</h3>
+<div class="highlight"><pre><span></span><code>nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>,443<span class="w"> </span>thetoppers.tbh
+</code></pre></div>
+<h3 id="5-testing-with-wfuzz">5. Testing with Wfuzz</h3>
+<div class="highlight"><pre><span></span><code>wfuzz<span class="w"> </span>-c<span class="w"> </span>-w<span class="w"> </span>/usr/share/wordlists/wfuzz/general/common.txt<span class="w"> </span>--hc<span class="w"> </span><span class="m">404</span><span class="w"> </span>http://thetoppers.tbh/FUZZ
+</code></pre></div>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li><strong>Always Backup <code>/etc/hosts</code> Before Editing</strong><br />
+  <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/hosts<span class="w"> </span>/etc/hosts.bak
+</code></pre></div></li>
+<li><strong>Remove Unnecessary Entries After Testing</strong><br />
+  <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/thetoppers.tbh/d&#39;</span><span class="w"> </span>/etc/hosts
+</code></pre></div></li>
+<li><strong>Ensure Proper Permissions</strong><br />
+  <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/etc/hosts<span class="w">  </span><span class="c1"># Should be writable by root only</span>
+</code></pre></div></li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Manually mapping an IP address to a hostname using <code>/etc/hosts</code> is a <strong>powerful technique</strong> for <strong>pentesting</strong>, <strong>virtual host enumeration</strong>, and <strong>web fuzzing</strong>. This method allows <strong>bypassing DNS dependencies</strong>, improving <strong>scanning accuracy</strong>, and testing <strong>subdomains efficiently</strong>.</p>
+<p>Use it wisely in authorized security assessments to <strong>enhance reconnaissance capabilities</strong>.</p>
 
 
 
@@ -1375,10 +1819,10 @@ Use the search-function top-right to find out one of the reasons why I enjoy MkD
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
