@@ -3,42 +3,55 @@ theme:
   name: material 
   palette:
     scheme: slate
-
+  features:
+    #- navigation.tabs
+    - search.suggest
+    - search.highlight
 plugins:
   - search
+  - roamlinks
 extra_css:
   - css/stylesheet.css
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - nl2br
+
 nav:
   - Home: index.md
-  - Bash Scripting: bashguide.md
-  - Cherrytree: cherry.md
-  - cUrl: curl.md
-  - Linux Commands: linux-commands.md
-  - Linux Users and Privileges: linuxuserpriv.md
-  - Mapping Hostnames to IPs: hostnamemapping.md
-  - Networking: networking.md
-  - Python Networking: pynet.md
-  
-  - H4X:
-    - Bruteforce Attacks: bruteforce.md
-    - Buffer Overflow x86: B0x86.md
-    - Hacking Methodology: hmet.md
-    - Information Gathering Tools: igtools.md
-    - MSFconsole: msfc.md
-    - Researching Vulnerabilities: revul.md
-    - Scanning and Enumeration: scanenum.md
-    - Shell Exploitation: shell.md
-    - SMB (Server Message Block): smb.md
-    - SSH (Secure Shell): ssh.md
-    - Wordpress exploitation: wpexplo.md
-    - Burpsuite - Stuffing & Spraying: burpspray.md
-    - Proxychains Tor: torproxy.md
+  - Git:
+    - Git Commands: content/git_commands.md
+  - old:
+    - Bash Scripting: content/bashguide.md
+    - Cherrytree: content/cherry.md
+    - cUrl: content/curl.md
+    - Linux Commands: content/linux-commands.md
+    - Linux Users and Privileges: content/linuxuserpriv.md
+    - Mapping Hostnames to IPs: content/hostnamemapping.md
+    - Networking: content/networking.md
+    - Python Networking: content/pynet.md
     
-  - HTB:
-    - Three - S3 Reverse Shell: threeawsshell.md
-  - MkDocs:  
-    - Create post: create.md
-    - Create Virtual Enviroment: venv.md
-    - Formatting Guide: mkdocs-formatting-guide.md
-    - Github create & update: github.md
+    - H4X:
+      - Bruteforce Attacks: content/bruteforce.md
+      - Buffer Overflow x86: content/B0x86.md
+      - Hacking Methodology: content/hmet.md
+      - Information Gathering Tools: content/igtools.md
+      - MSFconsole: content/msfc.md
+      - Manual Exploitation Guide: content/manuexpl.md
+      - Researching Vulnerabilities: content/revul.md
+      - Scanning and Enumeration: content/scanenum.md
+      - Shell Exploitation: content/shell.md
+      - SMB (Server Message Block): content/smb.md
+      - SSH (Secure Shell): content/ssh.md
+      - Wordpress exploitation: content/wpexplo.md
+      - Burpsuite - Stuffing & Spraying: content/burpspray.md
+      - Proxychains Tor: content/torproxy.md
+      
+    - HTB:
+      - Three - S3 Reverse Shell: content/threeawsshell.md
+    - MkDocs:  
+      - Create post: content/create.md
+      - Create Virtual Enviroment: content/venv.md
+      - Formatting Guide: content/mkdocs-formatting-guide.md
+      - Github create & update: content/github.md
 
